@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Protégé backups and logs
+*.log
+*.bak
+.Protege/
+
+# IntelliJ / editors
+.idea/
+*.iml
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]

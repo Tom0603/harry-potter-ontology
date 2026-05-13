@@ -1,0 +1,799 @@
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: : <http://www.semanticweb.org/harrypotter>
+
+
+
+Ontology: <http://www.semanticweb.org/harrypotter>
+
+
+AnnotationProperty: rdfs:label
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:integer
+
+    
+Datatype: xsd:string
+
+    
+ObjectProperty: <http://webprotege.stanford.edu/R2SfDRrekffdEPUKhSOX8R>
+
+    Annotations: 
+        rdfs:label "isHeadOf"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RJlhRIWjPnLU89LGLGYCc3>
+    
+    Range: 
+        <http://webprotege.stanford.edu/RB8PTtnwcC5i7ab44hKmrrm>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/R4WroUbru0hXJzwNCMWfuW>
+
+    Annotations: 
+        rdfs:label "transformsInto"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/R0q7LCBeZSv8ffje0BQFeZ>
+    
+    Range: 
+        <http://webprotege.stanford.edu/R95MF67xTQ7f8Tqgqz1fJaP>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/R7gURuOlSlwUW6V0mEb6Zvi>
+
+    Annotations: 
+        rdfs:label "isMarriedTo"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/R7W2NI1xzN9AlQXvEkzhQf8>
+    
+    Range: 
+        <http://webprotege.stanford.edu/R7W2NI1xzN9AlQXvEkzhQf8>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/R9EilgBiKEzCEd0pwJUoyVv>
+
+    Annotations: 
+        rdfs:label "attends"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RDhEzO3T3M7eZ1Jpy7uYzSS>
+    
+    Range: 
+        <http://webprotege.stanford.edu/RClpLdeYL2lCljJQzwBnzU9>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/R9SGyZuylnAAOwspKFygj7B>
+
+    Annotations: 
+        rdfs:label "isPrefectOf"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RDhEzO3T3M7eZ1Jpy7uYzSS>
+    
+    Range: 
+        <http://webprotege.stanford.edu/RB8PTtnwcC5i7ab44hKmrrm>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/R9X1UrZ0NttkBZnM4TA21Sh>
+
+    Annotations: 
+        rdfs:label "destroys"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RV9rLDseQLJUvUzze9IfJ6>
+    
+    Range: 
+        <http://webprotege.stanford.edu/RBj4Szu9qkiEGSjICvFh6NO>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/R9XhtMuP3Ri6h3Oz6d7mr0C>
+
+    Annotations: 
+        rdfs:label "performsSpell"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/R9rnBAcTOubiMQeAm1uRuak>
+    
+    Range: 
+        <http://webprotege.stanford.edu/RBtnJiaoEgMI7qeINuKXE2i>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/R9br1nkjuLDHQzLLUXUlQrG>
+
+    Annotations: 
+        rdfs:label "teaches"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RJlhRIWjPnLU89LGLGYCc3>
+    
+    Range: 
+        <http://webprotege.stanford.edu/RClpLdeYL2lCljJQzwBnzU9>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/R9m0dYzok6RMEpYqgjikkaX>
+
+    Annotations: 
+        rdfs:label "isFriendOf"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RV9rLDseQLJUvUzze9IfJ6>
+    
+    Range: 
+        <http://webprotege.stanford.edu/RV9rLDseQLJUvUzze9IfJ6>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/R9nsWu4BI4Q0Jh7wQZ7p9gS>
+
+    Annotations: 
+        rdfs:label "isFatherOf"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/R7W2NI1xzN9AlQXvEkzhQf8>
+    
+    Range: 
+        <http://webprotege.stanford.edu/R7W2NI1xzN9AlQXvEkzhQf8>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/RC4RLejRHl5DVaTOtdAHh9D>
+
+    Annotations: 
+        rdfs:label "attacks"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RV9rLDseQLJUvUzze9IfJ6>
+    
+    Range: 
+        <http://webprotege.stanford.edu/RV9rLDseQLJUvUzze9IfJ6>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/RC4d6xxUdiUqUga7YFbYS1R>
+
+    Annotations: 
+        rdfs:label "hasMember"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RB8PTtnwcC5i7ab44hKmrrm>
+    
+    Range: 
+        <http://webprotege.stanford.edu/R9rnBAcTOubiMQeAm1uRuak>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/RCAlUCQ3OhoZK9v9hUkYc10>
+
+    Annotations: 
+        rdfs:label "brews"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/R9rnBAcTOubiMQeAm1uRuak>
+    
+    Range: 
+        <http://webprotege.stanford.edu/R79aofQruqfe9Pl8K1zkurh>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/RCXGaQ96N7Nksutq6jAUwmV>
+
+    Annotations: 
+        rdfs:label "isProfessorAtSchool"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RJlhRIWjPnLU89LGLGYCc3>
+    
+    Range: 
+        <http://webprotege.stanford.edu/RCbrupRnLFQgwT5oTDy2Tq>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/RCd49kHIiCELaenjAQDRGvQ>
+
+    Annotations: 
+        rdfs:label "isLocatedIn"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/R7VEGU1FC7SZe8N0yEI5Fzc>
+    
+    Range: 
+        <http://webprotege.stanford.edu/R7VEGU1FC7SZe8N0yEI5Fzc>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/RDckm5wvFLsfdanX2L195Ce>
+
+    Annotations: 
+        rdfs:label "isMemberOf"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/R9rnBAcTOubiMQeAm1uRuak>
+    
+    Range: 
+        <http://webprotege.stanford.edu/R7pTBrrAWuYQjWAVSshaEM5>,
+        <http://webprotege.stanford.edu/RB8PTtnwcC5i7ab44hKmrrm>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/RESA2R0VMrJK5lAvlPUapP>
+
+    Annotations: 
+        rdfs:label "hasEnchanted"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RBtnJiaoEgMI7qeINuKXE2i>
+    
+    Range: 
+        <http://webprotege.stanford.edu/RBj4Szu9qkiEGSjICvFh6NO>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/RG86Iy9aa64asIiOQXE4eP>
+
+    Annotations: 
+        rdfs:label "hasPet"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/R7W2NI1xzN9AlQXvEkzhQf8>
+    
+    Range: 
+        <http://webprotege.stanford.edu/R95MF67xTQ7f8Tqgqz1fJaP>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/RO6Efkk7vhm87Mu1tPAuy4>
+
+    Annotations: 
+        rdfs:label "isMotherOf"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/R7W2NI1xzN9AlQXvEkzhQf8>
+    
+    Range: 
+        <http://webprotege.stanford.edu/R7W2NI1xzN9AlQXvEkzhQf8>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/RSfDKpy8BRfrWnnp1LSZWX>
+
+    Annotations: 
+        rdfs:label "isChildOf"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/R7W2NI1xzN9AlQXvEkzhQf8>
+    
+    Range: 
+        <http://webprotege.stanford.edu/R7W2NI1xzN9AlQXvEkzhQf8>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/Rex8B5Rw19kFRC4S553FXe>
+
+    Annotations: 
+        rdfs:label "counters"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RBtnJiaoEgMI7qeINuKXE2i>
+    
+    Range: 
+        <http://webprotege.stanford.edu/RBtnJiaoEgMI7qeINuKXE2i>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/RiXJyJwAsvnZ6qvZF1VYBM>
+
+    Annotations: 
+        rdfs:label "isStudentAtSchool"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RDhEzO3T3M7eZ1Jpy7uYzSS>
+    
+    Range: 
+        <http://webprotege.stanford.edu/RCbrupRnLFQgwT5oTDy2Tq>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/RjZviuoxpdclW6HMnwuPS3>
+
+    Annotations: 
+        rdfs:label "owns"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RV9rLDseQLJUvUzze9IfJ6>
+    
+    Range: 
+        <http://webprotege.stanford.edu/RBj4Szu9qkiEGSjICvFh6NO>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/Rmxp82tSxWMA3sjvCKxnQi>
+
+    Annotations: 
+        rdfs:label "uses"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/R9rnBAcTOubiMQeAm1uRuak>
+    
+    Range: 
+        <http://webprotege.stanford.edu/RCjz6sXql5CcNIVrC7sV1rP>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/RsyRwaxem2l9vLpgz4bCtS>
+
+    Annotations: 
+        rdfs:label "isEnemyOf"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RV9rLDseQLJUvUzze9IfJ6>
+    
+    Range: 
+        <http://webprotege.stanford.edu/RV9rLDseQLJUvUzze9IfJ6>
+    
+    
+ObjectProperty: owl:topObjectProperty
+
+    
+DataProperty: <http://webprotege.stanford.edu/R3HLBc8MQOhWv9QIU3t0KR>
+
+    Annotations: 
+        rdfs:label "incantation"@en
+    
+    Characteristics: 
+        Functional
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RBtnJiaoEgMI7qeINuKXE2i>
+    
+    Range: 
+        xsd:string
+    
+    SubPropertyOf: 
+        owl:topDataProperty
+    
+    
+DataProperty: <http://webprotege.stanford.edu/RBKPkYNVNTeV0hwnZ5jQgQL>
+
+    Annotations: 
+        rdfs:label "schoolYear"@en
+    
+    Characteristics: 
+        Functional
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RDhEzO3T3M7eZ1Jpy7uYzSS>
+    
+    Range: 
+        xsd:integer
+    
+    SubPropertyOf: 
+        owl:topDataProperty
+    
+    
+DataProperty: <http://webprotege.stanford.edu/RCOh4pnLPgQDMZiL40zHOXN>
+
+    Annotations: 
+        rdfs:label "housePoints"@en
+    
+    Characteristics: 
+        Functional
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RB8PTtnwcC5i7ab44hKmrrm>
+    
+    Range: 
+        xsd:integer
+    
+    SubPropertyOf: 
+        owl:topDataProperty
+    
+    
+DataProperty: <http://webprotege.stanford.edu/RDwbFYGrsGOH5aOAD3ubf8I>
+
+    Annotations: 
+        rdfs:label "birthYear"@en
+    
+    Characteristics: 
+        Functional
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RV9rLDseQLJUvUzze9IfJ6>
+    
+    Range: 
+        xsd:integer
+    
+    SubPropertyOf: 
+        owl:topDataProperty
+    
+    
+DataProperty: <http://webprotege.stanford.edu/RoQ2yHiZ0XpEKWxYJtnffi>
+
+    Annotations: 
+        rdfs:label "effectDuration"@en
+    
+    Characteristics: 
+        Functional
+    
+    Domain: 
+        <http://webprotege.stanford.edu/R79aofQruqfe9Pl8K1zkurh>
+    
+    Range: 
+        xsd:integer
+    
+    SubPropertyOf: 
+        owl:topDataProperty
+    
+    
+DataProperty: owl:topDataProperty
+
+    
+Class: <http://webprotege.stanford.edu/R0q7LCBeZSv8ffje0BQFeZ>
+
+    Annotations: 
+        rdfs:label "Animagus"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/R9rnBAcTOubiMQeAm1uRuak>
+    
+    
+Class: <http://webprotege.stanford.edu/R79aofQruqfe9Pl8K1zkurh>
+
+    Annotations: 
+        rdfs:label "Potion"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/RBj4Szu9qkiEGSjICvFh6NO>
+    
+    
+Class: <http://webprotege.stanford.edu/R7Af9mX8tuPg9xXhW5uA2jN>
+
+    Annotations: 
+        rdfs:label "Curse"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/RBtnJiaoEgMI7qeINuKXE2i>
+    
+    
+Class: <http://webprotege.stanford.edu/R7VEGU1FC7SZe8N0yEI5Fzc>
+
+    Annotations: 
+        rdfs:label "Location"@en
+    
+    
+Class: <http://webprotege.stanford.edu/R7W2NI1xzN9AlQXvEkzhQf8>
+
+    Annotations: 
+        rdfs:label "Person"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/RV9rLDseQLJUvUzze9IfJ6>
+    
+    
+Class: <http://webprotege.stanford.edu/R7pTBrrAWuYQjWAVSshaEM5>
+
+    Annotations: 
+        rdfs:label "SecretSociety"@en
+    
+    
+Class: <http://webprotege.stanford.edu/R8Nayucb9KGywd3AjdIFG0N>
+
+    Annotations: 
+        rdfs:label "Muggle"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/R7W2NI1xzN9AlQXvEkzhQf8>
+    
+    
+Class: <http://webprotege.stanford.edu/R8TS3LBWhDT1JBft3OH9Y8r>
+
+    Annotations: 
+        rdfs:label "Counterspell"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/RBtnJiaoEgMI7qeINuKXE2i>
+    
+    
+Class: <http://webprotege.stanford.edu/R8msZ8CvBYuvPRS3DfUN9kc>
+
+    Annotations: 
+        rdfs:label "Ghost"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/REsuUdMGlJfjz88oDJ5LVm>
+    
+    
+Class: <http://webprotege.stanford.edu/R8oNyARPZ2EoXKfAC5PAMtO>
+
+    Annotations: 
+        rdfs:label "HouseElf"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/RB50rLoGxwu3GoVWKApQGpe>
+    
+    
+Class: <http://webprotege.stanford.edu/R95MF67xTQ7f8Tqgqz1fJaP>
+
+    Annotations: 
+        rdfs:label "Beast"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/RnqCI5y0rpGvhTtpPhyjEl>
+    
+    
+Class: <http://webprotege.stanford.edu/R99lI9UsSt6urJbRi1l3LLj>
+
+    Annotations: 
+        rdfs:label "Horcrux"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/RBj4Szu9qkiEGSjICvFh6NO>
+    
+    
+Class: <http://webprotege.stanford.edu/R9cy534a8QKSkYkisRBzLpM>
+
+    Annotations: 
+        rdfs:label "PureBlood"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/R9rnBAcTOubiMQeAm1uRuak>
+    
+    
+Class: <http://webprotege.stanford.edu/R9jK6BS743wIIEbHMO2W0zJ>
+
+    Annotations: 
+        rdfs:label "Dementor"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/REsuUdMGlJfjz88oDJ5LVm>
+    
+    
+Class: <http://webprotege.stanford.edu/R9rnBAcTOubiMQeAm1uRuak>
+
+    Annotations: 
+        rdfs:label "Wizard"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/R7W2NI1xzN9AlQXvEkzhQf8>
+    
+    
+Class: <http://webprotege.stanford.edu/RB50rLoGxwu3GoVWKApQGpe>
+
+    Annotations: 
+        rdfs:label "Being"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/RnqCI5y0rpGvhTtpPhyjEl>
+    
+    
+Class: <http://webprotege.stanford.edu/RB8PTtnwcC5i7ab44hKmrrm>
+
+    Annotations: 
+        rdfs:label "House"@en
+    
+    
+Class: <http://webprotege.stanford.edu/RBj4Szu9qkiEGSjICvFh6NO>
+
+    Annotations: 
+        rdfs:label "MagicalObject"@en
+    
+    
+Class: <http://webprotege.stanford.edu/RBk4CpXUwteNs0vMWWFsLK9>
+
+    Annotations: 
+        rdfs:label "UnforgivableCurse"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/R7Af9mX8tuPg9xXhW5uA2jN>
+    
+    
+Class: <http://webprotege.stanford.edu/RBtnJiaoEgMI7qeINuKXE2i>
+
+    Annotations: 
+        rdfs:label "Spell"@en
+    
+    
+Class: <http://webprotege.stanford.edu/RBv7aK3h3Rzx88Hqo1jf4lc>
+
+    Annotations: 
+        rdfs:label "Charm"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/RBtnJiaoEgMI7qeINuKXE2i>
+    
+    
+Class: <http://webprotege.stanford.edu/RCbrupRnLFQgwT5oTDy2Tq>
+
+    Annotations: 
+        rdfs:label "MagicSchool"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/R7VEGU1FC7SZe8N0yEI5Fzc>
+    
+    
+Class: <http://webprotege.stanford.edu/RCjz6sXql5CcNIVrC7sV1rP>
+
+    Annotations: 
+        rdfs:label "Wand"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/RBj4Szu9qkiEGSjICvFh6NO>
+    
+    
+Class: <http://webprotege.stanford.edu/RClpLdeYL2lCljJQzwBnzU9>
+
+    Annotations: 
+        rdfs:label "Course"@en
+    
+    
+Class: <http://webprotege.stanford.edu/RCyV2cg7k78Tgm7LxG3NxVH>
+
+    Annotations: 
+        rdfs:label "Goblin"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/RB50rLoGxwu3GoVWKApQGpe>
+    
+    
+Class: <http://webprotege.stanford.edu/RDDo9FNM8tIOZKbvXTS27U7>
+
+    Annotations: 
+        rdfs:label "Broomstick"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/RDEkrOttmMz3TcwcMsTncIe>
+    
+    
+Class: <http://webprotege.stanford.edu/RDEkrOttmMz3TcwcMsTncIe>
+
+    Annotations: 
+        rdfs:label "MagicalVehicle"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/RBj4Szu9qkiEGSjICvFh6NO>
+    
+    
+Class: <http://webprotege.stanford.edu/RDXCRLRIyUaSgOlhRlG4vvY>
+
+    Annotations: 
+        rdfs:label "DeathlyHallow"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/RBj4Szu9qkiEGSjICvFh6NO>
+    
+    
+Class: <http://webprotege.stanford.edu/RDeKyU50hVXIHEhrFjRX6qT>
+
+    Annotations: 
+        rdfs:label "HalfBlood"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/R9rnBAcTOubiMQeAm1uRuak>
+    
+    
+Class: <http://webprotege.stanford.edu/RDhEzO3T3M7eZ1Jpy7uYzSS>
+
+    Annotations: 
+        rdfs:label "Student"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/R9rnBAcTOubiMQeAm1uRuak>
+    
+    
+Class: <http://webprotege.stanford.edu/RDyKlJWVgDNnqQ4vteird22>
+
+    Annotations: 
+        rdfs:label "MuggleBorn"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/R9rnBAcTOubiMQeAm1uRuak>
+    
+    
+Class: <http://webprotege.stanford.edu/REsuUdMGlJfjz88oDJ5LVm>
+
+    Annotations: 
+        rdfs:label "Spirit"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/RnqCI5y0rpGvhTtpPhyjEl>
+    
+    
+Class: <http://webprotege.stanford.edu/RJlhRIWjPnLU89LGLGYCc3>
+
+    Annotations: 
+        rdfs:label "Professor"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/R9rnBAcTOubiMQeAm1uRuak>
+    
+    
+Class: <http://webprotege.stanford.edu/RV9rLDseQLJUvUzze9IfJ6>
+
+    Annotations: 
+        rdfs:label "LivingBeing"@en
+    
+    
+Class: <http://webprotege.stanford.edu/RnqCI5y0rpGvhTtpPhyjEl>
+
+    Annotations: 
+        rdfs:label "MagicalCreature"@en
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/RV9rLDseQLJUvUzze9IfJ6>
+    
+    
+Individual: <http://webprotege.stanford.edu/RBHa0m7dMlEcpB7FevVhH2Y>
+
+    Annotations: 
+        rdfs:label "Harry Potter"@en
+    
+    Types: 
+        <http://webprotege.stanford.edu/R9rnBAcTOubiMQeAm1uRuak>
+    
+    

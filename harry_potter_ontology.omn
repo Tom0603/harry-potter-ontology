@@ -10,6 +10,9 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 Ontology: <http://www.potterverse-ontology.de/>
 
 
+AnnotationProperty: rdfs:comment
+
+    
 AnnotationProperty: rdfs:label
 
     
@@ -97,6 +100,21 @@ ObjectProperty: destroys
         MagicalObject
     
     
+ObjectProperty: hasChild
+
+    Annotations: 
+        rdfs:label "hasChild"@en
+    
+    Domain: 
+        Person
+    
+    Range: 
+        Person
+    
+    InverseOf: 
+        hasParent
+    
+    
 ObjectProperty: hasEnchanted
 
     Annotations: 
@@ -110,6 +128,21 @@ ObjectProperty: hasEnchanted
     
     Range: 
         MagicalObject
+    
+    
+ObjectProperty: hasFather
+
+    Annotations: 
+        rdfs:label "hasFather"@en
+    
+    SubPropertyOf: 
+        hasParent
+    
+    Characteristics: 
+        Functional
+    
+    InverseOf: 
+        isFatherOf
     
     
 ObjectProperty: hasMember
@@ -127,6 +160,36 @@ ObjectProperty: hasMember
         Wizard
     
     
+ObjectProperty: hasMother
+
+    Annotations: 
+        rdfs:label "hasMother"@en
+    
+    SubPropertyOf: 
+        hasParent
+    
+    Characteristics: 
+        Functional
+    
+    InverseOf: 
+        isMotherOf
+    
+    
+ObjectProperty: hasParent
+
+    Annotations: 
+        rdfs:label "hasParent"@en
+    
+    Domain: 
+        Person
+    
+    Range: 
+        Person
+    
+    InverseOf: 
+        hasChild
+    
+    
 ObjectProperty: hasPet
 
     Annotations: 
@@ -140,21 +203,6 @@ ObjectProperty: hasPet
     
     Range: 
         Beast
-    
-    
-ObjectProperty: isChildOf
-
-    Annotations: 
-        rdfs:label "isChildOf"@en
-    
-    SubPropertyOf: 
-        owl:topObjectProperty
-    
-    Domain: 
-        Person
-    
-    Range: 
-        Person
     
     
 ObjectProperty: isEnemyOf
@@ -178,13 +226,16 @@ ObjectProperty: isFatherOf
         rdfs:label "isFatherOf"@en
     
     SubPropertyOf: 
-        owl:topObjectProperty
+        hasChild
     
     Domain: 
         Person
     
     Range: 
         Person
+    
+    InverseOf: 
+        hasFather
     
     
 ObjectProperty: isFriendOf
@@ -269,13 +320,16 @@ ObjectProperty: isMotherOf
         rdfs:label "isMotherOf"@en
     
     SubPropertyOf: 
-        owl:topObjectProperty
+        hasChild
     
     Domain: 
         Person
     
     Range: 
         Person
+    
+    InverseOf: 
+        hasMother
     
     
 ObjectProperty: isPrefectOf
@@ -599,13 +653,24 @@ Class: Goblin
         Being
     
     
-Class: Halfblood
+Class: HalfBlood
 
     Annotations: 
         rdfs:label "HalfBlood"@en
     
+    EquivalentTo: 
+        Wizard
+         and (hasParent some 
+            (HalfBlood or PureBlood))
+         and (hasParent some 
+            (Muggle or MuggleBorn))
+         and (hasParent exactly 2 owl:Thing)
+    
     SubClassOf: 
         Wizard
+    
+    DisjointWith: 
+        MuggleBorn, PureBlood
     
     
 Class: Horcrux
@@ -685,14 +750,25 @@ Class: Muggle
     SubClassOf: 
         Person
     
+    DisjointWith: 
+        Wizard
+    
     
 Class: MuggleBorn
 
     Annotations: 
         rdfs:label "MuggleBorn"@en
     
+    EquivalentTo: 
+        Wizard
+         and (hasParent only Muggle)
+         and (hasParent exactly 2 owl:Thing)
+    
     SubClassOf: 
         Wizard
+    
+    DisjointWith: 
+        HalfBlood, PureBlood
     
     
 Class: Person
@@ -727,8 +803,17 @@ Class: PureBlood
     Annotations: 
         rdfs:label "PureBlood"@en
     
+    EquivalentTo: 
+        Wizard
+         and (hasParent only 
+            (HalfBlood or PureBlood))
+         and (hasParent exactly 2 owl:Thing)
+    
     SubClassOf: 
         Wizard
+    
+    DisjointWith: 
+        HalfBlood, MuggleBorn
     
     
 Class: SecretSociety
@@ -766,6 +851,9 @@ Class: UnforgivableCurse
     Annotations: 
         rdfs:label "UnforgivableCurse"@en
     
+    EquivalentTo: 
+        {AvadaKedavra , Crucio , Imperio}
+    
     SubClassOf: 
         Curse
     
@@ -785,14 +873,29 @@ Class: Wizard
         rdfs:label "Wizard"@en
     
     SubClassOf: 
-        Person
+        Person,
+        
+            Annotations: rdfs:comment "Enforces a global 'closed world' for parentage: Since hasFather and hasMother are functional, this constraint ensures that any Wizard is recognized as having exactly these two specific parents, allowing the reasoner to calculate blood status without requiring individual closure axioms."@en
+        hasParent exactly 2 owl:Thing
     
+    DisjointWith: 
+        Muggle
+    
+    
+Class: owl:Thing
+
     
 Individual: AvadaKedavra
 
+    Annotations: 
+        rdfs:label "Avada Kedavra"@en
+    
     
 Individual: Crucio
 
+    Annotations: 
+        rdfs:label "Crucio"@en
+    
     
 Individual: HarryPotter
 
@@ -802,7 +905,32 @@ Individual: HarryPotter
     Types: 
         Wizard
     
+    Facts:  
+     hasFather  JamesPotter,
+     hasMother  LilyPotter
+    
     
 Individual: Imperio
 
+    Annotations: 
+        rdfs:label "Imperio"@en
+    
+    
+Individual: JamesPotter
+
+    Annotations: 
+        rdfs:label "James Potter"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: LilyPotter
+
+    Annotations: 
+        rdfs:label "Lily Potter"@en
+    
+    Types: 
+        MuggleBorn
+    
     

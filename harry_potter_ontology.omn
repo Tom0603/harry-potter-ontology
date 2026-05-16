@@ -1071,15 +1071,12 @@ Individual: AdrianPucey
     Annotations: 
         rdfs:label "Adrian Pucey"@en
     
+    Types: 
+        Student
+    
     Facts:  
      isMemberOf  Slytherin,
      isStudentAtSchool  Hogwarts
-    
-    
-Individual: AidanLynch
-
-    Annotations: 
-        rdfs:label "Aidan Lynch"@en
     
     
 Individual: AlastorMoody
@@ -1094,64 +1091,19 @@ Individual: AlastorMoody
      isMemberOf  OrderOfThePhoenix
     
     
-Individual: AlbertRuncorn
-
-    Annotations: 
-        rdfs:label "Albert Runcorn"@en
-    
-    Types: 
-        PureBlood
-    
-    
 Individual: AlbusDumbledore
 
     Annotations: 
         rdfs:label "Albus Dumbledore"@en
     
     Types: 
-        HalfBlood
+        HalfBlood,
+        Professor
     
     Facts:  
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix,
      isProfessorAtSchool  Hogwarts
-    
-    
-Individual: AlbusPotter
-
-    Annotations: 
-        rdfs:label "Albus Potter"@en
-    
-    Types: 
-        HalfBlood
-    
-    Facts:  
-     isMemberOf  Slytherin,
-     isStudentAtSchool  Hogwarts
-    
-    
-Individual: AlectoCarrow
-
-    Annotations: 
-        rdfs:label "Alecto Carrow"@en
-    
-    Types: 
-        PureBlood
-    
-    
-Individual: AlexSykes
-
-    Annotations: 
-        rdfs:label "Alex Sykes"@en
-    
-    
-Individual: AlexiaWalkin
-
-    Annotations: 
-        rdfs:label "Alexia Walkin"@en
-    
-    Types: 
-        PureBlood
     
     
 Individual: AliceLongbottom
@@ -1172,6 +1124,7 @@ Individual: AliciaSpinnet
         rdfs:label "Alicia Spinnet"@en
     
     Types: 
+        Student,
         Wizard
     
     Facts:  
@@ -1197,54 +1150,13 @@ Individual: AmosDiggory
         Wizard
     
     
-Individual: AmycusCarrow
-
-    Annotations: 
-        rdfs:label "Amycus Carrow"@en
-    
-    Types: 
-        PureBlood
-    
-    
-Individual: AndrewKirke
-
-    Annotations: 
-        rdfs:label "Andrew Kirke"@en
-    
-    Facts:  
-     isMemberOf  Gryffindor
-    
-    
-Individual: AndromedaTonks
-
-    Annotations: 
-        rdfs:label "Andromeda Tonks"@en
-    
-    Types: 
-        PureBlood
-    
-    Facts:  
-     isMemberOf  Slytherin
-    
-    
-Individual: AngelicaCole
-
-    Annotations: 
-        rdfs:label "Angelica Cole"@en
-    
-    Facts:  
-     isMemberOf  Gryffindor,
-     isPrefectOf  Gryffindor,
-     isStudentAtSchool  Hogwarts
-    
-    
 Individual: AngelinaJohnson
 
     Annotations: 
         rdfs:label "Angelina Johnson"@en
     
     Types: 
-        Wizard
+        Student
     
     Facts:  
      isMemberOf  Gryffindor,
@@ -1265,12 +1177,6 @@ Individual: AnthonyGoldstein
      isStudentAtSchool  Hogwarts
     
     
-Individual: AntoninDolohov
-
-    Annotations: 
-        rdfs:label "Antonin Dolohov"@en
-    
-    
 Individual: Aragog
 
     Annotations: 
@@ -1280,33 +1186,6 @@ Individual: Aragog
         Beast
     
     
-Individual: ArcturusIBlack
-
-    Annotations: 
-        rdfs:label "Arcturus I Black"@en
-    
-    Types: 
-        PureBlood
-    
-    
-Individual: ArcturusIIBlack
-
-    Annotations: 
-        rdfs:label "Arcturus II Black"@en
-    
-    Types: 
-        PureBlood
-    
-    
-Individual: ArcturusIIIBlack
-
-    Annotations: 
-        rdfs:label "Arcturus III Black"@en
-    
-    Types: 
-        PureBlood
-    
-    
 Individual: ArianaDumbledore
 
     Annotations: 
@@ -1314,12 +1193,6 @@ Individual: ArianaDumbledore
     
     Types: 
         HalfBlood
-    
-    
-Individual: ArmandoDippet
-
-    Annotations: 
-        rdfs:label "Armando Dippet"@en
     
     
 Individual: ArthurWeasley
@@ -1335,21 +1208,6 @@ Individual: ArthurWeasley
      isMemberOf  OrderOfThePhoenix
     
     
-Individual: AstoriaGreengrass
-
-    Annotations: 
-        rdfs:label "Astoria Greengrass"@en
-    
-    Types: 
-        PureBlood
-    
-    
-Individual: AudreyWeasley
-
-    Annotations: 
-        rdfs:label "Audrey Weasley"@en
-    
-    
 Individual: AugustaLongbottom
 
     Annotations: 
@@ -1359,31 +1217,10 @@ Individual: AugustaLongbottom
         PureBlood
     
     
-Individual: AugustusRookwood
-
-    Annotations: 
-        rdfs:label "Augustus Rookwood"@en
-    
-    Types: 
-        Wizard
-    
-    
 Individual: AvadaKedavra
 
     Annotations: 
         rdfs:label "Avada Kedavra"@en
-    
-    
-Individual: Avery
-
-    Annotations: 
-        rdfs:label "Avery"@en
-    
-    Types: 
-        PureBlood
-    
-    Facts:  
-     isMemberOf  Slytherin
     
     
 Individual: Bane
@@ -1462,12 +1299,6 @@ Individual: BenjyFenwick
     
     Facts:  
      isMemberOf  OrderOfThePhoenix
-    
-    
-Individual: BerthaJorkins
-
-    Annotations: 
-        rdfs:label "Bertha Jorkins"@en
     
     
 Individual: BillWeasley
@@ -1550,12 +1381,6 @@ Individual: Bradley
     
     Facts:  
      isMemberOf  Ravenclaw
-    
-    
-Individual: BroderickBode
-
-    Annotations: 
-        rdfs:label "Broderick Bode"@en
     
     
 Individual: Buckbeak
@@ -1811,12 +1636,6 @@ Individual: Crucio
         rdfs:label "Crucio"@en
     
     
-Individual: CuthbertBinns
-
-    Annotations: 
-        rdfs:label "Cuthbert Binns"@en
-    
-    
 Individual: CygnusIBlack
 
     Annotations: 
@@ -1835,18 +1654,6 @@ Individual: CygnusIIBlack
         PureBlood
     
     
-Individual: CyrilMeakin
-
-    Annotations: 
-        rdfs:label "Cyril Meakin"@en
-    
-    
-Individual: DamianPerriss
-
-    Annotations: 
-        rdfs:label "Damian Perriss"@en
-    
-    
 Individual: DaphneGreengrass
 
     Annotations: 
@@ -1858,12 +1665,6 @@ Individual: DaphneGreengrass
     Facts:  
      isMemberOf  Slytherin,
      isStudentAtSchool  Hogwarts
-    
-    
-Individual: DavidBoorman
-
-    Annotations: 
-        rdfs:label "David Boorman"@en
     
     
 Individual: DeanThomas
@@ -2033,12 +1834,6 @@ Individual: EdgarBones
      isMemberOf  OrderOfThePhoenix
     
     
-Individual: EdmundSpiers
-
-    Annotations: 
-        rdfs:label "Edmund Spiers"@en
-    
-    
 Individual: EdwardLupin
 
     Annotations: 
@@ -2091,12 +1886,6 @@ Individual: ElphiasDoge
      isMemberOf  OrderOfThePhoenix
     
     
-Individual: EmmaDobbs
-
-    Annotations: 
-        rdfs:label "Emma Dobbs"@en
-    
-    
 Individual: EmmelineVance
 
     Annotations: 
@@ -2104,12 +1893,6 @@ Individual: EmmelineVance
     
     Facts:  
      isMemberOf  OrderOfThePhoenix
-    
-    
-Individual: EricMurley
-
-    Annotations: 
-        rdfs:label "Eric Murley"@en
     
     
 Individual: ErnieMacmillan
@@ -2444,12 +2227,6 @@ Individual: GodricGryffindor
     
     Facts:  
      isMemberOf  Gryffindor
-    
-    
-Individual: GordonPummell
-
-    Annotations: 
-        rdfs:label "Gordon Pummell"@en
     
     
 Individual: GrahamMontague

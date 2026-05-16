@@ -27,19 +27,19 @@ Datatype: xsd:string
     
 ObjectProperty: attacks
 
-    Annotations: 
+    Annotations:
         rdfs:label "attacks"@en
-    
-    SubPropertyOf: 
-        owl:topObjectProperty
-    
-    Domain: 
+
+    SubPropertyOf:
+        isEnemyOf
+
+    Domain:
         LivingBeing
-    
-    Range: 
+
+    Range:
         LivingBeing
-    
-    
+
+
 ObjectProperty: attends
 
     Annotations: 
@@ -47,6 +47,10 @@ ObjectProperty: attends
     
     SubPropertyOf: 
         owl:topObjectProperty
+    
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
     
     Domain: 
         Student
@@ -63,6 +67,10 @@ ObjectProperty: brews
     SubPropertyOf: 
         owl:topObjectProperty
     
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
+    
     Domain: 
         Wizard
     
@@ -77,6 +85,9 @@ ObjectProperty: counters
     
     SubPropertyOf: 
         owl:topObjectProperty
+    
+    Characteristics: 
+        Irreflexive
     
     Domain: 
         Spell
@@ -93,6 +104,10 @@ ObjectProperty: destroys
     SubPropertyOf: 
         owl:topObjectProperty
     
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
+    
     Domain: 
         LivingBeing
     
@@ -104,6 +119,10 @@ ObjectProperty: hasChild
 
     Annotations: 
         rdfs:label "hasChild"@en
+    
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
     
     Domain: 
         Person
@@ -123,6 +142,10 @@ ObjectProperty: hasEnchanted
     SubPropertyOf: 
         owl:topObjectProperty
     
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
+    
     Domain: 
         Spell
     
@@ -139,7 +162,9 @@ ObjectProperty: hasFather
         hasParent
     
     Characteristics: 
-        Functional
+        Functional,
+        Irreflexive,
+        Asymmetric
     
     InverseOf: 
         isFatherOf
@@ -152,6 +177,11 @@ ObjectProperty: hasMember
     
     SubPropertyOf: 
         owl:topObjectProperty
+    
+    Characteristics: 
+        InverseFunctional,
+        Irreflexive,
+        Asymmetric
     
     Domain: 
         House
@@ -169,7 +199,9 @@ ObjectProperty: hasMother
         hasParent
     
     Characteristics: 
-        Functional
+        Functional,
+        Irreflexive,
+        Asymmetric
     
     InverseOf: 
         isMotherOf
@@ -179,6 +211,10 @@ ObjectProperty: hasParent
 
     Annotations: 
         rdfs:label "hasParent"@en
+    
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
     
     Domain: 
         Person
@@ -198,6 +234,10 @@ ObjectProperty: hasPet
     SubPropertyOf: 
         owl:topObjectProperty
     
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
+    
     Domain: 
         Person
     
@@ -207,18 +247,27 @@ ObjectProperty: hasPet
     
 ObjectProperty: isEnemyOf
 
-    Annotations: 
+    Annotations:
         rdfs:label "isEnemyOf"@en
-    
-    SubPropertyOf: 
+
+    SubPropertyOf:
         owl:topObjectProperty
-    
-    Domain: 
+
+    Characteristics:
+        Symmetric
+
+    SubPropertyChain:
+        killed o hasChild
+
+    SubPropertyChain:
+        isFriendOf o isEnemyOf
+
+    Domain:
         LivingBeing
-    
-    Range: 
+
+    Range:
         LivingBeing
-    
+
     
 ObjectProperty: isFatherOf
 
@@ -227,6 +276,11 @@ ObjectProperty: isFatherOf
     
     SubPropertyOf: 
         hasChild
+    
+    Characteristics: 
+        InverseFunctional,
+        Irreflexive,
+        Asymmetric
     
     Domain: 
         Person
@@ -246,6 +300,10 @@ ObjectProperty: isFriendOf
     SubPropertyOf: 
         owl:topObjectProperty
     
+    Characteristics: 
+        Symmetric,
+        Irreflexive
+    
     Domain: 
         LivingBeing
     
@@ -260,6 +318,12 @@ ObjectProperty: isHeadOf
     
     SubPropertyOf: 
         owl:topObjectProperty
+    
+    Characteristics: 
+        Functional,
+        InverseFunctional,
+        Irreflexive,
+        Asymmetric
     
     Domain: 
         Professor
@@ -276,10 +340,13 @@ ObjectProperty: isLocatedIn
     SubPropertyOf: 
         owl:topObjectProperty
     
-    Domain: 
+    Characteristics:
+        Transitive
+
+    Domain:
         Location
-    
-    Range: 
+
+    Range:
         Location
     
     
@@ -290,6 +357,11 @@ ObjectProperty: isMarriedTo
     
     SubPropertyOf: 
         owl:topObjectProperty
+    
+    Characteristics: 
+        Functional,
+        Symmetric,
+        Irreflexive
     
     Domain: 
         Person
@@ -306,6 +378,10 @@ ObjectProperty: isMemberOf
     SubPropertyOf: 
         owl:topObjectProperty
     
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
+    
     Domain: 
         Wizard
     
@@ -321,6 +397,11 @@ ObjectProperty: isMotherOf
     
     SubPropertyOf: 
         hasChild
+    
+    Characteristics: 
+        InverseFunctional,
+        Irreflexive,
+        Asymmetric
     
     Domain: 
         Person
@@ -340,6 +421,11 @@ ObjectProperty: isPrefectOf
     SubPropertyOf: 
         owl:topObjectProperty
     
+    Characteristics: 
+        Functional,
+        Irreflexive,
+        Asymmetric
+    
     Domain: 
         Student
     
@@ -354,6 +440,11 @@ ObjectProperty: isProfessorAtSchool
     
     SubPropertyOf: 
         owl:topObjectProperty
+    
+    Characteristics: 
+        Functional,
+        Irreflexive,
+        Asymmetric
     
     Domain: 
         Professor
@@ -370,6 +461,11 @@ ObjectProperty: isStudentAtSchool
     SubPropertyOf: 
         owl:topObjectProperty
     
+    Characteristics: 
+        Functional,
+        Irreflexive,
+        Asymmetric
+    
     Domain: 
         Student
     
@@ -377,9 +473,28 @@ ObjectProperty: isStudentAtSchool
         MagicalSchool
     
     
+ObjectProperty: killed
+
+    Annotations:
+        rdfs:label "killed"@en
+
+    SubPropertyOf:
+        owl:topObjectProperty
+
+    Characteristics:
+        Asymmetric,
+        Irreflexive
+
+    Domain:
+        LivingBeing
+
+    Range:
+        LivingBeing
+
+
 ObjectProperty: owl:topObjectProperty
 
-    
+
 ObjectProperty: owns
 
     Annotations: 
@@ -387,6 +502,10 @@ ObjectProperty: owns
     
     SubPropertyOf: 
         owl:topObjectProperty
+    
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
     
     Domain: 
         LivingBeing
@@ -403,6 +522,10 @@ ObjectProperty: performsSpell
     SubPropertyOf: 
         owl:topObjectProperty
     
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
+    
     Domain: 
         Wizard
     
@@ -417,6 +540,10 @@ ObjectProperty: teaches
     
     SubPropertyOf: 
         owl:topObjectProperty
+    
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
     
     Domain: 
         Professor
@@ -433,6 +560,11 @@ ObjectProperty: transformsInto
     SubPropertyOf: 
         owl:topObjectProperty
     
+    Characteristics: 
+        Functional,
+        Irreflexive,
+        Asymmetric
+    
     Domain: 
         Animagus
     
@@ -447,6 +579,11 @@ ObjectProperty: uses
     
     SubPropertyOf: 
         owl:topObjectProperty
+    
+    Characteristics: 
+        Functional,
+        Irreflexive,
+        Asymmetric
     
     Domain: 
         Wizard
@@ -550,12 +687,16 @@ DataProperty: schoolYear
     
 Class: Animagus
 
-    Annotations: 
+    Annotations:
         rdfs:label "Animagus"@en
-    
-    SubClassOf: 
+
+    EquivalentTo:
         Wizard
-    
+         and (transformsInto some Beast)
+
+    SubClassOf:
+        Wizard
+
     
 Class: Beast
 
@@ -565,6 +706,9 @@ Class: Beast
     SubClassOf: 
         MagicalCreature
     
+    DisjointWith: 
+        Being, Spirit
+    
     
 Class: Being
 
@@ -573,6 +717,9 @@ Class: Being
     
     SubClassOf: 
         MagicalCreature
+    
+    DisjointWith: 
+        Beast, Spirit
     
     
 Class: Broomstick
@@ -595,12 +742,16 @@ Class: Charm
     
 Class: Counterspell
 
-    Annotations: 
+    Annotations:
         rdfs:label "Counterspell"@en
-    
-    SubClassOf: 
+
+    EquivalentTo:
         Spell
-    
+         and (counters some Spell)
+
+    SubClassOf:
+        Spell
+
     
 Class: Course
 
@@ -634,6 +785,9 @@ Class: Dementor
     SubClassOf: 
         Spirit
     
+    DisjointWith: 
+        Ghost
+    
     
 Class: Ghost
 
@@ -642,6 +796,9 @@ Class: Ghost
     
     SubClassOf: 
         Spirit
+    
+    DisjointWith: 
+        Dementor
     
     
 Class: Goblin
@@ -727,7 +884,7 @@ Class: MagicalObject
 Class: MagicalSchool
 
     Annotations: 
-        rdfs:label "MagicSchool"@en
+        rdfs:label "MagicalSchool"@en
     
     SubClassOf: 
         Location
@@ -791,12 +948,16 @@ Class: Potion
     
 Class: Professor
 
-    Annotations: 
+    Annotations:
         rdfs:label "Professor"@en
-    
-    SubClassOf: 
+
+    EquivalentTo:
         Wizard
-    
+         and (teaches some Course)
+
+    SubClassOf:
+        Wizard
+
     
 Class: PureBlood
 
@@ -836,15 +997,22 @@ Class: Spirit
     SubClassOf: 
         MagicalCreature
     
+    DisjointWith: 
+        Beast, Being
+    
     
 Class: Student
 
-    Annotations: 
+    Annotations:
         rdfs:label "Student"@en
-    
-    SubClassOf: 
+
+    EquivalentTo:
         Wizard
-    
+         and (isStudentAtSchool some MagicalSchool)
+
+    SubClassOf:
+        Wizard
+
     
 Class: UnforgivableCurse
 
@@ -884,7 +1052,8 @@ Class: Wizard
     
 Class: owl:Thing
 
-    
+
+
 Individual: AvadaKedavra
 
     Annotations: 
@@ -927,10 +1096,23 @@ Individual: JamesPotter
     
 Individual: LilyPotter
 
-    Annotations: 
+    Annotations:
         rdfs:label "Lily Potter"@en
-    
-    Types: 
+
+    Types:
         MuggleBorn
-    
-    
+
+
+Individual: Voldemort
+
+    Annotations:
+        rdfs:label "Voldemort"@en
+
+    Types:
+        Wizard
+
+    Facts:
+        killed JamesPotter,
+        killed LilyPotter
+
+

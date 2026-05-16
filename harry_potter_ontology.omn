@@ -27,19 +27,19 @@ Datatype: xsd:string
     
 ObjectProperty: attacks
 
-    Annotations:
+    Annotations: 
         rdfs:label "attacks"@en
-
-    SubPropertyOf:
+    
+    SubPropertyOf: 
         isEnemyOf
-
-    Domain:
+    
+    Domain: 
         LivingBeing
-
-    Range:
+    
+    Range: 
         LivingBeing
-
-
+    
+    
 ObjectProperty: attends
 
     Annotations: 
@@ -247,27 +247,27 @@ ObjectProperty: hasPet
     
 ObjectProperty: isEnemyOf
 
-    Annotations:
+    Annotations: 
         rdfs:label "isEnemyOf"@en
-
-    SubPropertyOf:
+    
+    SubPropertyOf: 
         owl:topObjectProperty
-
-    Characteristics:
-        Symmetric
-
-    SubPropertyChain:
-        killed o hasChild
-
-    SubPropertyChain:
+    
+    SubPropertyChain: 
         isFriendOf o isEnemyOf
-
-    Domain:
+    
+    SubPropertyChain: 
+        killed o hasChild
+    
+    Characteristics: 
+        Symmetric
+    
+    Domain: 
         LivingBeing
-
-    Range:
+    
+    Range: 
         LivingBeing
-
+    
     
 ObjectProperty: isFatherOf
 
@@ -340,13 +340,13 @@ ObjectProperty: isLocatedIn
     SubPropertyOf: 
         owl:topObjectProperty
     
-    Characteristics:
+    Characteristics: 
         Transitive
-
-    Domain:
+    
+    Domain: 
         Location
-
-    Range:
+    
+    Range: 
         Location
     
     
@@ -475,26 +475,26 @@ ObjectProperty: isStudentAtSchool
     
 ObjectProperty: killed
 
-    Annotations:
+    Annotations: 
         rdfs:label "killed"@en
-
-    SubPropertyOf:
+    
+    SubPropertyOf: 
         owl:topObjectProperty
-
-    Characteristics:
-        Asymmetric,
-        Irreflexive
-
-    Domain:
+    
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
+    
+    Domain: 
         LivingBeing
-
-    Range:
+    
+    Range: 
         LivingBeing
-
-
+    
+    
 ObjectProperty: owl:topObjectProperty
 
-
+    
 ObjectProperty: owns
 
     Annotations: 
@@ -687,16 +687,16 @@ DataProperty: schoolYear
     
 Class: Animagus
 
-    Annotations:
+    Annotations: 
         rdfs:label "Animagus"@en
-
-    EquivalentTo:
+    
+    EquivalentTo: 
         Wizard
          and (transformsInto some Beast)
-
-    SubClassOf:
+    
+    SubClassOf: 
         Wizard
-
+    
     
 Class: Beast
 
@@ -742,16 +742,16 @@ Class: Charm
     
 Class: Counterspell
 
-    Annotations:
+    Annotations: 
         rdfs:label "Counterspell"@en
-
-    EquivalentTo:
+    
+    EquivalentTo: 
         Spell
          and (counters some Spell)
-
-    SubClassOf:
+    
+    SubClassOf: 
         Spell
-
+    
     
 Class: Course
 
@@ -948,16 +948,16 @@ Class: Potion
     
 Class: Professor
 
-    Annotations:
+    Annotations: 
         rdfs:label "Professor"@en
-
-    EquivalentTo:
+    
+    EquivalentTo: 
         Wizard
          and (teaches some Course)
-
-    SubClassOf:
+    
+    SubClassOf: 
         Wizard
-
+    
     
 Class: PureBlood
 
@@ -1003,16 +1003,16 @@ Class: Spirit
     
 Class: Student
 
-    Annotations:
+    Annotations: 
         rdfs:label "Student"@en
-
-    EquivalentTo:
+    
+    EquivalentTo: 
         Wizard
          and (isStudentAtSchool some MagicalSchool)
-
-    SubClassOf:
+    
+    SubClassOf: 
         Wizard
-
+    
     
 Class: UnforgivableCurse
 
@@ -1052,12 +1052,757 @@ Class: Wizard
     
 Class: owl:Thing
 
+    
+Individual: AberforthDumbledore
 
+    Annotations: 
+        rdfs:label "Aberforth Dumbledore"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: AdrianPucey
 
+    Annotations: 
+        rdfs:label "Adrian Pucey"@en
+    
+    Facts:  
+     isMemberOf  Slytherin,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: AidanLynch
+
+    Annotations: 
+        rdfs:label "Aidan Lynch"@en
+    
+    
+Individual: AlastorMoody
+
+    Annotations: 
+        rdfs:label "Alastor Moody"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: AlbertRuncorn
+
+    Annotations: 
+        rdfs:label "Albert Runcorn"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: AlbusDumbledore
+
+    Annotations: 
+        rdfs:label "Albus Dumbledore"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isMemberOf  OrderOfThePhoenix,
+     isProfessorAtSchool  Hogwarts
+    
+    
+Individual: AlbusPotter
+
+    Annotations: 
+        rdfs:label "Albus Potter"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Slytherin,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: AlectoCarrow
+
+    Annotations: 
+        rdfs:label "Alecto Carrow"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: AlexSykes
+
+    Annotations: 
+        rdfs:label "Alex Sykes"@en
+    
+    
+Individual: AlexiaWalkin
+
+    Annotations: 
+        rdfs:label "Alexia Walkin"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: AliceLongbottom
+
+    Annotations: 
+        rdfs:label "Alice Longbottom"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: AliciaSpinnet
+
+    Annotations: 
+        rdfs:label "Alicia Spinnet"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: AmeliaBones
+
+    Annotations: 
+        rdfs:label "Amelia Bones"@en
+    
+    Types: 
+        Wizard
+    
+    
+Individual: AmosDiggory
+
+    Annotations: 
+        rdfs:label "Amos Diggory"@en
+    
+    Types: 
+        Wizard
+    
+    
+Individual: AmycusCarrow
+
+    Annotations: 
+        rdfs:label "Amycus Carrow"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: AndrewKirke
+
+    Annotations: 
+        rdfs:label "Andrew Kirke"@en
+    
+    Facts:  
+     isMemberOf  Gryffindor
+    
+    
+Individual: AndromedaTonks
+
+    Annotations: 
+        rdfs:label "Andromeda Tonks"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Slytherin
+    
+    
+Individual: AngelicaCole
+
+    Annotations: 
+        rdfs:label "Angelica Cole"@en
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isPrefectOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: AngelinaJohnson
+
+    Annotations: 
+        rdfs:label "Angelina Johnson"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: AnthonyGoldstein
+
+    Annotations: 
+        rdfs:label "Anthony Goldstein"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Ravenclaw,
+     isPrefectOf  Ravenclaw,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: AntoninDolohov
+
+    Annotations: 
+        rdfs:label "Antonin Dolohov"@en
+    
+    
+Individual: Aragog
+
+    Annotations: 
+        rdfs:label "Aragog"@en
+    
+    Types: 
+        Beast
+    
+    
+Individual: ArcturusIBlack
+
+    Annotations: 
+        rdfs:label "Arcturus I Black"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: ArcturusIIBlack
+
+    Annotations: 
+        rdfs:label "Arcturus II Black"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: ArcturusIIIBlack
+
+    Annotations: 
+        rdfs:label "Arcturus III Black"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: ArianaDumbledore
+
+    Annotations: 
+        rdfs:label "Ariana Dumbledore"@en
+    
+    Types: 
+        HalfBlood
+    
+    
+Individual: ArmandoDippet
+
+    Annotations: 
+        rdfs:label "Armando Dippet"@en
+    
+    
+Individual: ArthurWeasley
+
+    Annotations: 
+        rdfs:label "Arthur Weasley"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: AstoriaGreengrass
+
+    Annotations: 
+        rdfs:label "Astoria Greengrass"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: AudreyWeasley
+
+    Annotations: 
+        rdfs:label "Audrey Weasley"@en
+    
+    
+Individual: AugustaLongbottom
+
+    Annotations: 
+        rdfs:label "Augusta Longbottom"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: AugustusRookwood
+
+    Annotations: 
+        rdfs:label "Augustus Rookwood"@en
+    
+    Types: 
+        Wizard
+    
+    
 Individual: AvadaKedavra
 
     Annotations: 
         rdfs:label "Avada Kedavra"@en
+    
+    
+Individual: Avery
+
+    Annotations: 
+        rdfs:label "Avery"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Slytherin
+    
+    
+Individual: Bane
+
+    Annotations: 
+        rdfs:label "Bane"@en
+    
+    Types: 
+        Being
+    
+    
+Individual: BartyJrCrouch
+
+    Annotations: 
+        rdfs:label "Barty Jr. Crouch"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: BartySrCrouch
+
+    Annotations: 
+        rdfs:label "Barty Sr. Crouch"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: BathildaBagshot
+
+    Annotations: 
+        rdfs:label "Bathilda Bagshot"@en
+    
+    
+Individual: Beauxbatons
+
+    Annotations: 
+        rdfs:label "Beauxbatons"@en
+    
+    Types: 
+        MagicalSchool
+    
+    
+Individual: BeedleTheBard
+
+    Annotations: 
+        rdfs:label "Beedle the Bard"@en
+    
+    
+Individual: BellatrixLestrange
+
+    Annotations: 
+        rdfs:label "Bellatrix Lestrange"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Slytherin
+    
+    
+Individual: BelvinaBurke
+
+    Annotations: 
+        rdfs:label "Belvina Burke"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: BenjyFenwick
+
+    Annotations: 
+        rdfs:label "Benjy Fenwick"@en
+    
+    Facts:  
+     isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: BerthaJorkins
+
+    Annotations: 
+        rdfs:label "Bertha Jorkins"@en
+    
+    
+Individual: BillWeasley
+
+    Annotations: 
+        rdfs:label "Bill Weasley"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isMemberOf  OrderOfThePhoenix,
+     isPrefectOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: BlaiseZabini
+
+    Annotations: 
+        rdfs:label "Blaise Zabini"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Slytherin,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: BloodyBaron
+
+    Annotations: 
+        rdfs:label "Bloody Baron"@en
+    
+    Facts:  
+     isMemberOf  Slytherin
+    
+    
+Individual: BobHitchens
+
+    Annotations: 
+        rdfs:label "Bob Hitchens"@en
+    
+    Types: 
+        Muggle
+    
+    
+Individual: BobOgden
+
+    Annotations: 
+        rdfs:label "Bob Ogden"@en
+    
+    Types: 
+        Wizard
+    
+    
+Individual: Bogrod
+
+    Annotations: 
+        rdfs:label "Bogrod"@en
+    
+    Types: 
+        Goblin
+    
+    
+Individual: Borgin
+
+    Annotations: 
+        rdfs:label "Borgin"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: Bradley
+
+    Annotations: 
+        rdfs:label "Bradley"@en
+    
+    Facts:  
+     isMemberOf  Ravenclaw
+    
+    
+Individual: BroderickBode
+
+    Annotations: 
+        rdfs:label "Broderick Bode"@en
+    
+    
+Individual: Buckbeak
+
+    Annotations: 
+        rdfs:label "Buckbeak"@en
+    
+    Types: 
+        Beast
+    
+    
+Individual: Cadogan
+
+    Annotations: 
+        rdfs:label "Cadogan"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Gryffindor
+    
+    
+Individual: Cadwallader
+
+    Annotations: 
+        rdfs:label "Cadwallader"@en
+    
+    Facts:  
+     isMemberOf  Hufflepuff
+    
+    
+Individual: CallidoraBlack
+
+    Annotations: 
+        rdfs:label "Callidora Black"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: CaractacusBurke
+
+    Annotations: 
+        rdfs:label "Caractacus Burke"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: CaradocDearborn
+
+    Annotations: 
+        rdfs:label "Caradoc Dearborn"@en
+    
+    Facts:  
+     isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: CassiopeiaBlack
+
+    Annotations: 
+        rdfs:label "Cassiopeia Black"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: CassiusWarrington
+
+    Annotations: 
+        rdfs:label "Cassius Warrington"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Slytherin,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: CedrellaBlack
+
+    Annotations: 
+        rdfs:label "Cedrella Black"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: CedricDiggory
+
+    Annotations: 
+        rdfs:label "Cedric Diggory"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Hufflepuff,
+     isPrefectOf  Hufflepuff,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: Chambers
+
+    Annotations: 
+        rdfs:label "Chambers"@en
+    
+    Facts:  
+     isMemberOf  Ravenclaw
+    
+    
+Individual: CharisBlack
+
+    Annotations: 
+        rdfs:label "Charis Black"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: CharityBurbage
+
+    Annotations: 
+        rdfs:label "Charity Burbage"@en
+    
+    Types: 
+        Wizard
+    
+    
+Individual: CharlieWeasley
+
+    Annotations: 
+        rdfs:label "Charlie Weasley"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isPrefectOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: CharlusPotter
+
+    Annotations: 
+        rdfs:label "Charlus Potter"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: ChesterDavies
+
+    Annotations: 
+        rdfs:label "Chester Davies"@en
+    
+    Facts:  
+     isMemberOf  Ravenclaw,
+     isPrefectOf  Ravenclaw,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: ChoChang
+
+    Annotations: 
+        rdfs:label "Cho Chang"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Ravenclaw,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: Cole
+
+    Annotations: 
+        rdfs:label "Cole"@en
+    
+    Types: 
+        Muggle
+    
+    
+Individual: ColinCreevey
+
+    Annotations: 
+        rdfs:label "Colin Creevey"@en
+    
+    Types: 
+        MuggleBorn
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: CorbanYaxley
+
+    Annotations: 
+        rdfs:label "Corban Yaxley"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: CormacMcLaggen
+
+    Annotations: 
+        rdfs:label "Cormac McLaggen"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: CorneliusFudge
+
+    Annotations: 
+        rdfs:label "Cornelius Fudge"@en
+    
+    Types: 
+        Wizard
+    
+    
+Individual: Crabbe
+
+    Annotations: 
+        rdfs:label "Crabbe"@en
+    
+    Types: 
+        Wizard
+    
+    
+Individual: Crookshanks
+
+    Annotations: 
+        rdfs:label "Crookshanks"@en
+    
+    Types: 
+        Beast
     
     
 Individual: Crucio
@@ -1066,23 +1811,947 @@ Individual: Crucio
         rdfs:label "Crucio"@en
     
     
+Individual: CuthbertBinns
+
+    Annotations: 
+        rdfs:label "Cuthbert Binns"@en
+    
+    
+Individual: CygnusIBlack
+
+    Annotations: 
+        rdfs:label "Cygnus I Black"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: CygnusIIBlack
+
+    Annotations: 
+        rdfs:label "Cygnus II Black"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: CyrilMeakin
+
+    Annotations: 
+        rdfs:label "Cyril Meakin"@en
+    
+    
+Individual: DamianPerriss
+
+    Annotations: 
+        rdfs:label "Damian Perriss"@en
+    
+    
+Individual: DaphneGreengrass
+
+    Annotations: 
+        rdfs:label "Daphne Greengrass"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Slytherin,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: DavidBoorman
+
+    Annotations: 
+        rdfs:label "David Boorman"@en
+    
+    
+Individual: DeanThomas
+
+    Annotations: 
+        rdfs:label "Dean Thomas"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: DedalusDiggle
+
+    Annotations: 
+        rdfs:label "Dedalus Diggle"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: DemelzaRobins
+
+    Annotations: 
+        rdfs:label "Demelza Robins"@en
+    
+    Facts:  
+     isMemberOf  Gryffindor
+    
+    
+Individual: DennisCreevey
+
+    Annotations: 
+        rdfs:label "Dennis Creevey"@en
+    
+    Types: 
+        MuggleBorn
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: DirkCresswell
+
+    Annotations: 
+        rdfs:label "Dirk Cresswell"@en
+    
+    Types: 
+        MuggleBorn
+    
+    
+Individual: Dobby
+
+    Annotations: 
+        rdfs:label "Dobby"@en
+    
+    Types: 
+        HouseElf
+    
+    
+Individual: DoloresUmbridge
+
+    Annotations: 
+        rdfs:label "Dolores Umbridge"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Slytherin
+    
+    
+Individual: DominiqueWeasley
+
+    Annotations: 
+        rdfs:label "Dominique Weasley"@en
+    
+    Types: 
+        Wizard
+    
+    
+Individual: DorcasMeadowes
+
+    Annotations: 
+        rdfs:label "Dorcas Meadowes"@en
+    
+    Facts:  
+     isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: DoreaPotter
+
+    Annotations: 
+        rdfs:label "Dorea Potter"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: DracoMalfoy
+
+    Annotations: 
+        rdfs:label "Draco Malfoy"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Slytherin,
+     isPrefectOf  Slytherin,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: DruellaBlack
+
+    Annotations: 
+        rdfs:label "Druella Black"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: DudleyDursley
+
+    Annotations: 
+        rdfs:label "Dudley Dursley"@en
+    
+    Types: 
+        Muggle
+    
+    
+Individual: Durmstrang
+
+    Annotations: 
+        rdfs:label "Durmstrang"@en
+    
+    Types: 
+        MagicalSchool
+    
+    
+Individual: EddieCarmichael
+
+    Annotations: 
+        rdfs:label "Eddie Carmichael"@en
+    
+    Facts:  
+     isMemberOf  Ravenclaw,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: EdgarBones
+
+    Annotations: 
+        rdfs:label "Edgar Bones"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: EdmundSpiers
+
+    Annotations: 
+        rdfs:label "Edmund Spiers"@en
+    
+    
+Individual: EdwardLupin
+
+    Annotations: 
+        rdfs:label "Edward Lupin"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Hufflepuff
+    
+    
+Individual: EleanorBranstone
+
+    Annotations: 
+        rdfs:label "Eleanor Branstone"@en
+    
+    Facts:  
+     isMemberOf  Hufflepuff,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: EllaMax
+
+    Annotations: 
+        rdfs:label "Ella Max"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: ElladoraBlack
+
+    Annotations: 
+        rdfs:label "Elladora Black"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: ElphiasDoge
+
+    Annotations: 
+        rdfs:label "Elphias Doge"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: EmmaDobbs
+
+    Annotations: 
+        rdfs:label "Emma Dobbs"@en
+    
+    
+Individual: EmmelineVance
+
+    Annotations: 
+        rdfs:label "Emmeline Vance"@en
+    
+    Facts:  
+     isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: EricMurley
+
+    Annotations: 
+        rdfs:label "Eric Murley"@en
+    
+    
+Individual: ErnieMacmillan
+
+    Annotations: 
+        rdfs:label "Ernie Macmillan"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Hufflepuff,
+     isPrefectOf  Hufflepuff,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: Errol
+
+    Annotations: 
+        rdfs:label "Errol"@en
+    
+    Types: 
+        Beast
+    
+    
+Individual: EuanAbercrombie
+
+    Annotations: 
+        rdfs:label "Euan Abercrombie"@en
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: FabianPrewett
+
+    Annotations: 
+        rdfs:label "Fabian Prewett"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: Fang
+
+    Annotations: 
+        rdfs:label "Fang"@en
+    
+    Types: 
+        Beast
+    
+    
+Individual: FatLady
+
+    Annotations: 
+        rdfs:label "Fat Lady"@en
+    
+    Facts:  
+     isMemberOf  Gryffindor
+    
+    
+Individual: Fawkes
+
+    Annotations: 
+        rdfs:label "Fawkes"@en
+    
+    Types: 
+        Beast
+    
+    
+Individual: FayDunbar
+
+    Annotations: 
+        rdfs:label "Fay Dunbar"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: FelicityEastchurch
+
+    Annotations: 
+        rdfs:label "Felicity Eastchurch"@en
+    
+    Facts:  
+     isMemberOf  Ravenclaw
+    
+    
+Individual: FelixRosier
+
+    Annotations: 
+        rdfs:label "Felix Rosier"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Slytherin,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: FenrirGreyback
+
+    Annotations: 
+        rdfs:label "Fenrir Greyback"@en
+    
+    Types: 
+        Wizard
+    
+    
+Individual: FiliusFlitwick
+
+    Annotations: 
+        rdfs:label "Filius Flitwick"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Ravenclaw,
+     isProfessorAtSchool  Hogwarts
+    
+    
+Individual: Firenze
+
+    Annotations: 
+        rdfs:label "Firenze"@en
+    
+    Types: 
+        Being
+    
+    
+Individual: FleurDelacour
+
+    Annotations: 
+        rdfs:label "Fleur Delacour"@en
+    
+    Types: 
+        Student
+    
+    Facts:  
+     isStudentAtSchool  Beauxbatons
+    
+    
+Individual: FloraCarrow
+
+    Annotations: 
+        rdfs:label "Flora Carrow"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Slytherin
+    
+    
+Individual: Fluffy
+
+    Annotations: 
+        rdfs:label "Fluffy"@en
+    
+    Types: 
+        Beast
+    
+    
+Individual: FrankBryce
+
+    Annotations: 
+        rdfs:label "Frank Bryce"@en
+    
+    Types: 
+        Muggle
+    
+    
+Individual: FrankLongbottom
+
+    Annotations: 
+        rdfs:label "Frank Longbottom"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: FredIIWeasley
+
+    Annotations: 
+        rdfs:label "Fred II Weasley"@en
+    
+    
+Individual: FredWeasley
+
+    Annotations: 
+        rdfs:label "Fred Weasley"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isMemberOf  OrderOfThePhoenix,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: GabrielTruman
+
+    Annotations: 
+        rdfs:label "Gabriel Truman"@en
+    
+    Facts:  
+     isMemberOf  Hufflepuff,
+     isPrefectOf  Hufflepuff
+    
+    
+Individual: GabrielleDelacour
+
+    Annotations: 
+        rdfs:label "Gabrielle Delacour"@en
+    
+    Types: 
+        Wizard
+    
+    
+Individual: GarrickOllivander
+
+    Annotations: 
+        rdfs:label "Garrick Ollivander"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Ravenclaw
+    
+    
+Individual: GellertGrindelwald
+
+    Annotations: 
+        rdfs:label "Gellert Grindelwald"@en
+    
+    Types: 
+        Wizard
+    
+    
+Individual: GemmaFarley
+
+    Annotations: 
+        rdfs:label "Gemma Farley"@en
+    
+    Facts:  
+     isMemberOf  Slytherin,
+     isPrefectOf  Slytherin
+    
+    
+Individual: GeoffreyHooper
+
+    Annotations: 
+        rdfs:label "Geoffrey Hooper"@en
+    
+    Facts:  
+     isMemberOf  Gryffindor
+    
+    
+Individual: GeorgeWeasley
+
+    Annotations: 
+        rdfs:label "George Weasley"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isMemberOf  OrderOfThePhoenix,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: GideonPrewett
+
+    Annotations: 
+        rdfs:label "Gideon Prewett"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: GilderoyLockhart
+
+    Annotations: 
+        rdfs:label "Gilderoy Lockhart"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Ravenclaw
+    
+    
+Individual: GinnyWeasley
+
+    Annotations: 
+        rdfs:label "Ginny Weasley"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: GodricGryffindor
+
+    Annotations: 
+        rdfs:label "Godric Gryffindor"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Gryffindor
+    
+    
+Individual: GordonPummell
+
+    Annotations: 
+        rdfs:label "Gordon Pummell"@en
+    
+    
+Individual: GrahamMontague
+
+    Annotations: 
+        rdfs:label "Graham Montague"@en
+    
+    Facts:  
+     isMemberOf  Slytherin
+    
+    
+Individual: GrahamPritchard
+
+    Annotations: 
+        rdfs:label "Graham Pritchard"@en
+    
+    Facts:  
+     isMemberOf  Slytherin,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: Grawp
+
+    Annotations: 
+        rdfs:label "Grawp"@en
+    
+    Types: 
+        Being
+    
+    
+Individual: GregoryGoyle
+
+    Annotations: 
+        rdfs:label "Gregory Goyle"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Slytherin,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: Griphook
+
+    Annotations: 
+        rdfs:label "Griphook"@en
+    
+    Types: 
+        Goblin
+    
+    
+Individual: Gryffindor
+
+    Annotations: 
+        rdfs:label "Gryffindor"@en
+    
+    Types: 
+        House
+    
+    
+Individual: HannahAbbott
+
+    Annotations: 
+        rdfs:label "Hannah Abbott"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Hufflepuff,
+     isPrefectOf  Hufflepuff,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: Harper
+
+    Annotations: 
+        rdfs:label "Harper"@en
+    
+    Facts:  
+     isMemberOf  Slytherin,
+     isStudentAtSchool  Hogwarts
+    
+    
 Individual: HarryPotter
 
     Annotations: 
         rdfs:label "Harry Potter"@en
     
     Types: 
-        Wizard
+        Student
     
     Facts:  
      hasFather  JamesPotter,
-     hasMother  LilyPotter
+     hasMother  LilyPotter,
+     isMemberOf  Gryffindor,
+     isMemberOf  OrderOfThePhoenix,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: Hedwig
+
+    Annotations: 
+        rdfs:label "Hedwig"@en
+    
+    Types: 
+        Beast
+    
+    
+Individual: HelgaHufflepuff
+
+    Annotations: 
+        rdfs:label "Helga Hufflepuff"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Hufflepuff
+    
+    
+Individual: HepzibahSmith
+
+    Annotations: 
+        rdfs:label "Hepzibah Smith"@en
+    
+    Types: 
+        Wizard
+    
+    
+Individual: HerbertBurke
+
+    Annotations: 
+        rdfs:label "Herbert Burke"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: HermioneGranger
+
+    Annotations: 
+        rdfs:label "Hermione Granger"@en
+    
+    Types: 
+        MuggleBorn
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isMemberOf  OrderOfThePhoenix,
+     isPrefectOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: HesperBlack
+
+    Annotations: 
+        rdfs:label "Hesper Black"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: HestiaCarrow
+
+    Annotations: 
+        rdfs:label "Hestia Carrow"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Slytherin
+    
+    
+Individual: HestiaJones
+
+    Annotations: 
+        rdfs:label "Hestia Jones"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: Hogwarts
+
+    Annotations: 
+        rdfs:label "Hogwarts"@en
+    
+    Types: 
+        MagicalSchool
+    
+    
+Individual: Hokey
+
+    Annotations: 
+        rdfs:label "Hokey"@en
+    
+    Types: 
+        HouseElf
+    
+    
+Individual: HoraceSlughorn
+
+    Annotations: 
+        rdfs:label "Horace Slughorn"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Slytherin
+    
+    
+Individual: Hufflepuff
+
+    Annotations: 
+        rdfs:label "Hufflepuff"@en
+    
+    Types: 
+        House
+    
+    
+Individual: HugoWeasley
+
+    Annotations: 
+        rdfs:label "Hugo Weasley"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: IgnatiusPrewett
+
+    Annotations: 
+        rdfs:label "Ignatius Prewett"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: IgorKarkaroff
+
+    Annotations: 
+        rdfs:label "Igor Karkaroff"@en
+    
+    Types: 
+        Wizard
     
     
 Individual: Imperio
 
     Annotations: 
         rdfs:label "Imperio"@en
+    
+    
+Individual: IolaHitchens
+
+    Annotations: 
+        rdfs:label "Iola Hitchens"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: IrmaCrabbe
+
+    Annotations: 
+        rdfs:label "Irma Crabbe"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: IsobelMoragMacDougal
+
+    Annotations: 
+        rdfs:label "Isobel/Morag MacDougal"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Ravenclaw,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: JackSloper
+
+    Annotations: 
+        rdfs:label "Jack Sloper"@en
+    
+    Facts:  
+     isMemberOf  Gryffindor
     
     
 Individual: JamesPotter
@@ -1094,25 +2763,1661 @@ Individual: JamesPotter
         PureBlood
     
     
+Individual: JamesSiriusPotter
+
+    Annotations: 
+        rdfs:label "James Sirius Potter"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: JamesTuckett
+
+    Annotations: 
+        rdfs:label "James Tuckett"@en
+    
+    Facts:  
+     isMemberOf  Hufflepuff,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: JaneCourt
+
+    Annotations: 
+        rdfs:label "Jane Court"@en
+    
+    Facts:  
+     isMemberOf  Hufflepuff,
+     isPrefectOf  Hufflepuff,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: JimboBlishwick
+
+    Annotations: 
+        rdfs:label "Jimbo Blishwick"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: JimmyPeakes
+
+    Annotations: 
+        rdfs:label "Jimmy Peakes"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: JohnDawlish
+
+    Annotations: 
+        rdfs:label "John Dawlish"@en
+    
+    Types: 
+        Wizard
+    
+    
+Individual: JustinFinchFletchley
+
+    Annotations: 
+        rdfs:label "Justin Finch-Fletchley"@en
+    
+    Types: 
+        MuggleBorn
+    
+    Facts:  
+     isMemberOf  Hufflepuff,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: Karkus
+
+    Annotations: 
+        rdfs:label "Karkus"@en
+    
+    Types: 
+        Being
+    
+    
+Individual: KatieBell
+
+    Annotations: 
+        rdfs:label "Katie Bell"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: Kellah
+
+    Annotations: 
+        rdfs:label "Kellah"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: KendraDumbledore
+
+    Annotations: 
+        rdfs:label "Kendra Dumbledore"@en
+    
+    Types: 
+        MuggleBorn
+    
+    
+Individual: KennethTowler
+
+    Annotations: 
+        rdfs:label "Kenneth Towler"@en
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: KevinEntwhistle
+
+    Annotations: 
+        rdfs:label "Kevin Entwhistle"@en
+    
+    Types: 
+        MuggleBorn
+    
+    
+Individual: KevinWhitby
+
+    Annotations: 
+        rdfs:label "Kevin Whitby"@en
+    
+    Facts:  
+     isMemberOf  Hufflepuff,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: KingsleyShacklebolt
+
+    Annotations: 
+        rdfs:label "Kingsley Shacklebolt"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: Kreacher
+
+    Annotations: 
+        rdfs:label "Kreacher"@en
+    
+    Types: 
+        HouseElf
+    
+    
+Individual: LauraMadley
+
+    Annotations: 
+        rdfs:label "Laura Madley"@en
+    
+    Facts:  
+     isMemberOf  Hufflepuff,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: LavenderBrown
+
+    Annotations: 
+        rdfs:label "Lavender Brown"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: Leanne
+
+    Annotations: 
+        rdfs:label "Leanne"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Hufflepuff,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: LeeJordan
+
+    Annotations: 
+        rdfs:label "Lee Jordan"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: LicorusBlack
+
+    Annotations: 
+        rdfs:label "Licorus Black"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: LilyLunaPotter
+
+    Annotations: 
+        rdfs:label "Lily Luna Potter"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
 Individual: LilyPotter
 
-    Annotations:
+    Annotations: 
         rdfs:label "Lily Potter"@en
-
-    Types:
+    
+    Types: 
         MuggleBorn
+    
+    
+Individual: LisaTurpin
 
+    Annotations: 
+        rdfs:label "Lisa Turpin"@en
+    
+    Facts:  
+     isMemberOf  Ravenclaw,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: LouisWeasley
 
+    Annotations: 
+        rdfs:label "Louis Weasley"@en
+    
+    Types: 
+        Wizard
+    
+    
+Individual: LucianBole
+
+    Annotations: 
+        rdfs:label "Lucian Bole"@en
+    
+    Facts:  
+     isMemberOf  Slytherin,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: LuciusMalfoy
+
+    Annotations: 
+        rdfs:label "Lucius Malfoy"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Slytherin
+    
+    
+Individual: LucretiaBlack
+
+    Annotations: 
+        rdfs:label "Lucretia Black"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: LudoBagman
+
+    Annotations: 
+        rdfs:label "Ludo Bagman"@en
+    
+    Types: 
+        Wizard
+    
+    
+Individual: LunaLovegood
+
+    Annotations: 
+        rdfs:label "Luna Lovegood"@en
+    
+    Types: 
+        Student
+    
+    Facts:  
+     isMemberOf  Ravenclaw,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: LycorisBlack
+
+    Annotations: 
+        rdfs:label "Lycoris Black"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: LysandraYaxley
+
+    Annotations: 
+        rdfs:label "Lysandra Yaxley"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: Mafalda
+
+    Annotations: 
+        rdfs:label "Mafalda"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Slytherin
+    
+    
+Individual: MafaldaHopkirk
+
+    Annotations: 
+        rdfs:label "Mafalda Hopkirk"@en
+    
+    Types: 
+        Wizard
+    
+    
+Individual: MagentaTripe
+
+    Annotations: 
+        rdfs:label "Magenta Tripe"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: Magorian
+
+    Annotations: 
+        rdfs:label "Magorian"@en
+    
+    Types: 
+        Being
+    
+    
+Individual: MalcolmBaddock
+
+    Annotations: 
+        rdfs:label "Malcolm Baddock"@en
+    
+    Facts:  
+     isMemberOf  Slytherin,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: MandyBrocklehurst
+
+    Annotations: 
+        rdfs:label "Mandy Brocklehurst"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Ravenclaw,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: MarcusBelby
+
+    Annotations: 
+        rdfs:label "Marcus Belby"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Ravenclaw,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: MarcusFlint
+
+    Annotations: 
+        rdfs:label "Marcus Flint"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Slytherin,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: MarcusTurner
+
+    Annotations: 
+        rdfs:label "Marcus Turner"@en
+    
+    Facts:  
+     isMemberOf  Ravenclaw,
+     isPrefectOf  Ravenclaw
+    
+    
+Individual: MargeDursley
+
+    Annotations: 
+        rdfs:label "Marge Dursley"@en
+    
+    Types: 
+        Muggle
+    
+    
+Individual: MariettaEdgecombe
+
+    Annotations: 
+        rdfs:label "Marietta Edgecombe"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Ravenclaw
+    
+    
+Individual: MarleneMcKinnon
+
+    Annotations: 
+        rdfs:label "Marlene McKinnon"@en
+    
+    Facts:  
+     isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: MarvoloGaunt
+
+    Annotations: 
+        rdfs:label "Marvolo Gaunt"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: MaryCattermole
+
+    Annotations: 
+        rdfs:label "Mary Cattermole"@en
+    
+    Types: 
+        MuggleBorn
+    
+    
+Individual: MeganJones
+
+    Annotations: 
+        rdfs:label "Megan Jones"@en
+    
+    Facts:  
+     isMemberOf  Hufflepuff,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: MelaniaMacmillan
+
+    Annotations: 
+        rdfs:label "Melania Macmillan"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: MeropeRiddle
+
+    Annotations: 
+        rdfs:label "Merope Riddle"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: MichaelCorner
+
+    Annotations: 
+        rdfs:label "Michael Corner"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Ravenclaw,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: MichaelMcManus
+
+    Annotations: 
+        rdfs:label "Michael McManus"@en
+    
+    Facts:  
+     isMemberOf  Hufflepuff
+    
+    
+Individual: MilesBletchley
+
+    Annotations: 
+        rdfs:label "Miles Bletchley"@en
+    
+    Facts:  
+     isMemberOf  Slytherin
+    
+    
+Individual: MillicentBulstrode
+
+    Annotations: 
+        rdfs:label "Millicent Bulstrode"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Slytherin,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: MinervaMcGonagall
+
+    Annotations: 
+        rdfs:label "Minerva McGonagall"@en
+    
+    Types: 
+        HalfBlood,
+        Professor
+    
+    Facts:  
+     isHeadOf  Gryffindor,
+     isMemberOf  Gryffindor,
+     isMemberOf  OrderOfThePhoenix,
+     isProfessorAtSchool  Hogwarts
+    
+    
+Individual: MisapinoaBlack
+
+    Annotations: 
+        rdfs:label "Misapinoa Black"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: MollyWeasley
+
+    Annotations: 
+        rdfs:label "Molly Weasley"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: MorfinGaunt
+
+    Annotations: 
+        rdfs:label "Morfin Gaunt"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: MrsNorris
+
+    Annotations: 
+        rdfs:label "Mrs Norris"@en
+    
+    Types: 
+        Beast
+    
+    
+Individual: MundungusFletcher
+
+    Annotations: 
+        rdfs:label "Mundungus Fletcher"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: Muriel
+
+    Annotations: 
+        rdfs:label "Muriel"@en
+    
+    Types: 
+        Wizard
+    
+    
+Individual: MyrtleWarren
+
+    Annotations: 
+        rdfs:label "Myrtle Warren"@en
+    
+    Types: 
+        MuggleBorn
+    
+    Facts:  
+     isMemberOf  Ravenclaw
+    
+    
+Individual: Nagini
+
+    Annotations: 
+        rdfs:label "Nagini"@en
+    
+    Types: 
+        Beast
+    
+    
+Individual: NarcissaMalfoy
+
+    Annotations: 
+        rdfs:label "Narcissa Malfoy"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Slytherin
+    
+    
+Individual: NatalieMcDonald
+
+    Annotations: 
+        rdfs:label "Natalie McDonald"@en
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: NevilleLongbottom
+
+    Annotations: 
+        rdfs:label "Neville Longbottom"@en
+    
+    Types: 
+        PureBlood,
+        Student
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: NicholasDeMimsyPorpington
+
+    Annotations: 
+        rdfs:label "Nicholas de Mimsy-Porpington"@en
+    
+    Facts:  
+     isMemberOf  Gryffindor
+    
+    
+Individual: NicolasFlamel
+
+    Annotations: 
+        rdfs:label "Nicolas Flamel"@en
+    
+    Types: 
+        Wizard
+    
+    
+Individual: NigelWolpert
+
+    Annotations: 
+        rdfs:label "Nigel Wolpert"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: Norbert
+
+    Annotations: 
+        rdfs:label "Norbert"@en
+    
+    Types: 
+        Beast
+    
+    
+Individual: NymphadoraTonks
+
+    Annotations: 
+        rdfs:label "Nymphadora Tonks"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Hufflepuff
+    
+    
+Individual: OliverWood
+
+    Annotations: 
+        rdfs:label "Oliver Wood"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: OlympeMaxime
+
+    Annotations: 
+        rdfs:label "Olympe Maxime"@en
+    
+    Types: 
+        Wizard
+    
+    
+Individual: OrderOfThePhoenix
+
+    Annotations: 
+        rdfs:label "Order of the Phoenix"@en
+    
+    Types: 
+        SecretSociety
+    
+    
+Individual: OrionBlack
+
+    Annotations: 
+        rdfs:label "Orion Black"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: OrlaQuirke
+
+    Annotations: 
+        rdfs:label "Orla Quirke"@en
+    
+    Facts:  
+     isMemberOf  Ravenclaw,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: OwenCauldwell
+
+    Annotations: 
+        rdfs:label "Owen Cauldwell"@en
+    
+    Facts:  
+     isMemberOf  Hufflepuff,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: PadmaPatil
+
+    Annotations: 
+        rdfs:label "Padma Patil"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Ravenclaw,
+     isPrefectOf  Ravenclaw,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: PansyParkinson
+
+    Annotations: 
+        rdfs:label "Pansy Parkinson"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Slytherin,
+     isPrefectOf  Slytherin,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: ParvatiPatil
+
+    Annotations: 
+        rdfs:label "Parvati Patil"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: Peeves
+
+    Annotations: 
+        rdfs:label "Peeves"@en
+    
+    Types: 
+        Spirit
+    
+    
+Individual: PenelopeClearwater
+
+    Annotations: 
+        rdfs:label "Penelope Clearwater"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Ravenclaw,
+     isPrefectOf  Ravenclaw,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: PercyWeasley
+
+    Annotations: 
+        rdfs:label "Percy Weasley"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isPrefectOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: PeregrineDerrick
+
+    Annotations: 
+        rdfs:label "Peregrine Derrick"@en
+    
+    Facts:  
+     isMemberOf  Slytherin,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: PeterPettigrew
+
+    Annotations: 
+        rdfs:label "Peter Pettigrew"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Gryffindor
+    
+    
+Individual: PetuniaDursley
+
+    Annotations: 
+        rdfs:label "Petunia Dursley"@en
+    
+    Types: 
+        Muggle
+    
+    
+Individual: PhineasBlack
+
+    Annotations: 
+        rdfs:label "Phineas Black"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: PhineasNigellus
+
+    Annotations: 
+        rdfs:label "Phineas Nigellus"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Slytherin
+    
+    
+Individual: PiersPolkiss
+
+    Annotations: 
+        rdfs:label "Piers Polkiss"@en
+    
+    Types: 
+        Muggle
+    
+    
+Individual: Pigwidgeon
+
+    Annotations: 
+        rdfs:label "Pigwidgeon"@en
+    
+    Types: 
+        Beast
+    
+    
+Individual: PiusThicknesse
+
+    Annotations: 
+        rdfs:label "Pius Thicknesse"@en
+    
+    Types: 
+        Wizard
+    
+    
+Individual: PolluxBlack
+
+    Annotations: 
+        rdfs:label "Pollux Black"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: PomonaSprout
+
+    Annotations: 
+        rdfs:label "Pomona Sprout"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Hufflepuff
+    
+    
+Individual: PoppyPomfrey
+
+    Annotations: 
+        rdfs:label "Poppy Pomfrey"@en
+    
+    Types: 
+        Wizard
+    
+    
+Individual: QuirinusQuirrell
+
+    Annotations: 
+        rdfs:label "Quirinus Quirrell"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Ravenclaw
+    
+    
+Individual: Ravenclaw
+
+    Annotations: 
+        rdfs:label "Ravenclaw"@en
+    
+    Types: 
+        House
+    
+    
+Individual: ReginaldCattermole
+
+    Annotations: 
+        rdfs:label "Reginald Cattermole"@en
+    
+    Types: 
+        Wizard
+    
+    
+Individual: RegulusArcturusBlack
+
+    Annotations: 
+        rdfs:label "Regulus Arcturus Black"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Slytherin
+    
+    
+Individual: RegulusBlack
+
+    Annotations: 
+        rdfs:label "Regulus Black"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: RemusLupin
+
+    Annotations: 
+        rdfs:label "Remus Lupin"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: RitaSkeeter
+
+    Annotations: 
+        rdfs:label "Rita Skeeter"@en
+    
+    Types: 
+        Wizard
+    
+    
+Individual: RitchieCoote
+
+    Annotations: 
+        rdfs:label "Ritchie Coote"@en
+    
+    Facts:  
+     isMemberOf  Gryffindor
+    
+    
+Individual: RobertHilliard
+
+    Annotations: 
+        rdfs:label "Robert Hilliard"@en
+    
+    Facts:  
+     isMemberOf  Ravenclaw,
+     isPrefectOf  Ravenclaw
+    
+    
+Individual: Roberts
+
+    Annotations: 
+        rdfs:label "Roberts"@en
+    
+    Types: 
+        Muggle
+    
+    
+Individual: RodolphusLestrange
+
+    Annotations: 
+        rdfs:label "Rodolphus Lestrange"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Slytherin
+    
+    
+Individual: RogerDavies
+
+    Annotations: 
+        rdfs:label "Roger Davies"@en
+    
+    Facts:  
+     isMemberOf  Ravenclaw,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: RogerMalone
+
+    Annotations: 
+        rdfs:label "Roger Malone"@en
+    
+    Facts:  
+     isMemberOf  Hufflepuff,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: RomildaVane
+
+    Annotations: 
+        rdfs:label "Romilda Vane"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: RonWeasley
+
+    Annotations: 
+        rdfs:label "Ron Weasley"@en
+    
+    Types: 
+        PureBlood,
+        Student
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isMemberOf  OrderOfThePhoenix,
+     isPrefectOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: Ronan
+
+    Annotations: 
+        rdfs:label "Ronan"@en
+    
+    Types: 
+        Being
+    
+    
+Individual: RoseWeasley
+
+    Annotations: 
+        rdfs:label "Rose Weasley"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: RoseZeller
+
+    Annotations: 
+        rdfs:label "Rose Zeller"@en
+    
+    Facts:  
+     isMemberOf  Hufflepuff,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: RowenaRavenclaw
+
+    Annotations: 
+        rdfs:label "Rowena Ravenclaw"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Ravenclaw
+    
+    
+Individual: RubeusHagrid
+
+    Annotations: 
+        rdfs:label "Rubeus Hagrid"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: SalazarSlytherin
+
+    Annotations: 
+        rdfs:label "Salazar Slytherin"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Slytherin
+    
+    
+Individual: Scabior
+
+    Annotations: 
+        rdfs:label "Scabior"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Slytherin
+    
+    
+Individual: ScorpiusMalfoy
+
+    Annotations: 
+        rdfs:label "Scorpius Malfoy"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Slytherin,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: SeamusFinnigan
+
+    Annotations: 
+        rdfs:label "Seamus Finnigan"@en
+    
+    Types: 
+        HalfBlood,
+        Student
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: SeptimusWeasley
+
+    Annotations: 
+        rdfs:label "Septimus Weasley"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: SeverusSnape
+
+    Annotations: 
+        rdfs:label "Severus Snape"@en
+    
+    Types: 
+        HalfBlood,
+        Professor
+    
+    Facts:  
+     isMemberOf  OrderOfThePhoenix,
+     isMemberOf  Slytherin,
+     isProfessorAtSchool  Hogwarts
+    
+    
+Individual: SiriusBlack
+
+    Annotations: 
+        rdfs:label "Sirius Black"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Gryffindor,
+     isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: SiriusIBlack
+
+    Annotations: 
+        rdfs:label "Sirius I Black"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: SiriusIIBlack
+
+    Annotations: 
+        rdfs:label "Sirius II Black"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: Slytherin
+
+    Annotations: 
+        rdfs:label "Slytherin"@en
+    
+    Types: 
+        House
+    
+    
+Individual: StephenCornfoot
+
+    Annotations: 
+        rdfs:label "Stephen Cornfoot"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: StewartAckerley
+
+    Annotations: 
+        rdfs:label "Stewart Ackerley"@en
+    
+    Facts:  
+     isMemberOf  Ravenclaw,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: SturgisPodmore
+
+    Annotations: 
+        rdfs:label "Sturgis Podmore"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: SueLi
+
+    Annotations: 
+        rdfs:label "Sue Li"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Ravenclaw,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: Summerby
+
+    Annotations: 
+        rdfs:label "Summerby"@en
+    
+    Facts:  
+     isMemberOf  Hufflepuff
+    
+    
+Individual: SusanBones
+
+    Annotations: 
+        rdfs:label "Susan Bones"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Hufflepuff,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: SybillTrelawney
+
+    Annotations: 
+        rdfs:label "Sybill Trelawney"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Ravenclaw
+    
+    
+Individual: TedTonks
+
+    Annotations: 
+        rdfs:label "Ted Tonks"@en
+    
+    Types: 
+        MuggleBorn
+    
+    
+Individual: TerrenceHiggs
+
+    Annotations: 
+        rdfs:label "Terrence Higgs"@en
+    
+    Facts:  
+     isMemberOf  Slytherin
+    
+    
+Individual: TerryBoot
+
+    Annotations: 
+        rdfs:label "Terry Boot"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Ravenclaw,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: TheodoreNott
+
+    Annotations: 
+        rdfs:label "Theodore Nott"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Slytherin,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: TomRiddle
+
+    Annotations: 
+        rdfs:label "Tom Riddle"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Slytherin,
+     isPrefectOf  Slytherin
+    
+    
+Individual: TomSrRiddle
+
+    Annotations: 
+        rdfs:label "Tom Sr. Riddle"@en
+    
+    Types: 
+        Muggle
+    
+    
+Individual: TraceyDavis
+
+    Annotations: 
+        rdfs:label "Tracey Davis"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Slytherin,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: Travers
+
+    Annotations: 
+        rdfs:label "Travers"@en
+    
+    Types: 
+        Wizard
+    
+    
+Individual: Trevor
+
+    Annotations: 
+        rdfs:label "Trevor"@en
+    
+    Types: 
+        Beast
+    
+    
+Individual: Urquhart
+
+    Annotations: 
+        rdfs:label "Urquhart"@en
+    
+    Facts:  
+     isMemberOf  Slytherin
+    
+    
+Individual: UrsulaFlint
+
+    Annotations: 
+        rdfs:label "Ursula Flint"@en
+    
+    Types: 
+        PureBlood
+    
+    
+Individual: Vaisey
+
+    Annotations: 
+        rdfs:label "Vaisey"@en
+    
+    Facts:  
+     isMemberOf  Slytherin
+    
+    
+Individual: VernonDursley
+
+    Annotations: 
+        rdfs:label "Vernon Dursley"@en
+    
+    Types: 
+        Muggle
+    
+    
+Individual: VictoireWeasley
+
+    Annotations: 
+        rdfs:label "Victoire Weasley"@en
+    
+    Types: 
+        Wizard
+    
+    
+Individual: ViktorKrum
+
+    Annotations: 
+        rdfs:label "Viktor Krum"@en
+    
+    Types: 
+        Student
+    
+    Facts:  
+     isStudentAtSchool  Durmstrang
+    
+    
+Individual: VincentCrabbe
+
+    Annotations: 
+        rdfs:label "Vincent Crabbe"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Slytherin,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: ViolettaBulstrode
+
+    Annotations: 
+        rdfs:label "Violetta Bulstrode"@en
+    
+    Types: 
+        PureBlood
+    
+    
 Individual: Voldemort
 
-    Annotations:
+    Annotations: 
         rdfs:label "Voldemort"@en
-
-    Types:
+    
+    Types: 
         Wizard
+    
+    Facts:  
+     killed  JamesPotter,
+     killed  LilyPotter
+    
+    
+Individual: WalburgaBlack
 
-    Facts:
-        killed JamesPotter,
-        killed LilyPotter
+    Annotations: 
+        rdfs:label "Walburga Black"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMemberOf  Slytherin
+    
+    
+Individual: Warrington
 
+    Annotations: 
+        rdfs:label "Warrington"@en
+    
+    Facts:  
+     isMemberOf  Slytherin
+    
+    
+Individual: WayneHopkins
 
+    Annotations: 
+        rdfs:label "Wayne Hopkins"@en
+    
+    Types: 
+        HalfBlood
+    
+    Facts:  
+     isMemberOf  Hufflepuff,
+     isStudentAtSchool  Hogwarts
+    
+    
+Individual: Winky
+
+    Annotations: 
+        rdfs:label "Winky"@en
+    
+    Types: 
+        HouseElf
+    
+    
+Individual: XenophiliusLovegood
+
+    Annotations: 
+        rdfs:label "Xenophilius Lovegood"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Ravenclaw
+    
+    
+Individual: ZachariasSmith
+
+    Annotations: 
+        rdfs:label "Zacharias Smith"@en
+    
+    Types: 
+        Wizard
+    
+    Facts:  
+     isMemberOf  Hufflepuff
+    
+    

@@ -1243,6 +1243,15 @@ Individual: ArthurWeasley
      birthYear  "1950"@en
     
     
+Individual: Astronomy
+
+    Annotations: 
+        rdfs:label "Astronomy"@en
+    
+    Types: 
+        Class
+    
+    
 Individual: AugustaLongbottom
 
     Annotations: 
@@ -1434,6 +1443,15 @@ Individual: CharlieWeasley
      isStudentAtSchool  Hogwarts
     
     
+Individual: Charms
+
+    Annotations: 
+        rdfs:label "Charms"@en
+    
+    Types: 
+        Class
+    
+    
 Individual: ChoChang
 
     Annotations: 
@@ -1585,6 +1603,15 @@ Individual: DennisCreevey
      isMemberOf  DumbledoresArmy,
      isMemberOf  Gryffindor,
      isStudentAtSchool  Hogwarts
+    
+    
+Individual: Divination
+
+    Annotations: 
+        rdfs:label "Divination"@en
+    
+    Types: 
+        Class
     
     
 Individual: Dobby
@@ -1921,6 +1948,15 @@ Individual: Fluffy
         Beast
     
     
+Individual: Flying
+
+    Annotations: 
+        rdfs:label "Flying"@en
+    
+    Types: 
+        Class
+    
+    
 Individual: FrankBryce
 
     Annotations: 
@@ -2222,6 +2258,15 @@ Individual: HerbertBurke
         PureBlood
     
     
+Individual: Herbology
+
+    Annotations: 
+        rdfs:label "Herbology"@en
+    
+    Types: 
+        Class
+    
+    
 Individual: HermioneGranger
 
     Annotations: 
@@ -2268,6 +2313,15 @@ Individual: HestiaJones
     
     Facts:  
      isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: HistoryOfMagic
+
+    Annotations: 
+        rdfs:label "HistoryOfMagic"@en
+    
+    Types: 
+        Class
     
     
 Individual: Hogwarts
@@ -3394,6 +3448,15 @@ Individual: PoppyPomfrey
         Wizard
     
     
+Individual: Potions
+
+    Annotations: 
+        rdfs:label "Potions"@en
+    
+    Types: 
+        Class
+    
+    
 Individual: QuirinusQuirrell
 
     Annotations: 
@@ -3883,6 +3946,15 @@ Individual: TraceyDavis
     Facts:  
      isMemberOf  Slytherin,
      isStudentAtSchool  Hogwarts
+    
+    
+Individual: Transfiguration
+
+    Annotations: 
+        rdfs:label "Transfiguration"@en
+    
+    Types: 
+        Class
     
     
 Individual: Travers

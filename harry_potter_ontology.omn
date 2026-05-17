@@ -1035,6 +1035,15 @@ Class: Wand
         MagicalObject
     
     
+Class: Werewolf
+
+    Annotations: 
+        rdfs:label "Werewolf"@en
+    
+    SubClassOf: 
+        Beast
+    
+    
 Class: Wizard
 
     Annotations: 
@@ -1240,6 +1249,9 @@ Individual: BartyJrCrouch
     Types: 
         PureBlood
     
+    Facts:  
+     isMemberOf  DeathEater
+    
     
 Individual: BartySrCrouch
 
@@ -1255,6 +1267,9 @@ Individual: BathildaBagshot
     Annotations: 
         rdfs:label "Bathilda Bagshot"@en
     
+    Types: 
+        Wizard
+    
     
 Individual: Beauxbatons
 
@@ -1263,12 +1278,6 @@ Individual: Beauxbatons
     
     Types: 
         MagicalSchool
-    
-    
-Individual: BeedleTheBard
-
-    Annotations: 
-        rdfs:label "Beedle the Bard"@en
     
     
 Individual: BellatrixLestrange
@@ -1280,25 +1289,8 @@ Individual: BellatrixLestrange
         PureBlood
     
     Facts:  
+     isMemberOf  DeathEater,
      isMemberOf  Slytherin
-    
-    
-Individual: BelvinaBurke
-
-    Annotations: 
-        rdfs:label "Belvina Burke"@en
-    
-    Types: 
-        PureBlood
-    
-    
-Individual: BenjyFenwick
-
-    Annotations: 
-        rdfs:label "Benjy Fenwick"@en
-    
-    Facts:  
-     isMemberOf  OrderOfThePhoenix
     
     
 Individual: BillWeasley
@@ -1311,9 +1303,7 @@ Individual: BillWeasley
     
     Facts:  
      isMemberOf  Gryffindor,
-     isMemberOf  OrderOfThePhoenix,
-     isPrefectOf  Gryffindor,
-     isStudentAtSchool  Hogwarts
+     isMemberOf  OrderOfThePhoenix
     
     
 Individual: BlaiseZabini
@@ -1334,26 +1324,11 @@ Individual: BloodyBaron
     Annotations: 
         rdfs:label "Bloody Baron"@en
     
+    Types: 
+        Ghost
+    
     Facts:  
      isMemberOf  Slytherin
-    
-    
-Individual: BobHitchens
-
-    Annotations: 
-        rdfs:label "Bob Hitchens"@en
-    
-    Types: 
-        Muggle
-    
-    
-Individual: BobOgden
-
-    Annotations: 
-        rdfs:label "Bob Ogden"@en
-    
-    Types: 
-        Wizard
     
     
 Individual: Bogrod
@@ -1365,24 +1340,6 @@ Individual: Bogrod
         Goblin
     
     
-Individual: Borgin
-
-    Annotations: 
-        rdfs:label "Borgin"@en
-    
-    Types: 
-        PureBlood
-    
-    
-Individual: Bradley
-
-    Annotations: 
-        rdfs:label "Bradley"@en
-    
-    Facts:  
-     isMemberOf  Ravenclaw
-    
-    
 Individual: Buckbeak
 
     Annotations: 
@@ -1390,18 +1347,6 @@ Individual: Buckbeak
     
     Types: 
         Beast
-    
-    
-Individual: Cadogan
-
-    Annotations: 
-        rdfs:label "Cadogan"@en
-    
-    Types: 
-        PureBlood
-    
-    Facts:  
-     isMemberOf  Gryffindor
     
     
 Individual: Cadwallader
@@ -1680,6 +1625,15 @@ Individual: DeanThomas
      isStudentAtSchool  Hogwarts
     
     
+Individual: DeathEater
+
+    Annotations: 
+        rdfs:label "DeathEater"@en
+    
+    Types: 
+        SecretSociety
+    
+    
 Individual: DedalusDiggle
 
     Annotations: 
@@ -1801,6 +1755,15 @@ Individual: DudleyDursley
     
     Types: 
         Muggle
+    
+    
+Individual: DumbledoresArmy
+
+    Annotations: 
+        rdfs:label "DumbledoresArmy"@en
+    
+    Types: 
+        SecretSociety
     
     
 Individual: Durmstrang
@@ -3308,7 +3271,7 @@ Individual: OlympeMaxime
 Individual: OrderOfThePhoenix
 
     Annotations: 
-        rdfs:label "Order of the Phoenix"@en
+        rdfs:label "OrderOfThePhoenix"@en
     
     Types: 
         SecretSociety

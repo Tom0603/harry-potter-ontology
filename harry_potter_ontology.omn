@@ -56,7 +56,7 @@ ObjectProperty: attends
         Student
     
     Range: 
-        Course
+        Class
     
     
 ObjectProperty: brews
@@ -549,7 +549,7 @@ ObjectProperty: teaches
         Professor
     
     Range: 
-        Course
+        Class
     
     
 ObjectProperty: transformsInto
@@ -740,6 +740,12 @@ Class: Charm
         Spell
     
     
+Class: Class
+
+    Annotations: 
+        rdfs:label "Class"@en
+    
+    
 Class: Counterspell
 
     Annotations: 
@@ -751,12 +757,6 @@ Class: Counterspell
     
     SubClassOf: 
         Spell
-    
-    
-Class: Course
-
-    Annotations: 
-        rdfs:label "Course"@en
     
     
 Class: Curse
@@ -953,7 +953,7 @@ Class: Professor
     
     EquivalentTo: 
         Wizard
-         and (teaches some Course)
+         and (teaches some Class)
     
     SubClassOf: 
         Wizard
@@ -1112,7 +1112,8 @@ Individual: AlbusDumbledore
     Facts:  
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix,
-     isProfessorAtSchool  Hogwarts
+     isProfessorAtSchool  Hogwarts,
+     birthYear  "1881"@en
     
     
 Individual: AliceLongbottom
@@ -1157,6 +1158,22 @@ Individual: AmosDiggory
     
     Types: 
         Wizard
+    
+    Facts:  
+     isFatherOf  CedricDiggory
+    
+    
+Individual: Andromeda_Tonks
+
+    Annotations: 
+        rdfs:label "Andromeda Tonks"@en
+    
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isMarriedTo  TedTonks,
+     isMotherOf  NymphadoraTonks
     
     
 Individual: AngelinaJohnson
@@ -1213,8 +1230,17 @@ Individual: ArthurWeasley
         PureBlood
     
     Facts:  
+     isFatherOf  BillWeasley,
+     isFatherOf  CharlieWeasley,
+     isFatherOf  FredWeasley,
+     isFatherOf  GeorgeWeasley,
+     isFatherOf  GinnyWeasley,
+     isFatherOf  PercyWeasley,
+     isFatherOf  RonWeasley,
+     isMarriedTo  MollyWeasley,
      isMemberOf  Gryffindor,
-     isMemberOf  OrderOfThePhoenix
+     isMemberOf  OrderOfThePhoenix,
+     birthYear  "1950"@en
     
     
 Individual: AugustaLongbottom
@@ -1250,7 +1276,8 @@ Individual: BartyJrCrouch
         PureBlood
     
     Facts:  
-     isMemberOf  DeathEater
+     isMemberOf  DeathEater,
+     birthYear  "1962"@en
     
     
 Individual: BartySrCrouch
@@ -1349,71 +1376,17 @@ Individual: Buckbeak
         Beast
     
     
-Individual: Cadwallader
-
-    Annotations: 
-        rdfs:label "Cadwallader"@en
-    
-    Facts:  
-     isMemberOf  Hufflepuff
-    
-    
-Individual: CallidoraBlack
-
-    Annotations: 
-        rdfs:label "Callidora Black"@en
-    
-    Types: 
-        PureBlood
-    
-    
-Individual: CaractacusBurke
-
-    Annotations: 
-        rdfs:label "Caractacus Burke"@en
-    
-    Types: 
-        PureBlood
-    
-    
-Individual: CaradocDearborn
-
-    Annotations: 
-        rdfs:label "Caradoc Dearborn"@en
-    
-    Facts:  
-     isMemberOf  OrderOfThePhoenix
-    
-    
-Individual: CassiopeiaBlack
-
-    Annotations: 
-        rdfs:label "Cassiopeia Black"@en
-    
-    Types: 
-        PureBlood
-    
-    
 Individual: CassiusWarrington
 
     Annotations: 
         rdfs:label "Cassius Warrington"@en
     
     Types: 
-        Wizard
+        Student
     
     Facts:  
      isMemberOf  Slytherin,
      isStudentAtSchool  Hogwarts
-    
-    
-Individual: CedrellaBlack
-
-    Annotations: 
-        rdfs:label "Cedrella Black"@en
-    
-    Types: 
-        PureBlood
     
     
 Individual: CedricDiggory
@@ -1422,30 +1395,14 @@ Individual: CedricDiggory
         rdfs:label "Cedric Diggory"@en
     
     Types: 
-        PureBlood
+        PureBlood,
+        Student
     
     Facts:  
      isMemberOf  Hufflepuff,
      isPrefectOf  Hufflepuff,
-     isStudentAtSchool  Hogwarts
-    
-    
-Individual: Chambers
-
-    Annotations: 
-        rdfs:label "Chambers"@en
-    
-    Facts:  
-     isMemberOf  Ravenclaw
-    
-    
-Individual: CharisBlack
-
-    Annotations: 
-        rdfs:label "Charis Black"@en
-    
-    Types: 
-        PureBlood
+     isStudentAtSchool  Hogwarts,
+     birthYear  "1977"@en
     
     
 Individual: CharityBurbage
@@ -1454,7 +1411,11 @@ Individual: CharityBurbage
         rdfs:label "Charity Burbage"@en
     
     Types: 
-        Wizard
+        Professor
+    
+    Facts:  
+     isProfessorAtSchool  Hogwarts,
+     teaches  MuggleStudies
     
     
 Individual: CharlieWeasley
@@ -1463,31 +1424,13 @@ Individual: CharlieWeasley
         rdfs:label "Charlie Weasley"@en
     
     Types: 
-        PureBlood
+        PureBlood,
+        Student
     
     Facts:  
      isMemberOf  Gryffindor,
+     isMemberOf  OrderOfThePhoenix,
      isPrefectOf  Gryffindor,
-     isStudentAtSchool  Hogwarts
-    
-    
-Individual: CharlusPotter
-
-    Annotations: 
-        rdfs:label "Charlus Potter"@en
-    
-    Types: 
-        PureBlood
-    
-    
-Individual: ChesterDavies
-
-    Annotations: 
-        rdfs:label "Chester Davies"@en
-    
-    Facts:  
-     isMemberOf  Ravenclaw,
-     isPrefectOf  Ravenclaw,
      isStudentAtSchool  Hogwarts
     
     
@@ -1497,20 +1440,12 @@ Individual: ChoChang
         rdfs:label "Cho Chang"@en
     
     Types: 
-        Wizard
+        Student
     
     Facts:  
      isMemberOf  Ravenclaw,
-     isStudentAtSchool  Hogwarts
-    
-    
-Individual: Cole
-
-    Annotations: 
-        rdfs:label "Cole"@en
-    
-    Types: 
-        Muggle
+     isStudentAtSchool  Hogwarts,
+     birthYear  "1979"@en
     
     
 Individual: ColinCreevey
@@ -1519,11 +1454,13 @@ Individual: ColinCreevey
         rdfs:label "Colin Creevey"@en
     
     Types: 
-        MuggleBorn
+        MuggleBorn,
+        Student
     
     Facts:  
      isMemberOf  Gryffindor,
-     isStudentAtSchool  Hogwarts
+     isStudentAtSchool  Hogwarts,
+     birthYear  "1981"@en
     
     
 Individual: CorbanYaxley
@@ -1534,6 +1471,9 @@ Individual: CorbanYaxley
     Types: 
         PureBlood
     
+    Facts:  
+     isMemberOf  DeathEater
+    
     
 Individual: CormacMcLaggen
 
@@ -1541,7 +1481,7 @@ Individual: CormacMcLaggen
         rdfs:label "Cormac McLaggen"@en
     
     Types: 
-        Wizard
+        Student
     
     Facts:  
      isMemberOf  Gryffindor,
@@ -1552,15 +1492,6 @@ Individual: CorneliusFudge
 
     Annotations: 
         rdfs:label "Cornelius Fudge"@en
-    
-    Types: 
-        Wizard
-    
-    
-Individual: Crabbe
-
-    Annotations: 
-        rdfs:label "Crabbe"@en
     
     Types: 
         Wizard
@@ -1581,35 +1512,19 @@ Individual: Crucio
         rdfs:label "Crucio"@en
     
     
-Individual: CygnusIBlack
+Individual: CygnusBlack
 
     Annotations: 
-        rdfs:label "Cygnus I Black"@en
-    
-    Types: 
-        PureBlood
-    
-    
-Individual: CygnusIIBlack
-
-    Annotations: 
-        rdfs:label "Cygnus II Black"@en
-    
-    Types: 
-        PureBlood
-    
-    
-Individual: DaphneGreengrass
-
-    Annotations: 
-        rdfs:label "Daphne Greengrass"@en
+        rdfs:label "Cygnus Black"@en
     
     Types: 
         PureBlood
     
     Facts:  
-     isMemberOf  Slytherin,
-     isStudentAtSchool  Hogwarts
+     isFatherOf  Andromeda_Tonks,
+     isFatherOf  BellatrixLestrange,
+     isFatherOf  NarcissaMalfoy,
+     isMarriedTo  DruellaBlack
     
     
 Individual: DeanThomas
@@ -1621,6 +1536,7 @@ Individual: DeanThomas
         HalfBlood
     
     Facts:  
+     isMemberOf  DumbledoresArmy,
      isMemberOf  Gryffindor,
      isStudentAtSchool  Hogwarts
     
@@ -1634,16 +1550,13 @@ Individual: DeathEater
         SecretSociety
     
     
-Individual: DedalusDiggle
+Individual: DefenseAgainstTheDarkArts
 
     Annotations: 
-        rdfs:label "Dedalus Diggle"@en
+        rdfs:label "DefenseAgainstTheDarkArts"@en
     
     Types: 
-        Wizard
-    
-    Facts:  
-     isMemberOf  OrderOfThePhoenix
+        Class
     
     
 Individual: DemelzaRobins
@@ -1651,8 +1564,12 @@ Individual: DemelzaRobins
     Annotations: 
         rdfs:label "Demelza Robins"@en
     
+    Types: 
+        Student
+    
     Facts:  
-     isMemberOf  Gryffindor
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
     
     
 Individual: DennisCreevey
@@ -1661,20 +1578,13 @@ Individual: DennisCreevey
         rdfs:label "Dennis Creevey"@en
     
     Types: 
-        MuggleBorn
+        MuggleBorn,
+        Student
     
     Facts:  
+     isMemberOf  DumbledoresArmy,
      isMemberOf  Gryffindor,
      isStudentAtSchool  Hogwarts
-    
-    
-Individual: DirkCresswell
-
-    Annotations: 
-        rdfs:label "Dirk Cresswell"@en
-    
-    Types: 
-        MuggleBorn
     
     
 Individual: Dobby
@@ -1685,6 +1595,11 @@ Individual: Dobby
     Types: 
         HouseElf
     
+    Facts:  
+     isFriendOf  HarryPotter,
+     isFriendOf  HermioneGranger,
+     isFriendOf  RonWeasley
+    
     
 Individual: DoloresUmbridge
 
@@ -1692,37 +1607,13 @@ Individual: DoloresUmbridge
         rdfs:label "Dolores Umbridge"@en
     
     Types: 
-        HalfBlood
+        HalfBlood,
+        Professor
     
     Facts:  
-     isMemberOf  Slytherin
-    
-    
-Individual: DominiqueWeasley
-
-    Annotations: 
-        rdfs:label "Dominique Weasley"@en
-    
-    Types: 
-        Wizard
-    
-    
-Individual: DorcasMeadowes
-
-    Annotations: 
-        rdfs:label "Dorcas Meadowes"@en
-    
-    Facts:  
-     isMemberOf  OrderOfThePhoenix
-    
-    
-Individual: DoreaPotter
-
-    Annotations: 
-        rdfs:label "Dorea Potter"@en
-    
-    Types: 
-        PureBlood
+     isMemberOf  Slytherin,
+     isProfessorAtSchool  Hogwarts,
+     teaches  DefenseAgainstTheDarkArts
     
     
 Individual: DracoMalfoy
@@ -1736,7 +1627,8 @@ Individual: DracoMalfoy
     Facts:  
      isMemberOf  Slytherin,
      isPrefectOf  Slytherin,
-     isStudentAtSchool  Hogwarts
+     isStudentAtSchool  Hogwarts,
+     birthYear  "1980"@en
     
     
 Individual: DruellaBlack
@@ -3114,6 +3006,15 @@ Individual: MrsNorris
     
     Types: 
         Beast
+    
+    
+Individual: MuggleStudies
+
+    Annotations: 
+        rdfs:label "MuggleStudies"@en
+    
+    Types: 
+        Class
     
     
 Individual: MundungusFletcher

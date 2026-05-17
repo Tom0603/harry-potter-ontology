@@ -2061,21 +2061,12 @@ Individual: HannahAbbott
         rdfs:label "Hannah Abbott"@en
     
     Types: 
-        HalfBlood
+        HalfBlood,
+        Student
     
     Facts:  
      isMemberOf  Hufflepuff,
      isPrefectOf  Hufflepuff,
-     isStudentAtSchool  Hogwarts
-    
-    
-Individual: Harper
-
-    Annotations: 
-        rdfs:label "Harper"@en
-    
-    Facts:  
-     isMemberOf  Slytherin,
      isStudentAtSchool  Hogwarts
     
     
@@ -2085,14 +2076,19 @@ Individual: HarryPotter
         rdfs:label "Harry Potter"@en
     
     Types: 
+        HalfBlood,
         Student
     
     Facts:  
      hasFather  JamesPotter,
      hasMother  LilyPotter,
+     hasPet  Hedwig,
+     isFriendOf  HermioneGranger,
+     isFriendOf  RonWeasley,
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix,
-     isStudentAtSchool  Hogwarts
+     isStudentAtSchool  Hogwarts,
+     birthYear  "1980"@en
     
     
 Individual: Hedwig
@@ -2116,24 +2112,6 @@ Individual: HelgaHufflepuff
      isMemberOf  Hufflepuff
     
     
-Individual: HepzibahSmith
-
-    Annotations: 
-        rdfs:label "Hepzibah Smith"@en
-    
-    Types: 
-        Wizard
-    
-    
-Individual: HerbertBurke
-
-    Annotations: 
-        rdfs:label "Herbert Burke"@en
-    
-    Types: 
-        PureBlood
-    
-    
 Individual: Herbology
 
     Annotations: 
@@ -2149,22 +2127,17 @@ Individual: HermioneGranger
         rdfs:label "Hermione Granger"@en
     
     Types: 
-        MuggleBorn
+        MuggleBorn,
+        Student
     
     Facts:  
+     hasPet  Crookshanks,
+     isMemberOf  DumbledoresArmy,
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix,
      isPrefectOf  Gryffindor,
-     isStudentAtSchool  Hogwarts
-    
-    
-Individual: HesperBlack
-
-    Annotations: 
-        rdfs:label "Hesper Black"@en
-    
-    Types: 
-        PureBlood
+     isStudentAtSchool  Hogwarts,
+     birthYear  "1979"@en
     
     
 Individual: HestiaCarrow
@@ -2173,10 +2146,12 @@ Individual: HestiaCarrow
         rdfs:label "Hestia Carrow"@en
     
     Types: 
-        PureBlood
+        PureBlood,
+        Student
     
     Facts:  
-     isMemberOf  Slytherin
+     isMemberOf  Slytherin,
+     isStudentAtSchool  Hogwarts
     
     
 Individual: HestiaJones
@@ -2185,10 +2160,12 @@ Individual: HestiaJones
         rdfs:label "Hestia Jones"@en
     
     Types: 
+        Student,
         Wizard
     
     Facts:  
-     isMemberOf  OrderOfThePhoenix
+     isMemberOf  OrderOfThePhoenix,
+     isStudentAtSchool  Hogwarts
     
     
 Individual: HistoryOfMagic
@@ -2209,22 +2186,14 @@ Individual: Hogwarts
         MagicalSchool
     
     
-Individual: Hokey
-
-    Annotations: 
-        rdfs:label "Hokey"@en
-    
-    Types: 
-        HouseElf
-    
-    
 Individual: HoraceSlughorn
 
     Annotations: 
         rdfs:label "Horace Slughorn"@en
     
     Types: 
-        Wizard
+        Professor,
+        PureBlood
     
     Facts:  
      isMemberOf  Slytherin
@@ -2239,35 +2208,16 @@ Individual: Hufflepuff
         House
     
     
-Individual: HugoWeasley
-
-    Annotations: 
-        rdfs:label "Hugo Weasley"@en
-    
-    Types: 
-        HalfBlood
-    
-    Facts:  
-     isMemberOf  Gryffindor,
-     isStudentAtSchool  Hogwarts
-    
-    
-Individual: IgnatiusPrewett
-
-    Annotations: 
-        rdfs:label "Ignatius Prewett"@en
-    
-    Types: 
-        PureBlood
-    
-    
 Individual: IgorKarkaroff
 
     Annotations: 
         rdfs:label "Igor Karkaroff"@en
     
     Types: 
-        Wizard
+        Professor
+    
+    Facts:  
+     isMemberOf  DeathEater
     
     
 Individual: Imperio
@@ -2276,44 +2226,17 @@ Individual: Imperio
         rdfs:label "Imperio"@en
     
     
-Individual: IolaHitchens
-
-    Annotations: 
-        rdfs:label "Iola Hitchens"@en
-    
-    Types: 
-        PureBlood
-    
-    
-Individual: IrmaCrabbe
-
-    Annotations: 
-        rdfs:label "Irma Crabbe"@en
-    
-    Types: 
-        PureBlood
-    
-    
-Individual: IsobelMoragMacDougal
-
-    Annotations: 
-        rdfs:label "Isobel/Morag MacDougal"@en
-    
-    Types: 
-        PureBlood
-    
-    Facts:  
-     isMemberOf  Ravenclaw,
-     isStudentAtSchool  Hogwarts
-    
-    
 Individual: JackSloper
 
     Annotations: 
         rdfs:label "Jack Sloper"@en
     
+    Types: 
+        Student
+    
     Facts:  
-     isMemberOf  Gryffindor
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
     
     
 Individual: JamesPotter
@@ -2322,20 +2245,15 @@ Individual: JamesPotter
         rdfs:label "James Potter"@en
     
     Types: 
+        Animagus,
         PureBlood
     
-    
-Individual: JamesSiriusPotter
-
-    Annotations: 
-        rdfs:label "James Sirius Potter"@en
-    
-    Types: 
-        HalfBlood
-    
     Facts:  
-     isMemberOf  Gryffindor,
-     isStudentAtSchool  Hogwarts
+     isFatherOf  HarryPotter,
+     isMarriedTo  LilyPotter,
+     isMemberOf  OrderOfThePhoenix,
+     transformsInto  Stag,
+     birthYear  "1960"@en
     
     
 Individual: JamesTuckett
@@ -2343,29 +2261,12 @@ Individual: JamesTuckett
     Annotations: 
         rdfs:label "James Tuckett"@en
     
-    Facts:  
-     isMemberOf  Hufflepuff,
-     isStudentAtSchool  Hogwarts
-    
-    
-Individual: JaneCourt
-
-    Annotations: 
-        rdfs:label "Jane Court"@en
-    
-    Facts:  
-     isMemberOf  Hufflepuff,
-     isPrefectOf  Hufflepuff,
-     isStudentAtSchool  Hogwarts
-    
-    
-Individual: JimboBlishwick
-
-    Annotations: 
-        rdfs:label "Jimbo Blishwick"@en
-    
     Types: 
-        PureBlood
+        Student
+    
+    Facts:  
+     isMemberOf  Hufflepuff,
+     isStudentAtSchool  Hogwarts
     
     
 Individual: JimmyPeakes
@@ -2374,7 +2275,7 @@ Individual: JimmyPeakes
         rdfs:label "Jimmy Peakes"@en
     
     Types: 
-        Wizard
+        Student
     
     Facts:  
      isMemberOf  Gryffindor,
@@ -2396,20 +2297,12 @@ Individual: JustinFinchFletchley
         rdfs:label "Justin Finch-Fletchley"@en
     
     Types: 
-        MuggleBorn
+        MuggleBorn,
+        Wizard
     
     Facts:  
      isMemberOf  Hufflepuff,
      isStudentAtSchool  Hogwarts
-    
-    
-Individual: Karkus
-
-    Annotations: 
-        rdfs:label "Karkus"@en
-    
-    Types: 
-        Being
     
     
 Individual: KatieBell
@@ -2446,30 +2339,19 @@ Individual: KendraDumbledore
     Types: 
         MuggleBorn
     
-    
-Individual: KennethTowler
-
-    Annotations: 
-        rdfs:label "Kenneth Towler"@en
-    
     Facts:  
-     isMemberOf  Gryffindor,
-     isStudentAtSchool  Hogwarts
-    
-    
-Individual: KevinEntwhistle
-
-    Annotations: 
-        rdfs:label "Kevin Entwhistle"@en
-    
-    Types: 
-        MuggleBorn
+     isMotherOf  AberforthDumbledore,
+     isMotherOf  AlbusDumbledore,
+     isMotherOf  ArianaDumbledore
     
     
 Individual: KevinWhitby
 
     Annotations: 
         rdfs:label "Kevin Whitby"@en
+    
+    Types: 
+        Wizard
     
     Facts:  
      isMemberOf  Hufflepuff,
@@ -2483,6 +2365,9 @@ Individual: KingsleyShacklebolt
     
     Types: 
         PureBlood
+    
+    Facts:  
+     isMemberOf  OrderOfThePhoenix
     
     
 Individual: Kreacher
@@ -2498,6 +2383,9 @@ Individual: LauraMadley
 
     Annotations: 
         rdfs:label "Laura Madley"@en
+    
+    Types: 
+        Wizard
     
     Facts:  
      isMemberOf  Hufflepuff,
@@ -2526,6 +2414,8 @@ Individual: Leanne
         Wizard
     
     Facts:  
+     isFriendOf  KatieBell,
+     isMemberOf  DumbledoresArmy,
      isMemberOf  Hufflepuff,
      isStudentAtSchool  Hogwarts
     
@@ -2539,28 +2429,7 @@ Individual: LeeJordan
         Wizard
     
     Facts:  
-     isMemberOf  Gryffindor,
-     isStudentAtSchool  Hogwarts
-    
-    
-Individual: LicorusBlack
-
-    Annotations: 
-        rdfs:label "Licorus Black"@en
-    
-    Types: 
-        PureBlood
-    
-    
-Individual: LilyLunaPotter
-
-    Annotations: 
-        rdfs:label "Lily Luna Potter"@en
-    
-    Types: 
-        HalfBlood
-    
-    Facts:  
+     isMemberOf  DumbledoresArmy,
      isMemberOf  Gryffindor,
      isStudentAtSchool  Hogwarts
     
@@ -2573,34 +2442,12 @@ Individual: LilyPotter
     Types: 
         MuggleBorn
     
-    
-Individual: LisaTurpin
-
-    Annotations: 
-        rdfs:label "Lisa Turpin"@en
-    
     Facts:  
-     isMemberOf  Ravenclaw,
-     isStudentAtSchool  Hogwarts
-    
-    
-Individual: LouisWeasley
-
-    Annotations: 
-        rdfs:label "Louis Weasley"@en
-    
-    Types: 
-        Wizard
-    
-    
-Individual: LucianBole
-
-    Annotations: 
-        rdfs:label "Lucian Bole"@en
-    
-    Facts:  
-     isMemberOf  Slytherin,
-     isStudentAtSchool  Hogwarts
+     isMarriedTo  JamesPotter,
+     isMemberOf  Gryffindor,
+     isMemberOf  OrderOfThePhoenix,
+     isMotherOf  HarryPotter,
+     birthYear  "1960"@en
     
     
 Individual: LuciusMalfoy
@@ -2612,25 +2459,11 @@ Individual: LuciusMalfoy
         PureBlood
     
     Facts:  
-     isMemberOf  Slytherin
-    
-    
-Individual: LucretiaBlack
-
-    Annotations: 
-        rdfs:label "Lucretia Black"@en
-    
-    Types: 
-        PureBlood
-    
-    
-Individual: LudoBagman
-
-    Annotations: 
-        rdfs:label "Ludo Bagman"@en
-    
-    Types: 
-        Wizard
+     isFatherOf  DracoMalfoy,
+     isMarriedTo  NarcissaMalfoy,
+     isMemberOf  DeathEater,
+     isMemberOf  Slytherin,
+     birthYear  "1954"@en
     
     
 Individual: LunaLovegood
@@ -2642,38 +2475,12 @@ Individual: LunaLovegood
         Student
     
     Facts:  
+     isFriendOf  HarryPotter,
+     isMemberOf  DumbledoresArmy,
+     isMemberOf  OrderOfThePhoenix,
      isMemberOf  Ravenclaw,
-     isStudentAtSchool  Hogwarts
-    
-    
-Individual: LycorisBlack
-
-    Annotations: 
-        rdfs:label "Lycoris Black"@en
-    
-    Types: 
-        PureBlood
-    
-    
-Individual: LysandraYaxley
-
-    Annotations: 
-        rdfs:label "Lysandra Yaxley"@en
-    
-    Types: 
-        PureBlood
-    
-    
-Individual: Mafalda
-
-    Annotations: 
-        rdfs:label "Mafalda"@en
-    
-    Types: 
-        HalfBlood
-    
-    Facts:  
-     isMemberOf  Slytherin
+     isStudentAtSchool  Hogwarts,
+     birthYear  "1981"@en
     
     
 Individual: MafaldaHopkirk
@@ -2683,15 +2490,6 @@ Individual: MafaldaHopkirk
     
     Types: 
         Wizard
-    
-    
-Individual: MagentaTripe
-
-    Annotations: 
-        rdfs:label "Magenta Tripe"@en
-    
-    Types: 
-        PureBlood
     
     
 Individual: Magorian
@@ -2707,6 +2505,9 @@ Individual: MalcolmBaddock
 
     Annotations: 
         rdfs:label "Malcolm Baddock"@en
+    
+    Types: 
+        Wizard
     
     Facts:  
      isMemberOf  Slytherin,
@@ -2757,6 +2558,9 @@ Individual: MarcusTurner
     Annotations: 
         rdfs:label "Marcus Turner"@en
     
+    Types: 
+        Wizard
+    
     Facts:  
      isMemberOf  Ravenclaw,
      isPrefectOf  Ravenclaw
@@ -2780,7 +2584,9 @@ Individual: MariettaEdgecombe
         Wizard
     
     Facts:  
-     isMemberOf  Ravenclaw
+     isMemberOf  DumbledoresArmy,
+     isMemberOf  Ravenclaw,
+     isStudentAtSchool  Hogwarts
     
     
 Individual: MarleneMcKinnon
@@ -2788,45 +2594,11 @@ Individual: MarleneMcKinnon
     Annotations: 
         rdfs:label "Marlene McKinnon"@en
     
+    Types: 
+        Wizard
+    
     Facts:  
      isMemberOf  OrderOfThePhoenix
-    
-    
-Individual: MarvoloGaunt
-
-    Annotations: 
-        rdfs:label "Marvolo Gaunt"@en
-    
-    Types: 
-        PureBlood
-    
-    
-Individual: MaryCattermole
-
-    Annotations: 
-        rdfs:label "Mary Cattermole"@en
-    
-    Types: 
-        MuggleBorn
-    
-    
-Individual: MeganJones
-
-    Annotations: 
-        rdfs:label "Megan Jones"@en
-    
-    Facts:  
-     isMemberOf  Hufflepuff,
-     isStudentAtSchool  Hogwarts
-    
-    
-Individual: MelaniaMacmillan
-
-    Annotations: 
-        rdfs:label "Melania Macmillan"@en
-    
-    Types: 
-        PureBlood
     
     
 Individual: MeropeRiddle
@@ -2836,6 +2608,11 @@ Individual: MeropeRiddle
     
     Types: 
         PureBlood
+    
+    Facts:  
+     isMarriedTo  TomSrRiddle,
+     isMotherOf  TomRiddle,
+     birthYear  "1907"@en
     
     
 Individual: MichaelCorner
@@ -2847,6 +2624,7 @@ Individual: MichaelCorner
         HalfBlood
     
     Facts:  
+     isMemberOf  DumbledoresArmy,
      isMemberOf  Ravenclaw,
      isStudentAtSchool  Hogwarts
     
@@ -2855,6 +2633,9 @@ Individual: MichaelMcManus
 
     Annotations: 
         rdfs:label "Michael McManus"@en
+    
+    Types: 
+        Wizard
     
     Facts:  
      isMemberOf  Hufflepuff
@@ -2865,8 +2646,12 @@ Individual: MilesBletchley
     Annotations: 
         rdfs:label "Miles Bletchley"@en
     
+    Types: 
+        Wizard
+    
     Facts:  
-     isMemberOf  Slytherin
+     isMemberOf  Slytherin,
+     isStudentAtSchool  Hogwarts
     
     
 Individual: MillicentBulstrode
@@ -2895,16 +2680,8 @@ Individual: MinervaMcGonagall
      isHeadOf  Gryffindor,
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix,
-     isProfessorAtSchool  Hogwarts
-    
-    
-Individual: MisapinoaBlack
-
-    Annotations: 
-        rdfs:label "Misapinoa Black"@en
-    
-    Types: 
-        PureBlood
+     isProfessorAtSchool  Hogwarts,
+     teaches  Transfiguration
     
     
 Individual: MollyWeasley
@@ -2917,16 +2694,14 @@ Individual: MollyWeasley
     
     Facts:  
      isMemberOf  Gryffindor,
-     isMemberOf  OrderOfThePhoenix
-    
-    
-Individual: MorfinGaunt
-
-    Annotations: 
-        rdfs:label "Morfin Gaunt"@en
-    
-    Types: 
-        PureBlood
+     isMemberOf  OrderOfThePhoenix,
+     isMotherOf  BillWeasley,
+     isMotherOf  CharlieWeasley,
+     isMotherOf  FredWeasley,
+     isMotherOf  GeorgeWeasley,
+     isMotherOf  GinnyWeasley,
+     isMotherOf  PercyWeasley,
+     isMotherOf  RonWeasley
     
     
 Individual: MrsNorris
@@ -2959,21 +2734,13 @@ Individual: MundungusFletcher
      isMemberOf  OrderOfThePhoenix
     
     
-Individual: Muriel
-
-    Annotations: 
-        rdfs:label "Muriel"@en
-    
-    Types: 
-        Wizard
-    
-    
 Individual: MyrtleWarren
 
     Annotations: 
         rdfs:label "Myrtle Warren"@en
     
     Types: 
+        Ghost,
         MuggleBorn
     
     Facts:  
@@ -2998,13 +2765,19 @@ Individual: NarcissaMalfoy
         PureBlood
     
     Facts:  
-     isMemberOf  Slytherin
+     isMemberOf  DeathEater,
+     isMemberOf  Slytherin,
+     isMotherOf  DracoMalfoy,
+     birthYear  "1955"@en
     
     
 Individual: NatalieMcDonald
 
     Annotations: 
         rdfs:label "Natalie McDonald"@en
+    
+    Types: 
+        Wizard
     
     Facts:  
      isMemberOf  Gryffindor,
@@ -3021,14 +2794,23 @@ Individual: NevilleLongbottom
         Student
     
     Facts:  
+     hasPet  Trevor,
+     isFriendOf  HarryPotter,
+     isFriendOf  RonWeasley,
+     isMemberOf  DumbledoresArmy,
      isMemberOf  Gryffindor,
-     isStudentAtSchool  Hogwarts
+     isMemberOf  OrderOfThePhoenix,
+     isStudentAtSchool  Hogwarts,
+     birthYear  "1980"@en
     
     
 Individual: NicholasDeMimsyPorpington
 
     Annotations: 
         rdfs:label "Nicholas de Mimsy-Porpington"@en
+    
+    Types: 
+        Ghost
     
     Facts:  
      isMemberOf  Gryffindor
@@ -3052,6 +2834,7 @@ Individual: NigelWolpert
         Wizard
     
     Facts:  
+     isMemberOf  DumbledoresArmy,
      isMemberOf  Gryffindor,
      isStudentAtSchool  Hogwarts
     
@@ -3074,7 +2857,9 @@ Individual: NymphadoraTonks
         HalfBlood
     
     Facts:  
-     isMemberOf  Hufflepuff
+     isMarriedTo  RemusLupin,
+     isMemberOf  Hufflepuff,
+     isMemberOf  OrderOfThePhoenix
     
     
 Individual: OliverWood
@@ -3086,7 +2871,9 @@ Individual: OliverWood
         Wizard
     
     Facts:  
+     isMemberOf  DumbledoresArmy,
      isMemberOf  Gryffindor,
+     isMemberOf  OrderOfThePhoenix,
      isStudentAtSchool  Hogwarts
     
     
@@ -3097,6 +2884,10 @@ Individual: OlympeMaxime
     
     Types: 
         Wizard
+    
+    Facts:  
+     isMemberOf  OrderOfThePhoenix,
+     isProfessorAtSchool  Beauxbatons
     
     
 Individual: OrderOfThePhoenix
@@ -3116,11 +2907,19 @@ Individual: OrionBlack
     Types: 
         PureBlood
     
+    Facts:  
+     isFatherOf  RegulusArcturusBlack,
+     isFatherOf  SiriusBlack,
+     isMemberOf  Slytherin
+    
     
 Individual: OrlaQuirke
 
     Annotations: 
         rdfs:label "Orla Quirke"@en
+    
+    Types: 
+        Wizard
     
     Facts:  
      isMemberOf  Ravenclaw,
@@ -3131,6 +2930,9 @@ Individual: OwenCauldwell
 
     Annotations: 
         rdfs:label "Owen Cauldwell"@en
+    
+    Types: 
+        Wizard
     
     Facts:  
      isMemberOf  Hufflepuff,
@@ -3146,6 +2948,7 @@ Individual: PadmaPatil
         Wizard
     
     Facts:  
+     isMemberOf  DumbledoresArmy,
      isMemberOf  Ravenclaw,
      isPrefectOf  Ravenclaw,
      isStudentAtSchool  Hogwarts
@@ -3174,6 +2977,7 @@ Individual: ParvatiPatil
         Wizard
     
     Facts:  
+     isMemberOf  DumbledoresArmy,
      isMemberOf  Gryffindor,
      isStudentAtSchool  Hogwarts
     
@@ -3212,13 +3016,17 @@ Individual: PercyWeasley
     Facts:  
      isMemberOf  Gryffindor,
      isPrefectOf  Gryffindor,
-     isStudentAtSchool  Hogwarts
+     isStudentAtSchool  Hogwarts,
+     birthYear  "1976"@en
     
     
 Individual: PeregrineDerrick
 
     Annotations: 
         rdfs:label "Peregrine Derrick"@en
+    
+    Types: 
+        Wizard
     
     Facts:  
      isMemberOf  Slytherin,
@@ -3231,9 +3039,10 @@ Individual: PeterPettigrew
         rdfs:label "Peter Pettigrew"@en
     
     Types: 
-        Wizard
+        Animagus
     
     Facts:  
+     isMemberOf  DeathEater,
      isMemberOf  Gryffindor
     
     
@@ -3245,35 +3054,8 @@ Individual: PetuniaDursley
     Types: 
         Muggle
     
-    
-Individual: PhineasBlack
-
-    Annotations: 
-        rdfs:label "Phineas Black"@en
-    
-    Types: 
-        PureBlood
-    
-    
-Individual: PhineasNigellus
-
-    Annotations: 
-        rdfs:label "Phineas Nigellus"@en
-    
-    Types: 
-        PureBlood
-    
     Facts:  
-     isMemberOf  Slytherin
-    
-    
-Individual: PiersPolkiss
-
-    Annotations: 
-        rdfs:label "Piers Polkiss"@en
-    
-    Types: 
-        Muggle
+     isMotherOf  DudleyDursley
     
     
 Individual: Pigwidgeon
@@ -3293,6 +3075,9 @@ Individual: PiusThicknesse
     Types: 
         Wizard
     
+    Facts:  
+     isMemberOf  DeathEater
+    
     
 Individual: PolluxBlack
 
@@ -3301,6 +3086,11 @@ Individual: PolluxBlack
     
     Types: 
         PureBlood
+    
+    Facts:  
+     isFatherOf  CygnusBlack,
+     isFatherOf  WalburgaBlack,
+     birthYear  "1912"@en
     
     
 Individual: PomonaSprout
@@ -3312,7 +3102,10 @@ Individual: PomonaSprout
         Wizard
     
     Facts:  
-     isMemberOf  Hufflepuff
+     isMemberOf  Hufflepuff,
+     isMemberOf  OrderOfThePhoenix,
+     isProfessorAtSchool  Hogwarts,
+     teaches  Herbology
     
     
 Individual: PoppyPomfrey
@@ -3372,16 +3165,8 @@ Individual: RegulusArcturusBlack
         PureBlood
     
     Facts:  
+     isMemberOf  DeathEater,
      isMemberOf  Slytherin
-    
-    
-Individual: RegulusBlack
-
-    Annotations: 
-        rdfs:label "Regulus Black"@en
-    
-    Types: 
-        PureBlood
     
     
 Individual: RemusLupin
@@ -3390,7 +3175,8 @@ Individual: RemusLupin
         rdfs:label "Remus Lupin"@en
     
     Types: 
-        HalfBlood
+        HalfBlood,
+        Werewolf
     
     Facts:  
      isMemberOf  Gryffindor,
@@ -3411,8 +3197,12 @@ Individual: RitchieCoote
     Annotations: 
         rdfs:label "Ritchie Coote"@en
     
+    Types: 
+        Wizard
+    
     Facts:  
-     isMemberOf  Gryffindor
+     isMemberOf  Gryffindor,
+     isStudentAtSchool  Hogwarts
     
     
 Individual: RobertHilliard
@@ -3420,18 +3210,13 @@ Individual: RobertHilliard
     Annotations: 
         rdfs:label "Robert Hilliard"@en
     
+    Types: 
+        Wizard
+    
     Facts:  
      isMemberOf  Ravenclaw,
-     isPrefectOf  Ravenclaw
-    
-    
-Individual: Roberts
-
-    Annotations: 
-        rdfs:label "Roberts"@en
-    
-    Types: 
-        Muggle
+     isPrefectOf  Ravenclaw,
+     isStudentAtSchool  Hogwarts
     
     
 Individual: RodolphusLestrange
@@ -3443,6 +3228,8 @@ Individual: RodolphusLestrange
         PureBlood
     
     Facts:  
+     isMarriedTo  BellatrixLestrange,
+     isMemberOf  DeathEater,
      isMemberOf  Slytherin
     
     
@@ -3450,6 +3237,9 @@ Individual: RogerDavies
 
     Annotations: 
         rdfs:label "Roger Davies"@en
+    
+    Types: 
+        Wizard
     
     Facts:  
      isMemberOf  Ravenclaw,
@@ -3460,6 +3250,9 @@ Individual: RogerMalone
 
     Annotations: 
         rdfs:label "Roger Malone"@en
+    
+    Types: 
+        Wizard
     
     Facts:  
      isMemberOf  Hufflepuff,
@@ -3475,6 +3268,7 @@ Individual: RomildaVane
         Wizard
     
     Facts:  
+     isMemberOf  DumbledoresArmy,
      isMemberOf  Gryffindor,
      isStudentAtSchool  Hogwarts
     
@@ -3489,10 +3283,12 @@ Individual: RonWeasley
         Student
     
     Facts:  
+     isMemberOf  DumbledoresArmy,
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix,
      isPrefectOf  Gryffindor,
-     isStudentAtSchool  Hogwarts
+     isStudentAtSchool  Hogwarts,
+     birthYear  "1980"@en
     
     
 Individual: Ronan
@@ -3504,23 +3300,13 @@ Individual: Ronan
         Being
     
     
-Individual: RoseWeasley
-
-    Annotations: 
-        rdfs:label "Rose Weasley"@en
-    
-    Types: 
-        HalfBlood
-    
-    Facts:  
-     isMemberOf  Gryffindor,
-     isStudentAtSchool  Hogwarts
-    
-    
 Individual: RoseZeller
 
     Annotations: 
         rdfs:label "Rose Zeller"@en
+    
+    Types: 
+        Wizard
     
     Facts:  
      isMemberOf  Hufflepuff,
@@ -3548,6 +3334,12 @@ Individual: RubeusHagrid
         Wizard
     
     Facts:  
+     hasPet  Fluffy,
+     hasPet  Norbert,
+     isFriendOf  AlbusDumbledore,
+     isFriendOf  HarryPotter,
+     isFriendOf  HermioneGranger,
+     isFriendOf  RonWeasley,
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix
     
@@ -3573,20 +3365,8 @@ Individual: Scabior
         Wizard
     
     Facts:  
+     isMemberOf  DeathEater,
      isMemberOf  Slytherin
-    
-    
-Individual: ScorpiusMalfoy
-
-    Annotations: 
-        rdfs:label "Scorpius Malfoy"@en
-    
-    Types: 
-        PureBlood
-    
-    Facts:  
-     isMemberOf  Slytherin,
-     isStudentAtSchool  Hogwarts
     
     
 Individual: SeamusFinnigan
@@ -3599,17 +3379,11 @@ Individual: SeamusFinnigan
         Student
     
     Facts:  
+     isFriendOf  HarryPotter,
+     isFriendOf  RonWeasley,
+     isMemberOf  DumbledoresArmy,
      isMemberOf  Gryffindor,
      isStudentAtSchool  Hogwarts
-    
-    
-Individual: SeptimusWeasley
-
-    Annotations: 
-        rdfs:label "Septimus Weasley"@en
-    
-    Types: 
-        PureBlood
     
     
 Individual: SeverusSnape
@@ -3622,9 +3396,12 @@ Individual: SeverusSnape
         Professor
     
     Facts:  
+     isMemberOf  DeathEater,
      isMemberOf  OrderOfThePhoenix,
      isMemberOf  Slytherin,
-     isProfessorAtSchool  Hogwarts
+     isProfessorAtSchool  Hogwarts,
+     teaches  Potions,
+     birthYear  "1960"@en
     
     
 Individual: SiriusBlack
@@ -3633,29 +3410,14 @@ Individual: SiriusBlack
         rdfs:label "Sirius Black"@en
     
     Types: 
+        Animagus,
         PureBlood
     
     Facts:  
+     isFriendOf  JamesPotter,
      isMemberOf  Gryffindor,
-     isMemberOf  OrderOfThePhoenix
-    
-    
-Individual: SiriusIBlack
-
-    Annotations: 
-        rdfs:label "Sirius I Black"@en
-    
-    Types: 
-        PureBlood
-    
-    
-Individual: SiriusIIBlack
-
-    Annotations: 
-        rdfs:label "Sirius II Black"@en
-    
-    Types: 
-        PureBlood
+     isMemberOf  OrderOfThePhoenix,
+     birthYear  "1959"@en
     
     
 Individual: Slytherin
@@ -3667,19 +3429,22 @@ Individual: Slytherin
         House
     
     
-Individual: StephenCornfoot
+Individual: Stag
 
     Annotations: 
-        rdfs:label "Stephen Cornfoot"@en
+        rdfs:label "Stag"@en
     
     Types: 
-        PureBlood
+        Beast
     
     
 Individual: StewartAckerley
 
     Annotations: 
         rdfs:label "Stewart Ackerley"@en
+    
+    Types: 
+        Wizard
     
     Facts:  
      isMemberOf  Ravenclaw,
@@ -3711,15 +3476,6 @@ Individual: SueLi
      isStudentAtSchool  Hogwarts
     
     
-Individual: Summerby
-
-    Annotations: 
-        rdfs:label "Summerby"@en
-    
-    Facts:  
-     isMemberOf  Hufflepuff
-    
-    
 Individual: SusanBones
 
     Annotations: 
@@ -3729,6 +3485,7 @@ Individual: SusanBones
         HalfBlood
     
     Facts:  
+     isMemberOf  DumbledoresArmy,
      isMemberOf  Hufflepuff,
      isStudentAtSchool  Hogwarts
     
@@ -3742,7 +3499,9 @@ Individual: SybillTrelawney
         HalfBlood
     
     Facts:  
-     isMemberOf  Ravenclaw
+     isMemberOf  Ravenclaw,
+     isProfessorAtSchool  Hogwarts,
+     teaches  Divination
     
     
 Individual: TedTonks
@@ -3753,14 +3512,22 @@ Individual: TedTonks
     Types: 
         MuggleBorn
     
+    Facts:  
+     isFatherOf  NymphadoraTonks,
+     isMarriedTo  Andromeda_Tonks
+    
     
 Individual: TerrenceHiggs
 
     Annotations: 
         rdfs:label "Terrence Higgs"@en
     
+    Types: 
+        Wizard
+    
     Facts:  
-     isMemberOf  Slytherin
+     isMemberOf  Slytherin,
+     isStudentAtSchool  Hogwarts
     
     
 Individual: TerryBoot
@@ -3772,6 +3539,7 @@ Individual: TerryBoot
         Wizard
     
     Facts:  
+     isMemberOf  DumbledoresArmy,
      isMemberOf  Ravenclaw,
      isStudentAtSchool  Hogwarts
     
@@ -3798,8 +3566,12 @@ Individual: TomRiddle
         HalfBlood
     
     Facts:  
+     isMemberOf  DeathEater,
      isMemberOf  Slytherin,
-     isPrefectOf  Slytherin
+     birthYear  "1926"@en
+    
+    SameAs: 
+        Voldemort
     
     
 Individual: TomSrRiddle
@@ -3809,6 +3581,11 @@ Individual: TomSrRiddle
     
     Types: 
         Muggle
+    
+    Facts:  
+     isFatherOf  TomRiddle,
+     isMarriedTo  MeropeRiddle,
+     birthYear  "1905"@en
     
     
 Individual: TraceyDavis
@@ -3833,15 +3610,6 @@ Individual: Transfiguration
         Class
     
     
-Individual: Travers
-
-    Annotations: 
-        rdfs:label "Travers"@en
-    
-    Types: 
-        Wizard
-    
-    
 Individual: Trevor
 
     Annotations: 
@@ -3856,26 +3624,12 @@ Individual: Urquhart
     Annotations: 
         rdfs:label "Urquhart"@en
     
-    Facts:  
-     isMemberOf  Slytherin
-    
-    
-Individual: UrsulaFlint
-
-    Annotations: 
-        rdfs:label "Ursula Flint"@en
-    
     Types: 
-        PureBlood
-    
-    
-Individual: Vaisey
-
-    Annotations: 
-        rdfs:label "Vaisey"@en
+        Wizard
     
     Facts:  
-     isMemberOf  Slytherin
+     isMemberOf  Slytherin,
+     isStudentAtSchool  Hogwarts
     
     
 Individual: VernonDursley
@@ -3886,14 +3640,8 @@ Individual: VernonDursley
     Types: 
         Muggle
     
-    
-Individual: VictoireWeasley
-
-    Annotations: 
-        rdfs:label "Victoire Weasley"@en
-    
-    Types: 
-        Wizard
+    Facts:  
+     isFatherOf  DudleyDursley
     
     
 Individual: ViktorKrum
@@ -3917,17 +3665,9 @@ Individual: VincentCrabbe
         PureBlood
     
     Facts:  
+     isFriendOf  DracoMalfoy,
      isMemberOf  Slytherin,
      isStudentAtSchool  Hogwarts
-    
-    
-Individual: ViolettaBulstrode
-
-    Annotations: 
-        rdfs:label "Violetta Bulstrode"@en
-    
-    Types: 
-        PureBlood
     
     
 Individual: Voldemort
@@ -3939,8 +3679,12 @@ Individual: Voldemort
         Wizard
     
     Facts:  
+     isMemberOf  DeathEater,
      killed  JamesPotter,
      killed  LilyPotter
+    
+    SameAs: 
+        TomRiddle
     
     
 Individual: WalburgaBlack
@@ -3952,16 +3696,9 @@ Individual: WalburgaBlack
         PureBlood
     
     Facts:  
-     isMemberOf  Slytherin
-    
-    
-Individual: Warrington
-
-    Annotations: 
-        rdfs:label "Warrington"@en
-    
-    Facts:  
-     isMemberOf  Slytherin
+     isMemberOf  Slytherin,
+     isMotherOf  RegulusArcturusBlack,
+     isMotherOf  SiriusBlack
     
     
 Individual: WayneHopkins
@@ -3977,15 +3714,6 @@ Individual: WayneHopkins
      isStudentAtSchool  Hogwarts
     
     
-Individual: Winky
-
-    Annotations: 
-        rdfs:label "Winky"@en
-    
-    Types: 
-        HouseElf
-    
-    
 Individual: XenophiliusLovegood
 
     Annotations: 
@@ -3995,6 +3723,8 @@ Individual: XenophiliusLovegood
         Wizard
     
     Facts:  
+     isFatherOf  LunaLovegood,
+     isMemberOf  OrderOfThePhoenix,
      isMemberOf  Ravenclaw
     
     
@@ -4007,6 +3737,7 @@ Individual: ZachariasSmith
         Wizard
     
     Facts:  
-     isMemberOf  Hufflepuff
+     isMemberOf  Hufflepuff,
+     isStudentAtSchool  Hogwarts
     
     

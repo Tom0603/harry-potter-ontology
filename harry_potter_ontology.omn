@@ -19,6 +19,9 @@ AnnotationProperty: rdfs:label
 Datatype: rdf:PlainLiteral
 
     
+Datatype: xsd:decimal
+
+    
 Datatype: xsd:integer
 
     
@@ -830,10 +833,10 @@ Class: HalfBlood
         MuggleBorn, PureBlood
     
     
-Class: Horcrux
+Class: HorcruxMakingSpell
 
     Annotations: 
-        rdfs:label "Horcrux"@en
+        rdfs:label "Horcrux-making Spell"@en
     
     SubClassOf: 
         MagicalObject
@@ -1020,7 +1023,7 @@ Class: UnforgivableCurse
         rdfs:label "UnforgivableCurse"@en
     
     EquivalentTo: 
-        {AvadaKedavra , Crucio , Imperio}
+        {ImperiusCurse , KillingCurse , TortureCurse}
     
     SubClassOf: 
         Curse
@@ -1113,7 +1116,7 @@ Individual: AlbusDumbledore
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix,
      isProfessorAtSchool  Hogwarts,
-     birthYear  "1881"@en
+     birthYear  1881
     
     
 Individual: AliceLongbottom
@@ -1163,7 +1166,7 @@ Individual: AmosDiggory
      isFatherOf  CedricDiggory
     
     
-Individual: Andromeda_Tonks
+Individual: AndromedaTonks
 
     Annotations: 
         rdfs:label "Andromeda Tonks"@en
@@ -1240,7 +1243,7 @@ Individual: ArthurWeasley
      isMarriedTo  MollyWeasley,
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix,
-     birthYear  "1950"@en
+     birthYear  1950
     
     
 Individual: Astronomy
@@ -1261,10 +1264,13 @@ Individual: AugustaLongbottom
         PureBlood
     
     
-Individual: AvadaKedavra
+Individual: BabblingCurse
 
     Annotations: 
-        rdfs:label "Avada Kedavra"@en
+        rdfs:label "Babbling Curse"@en
+    
+    Types: 
+        Curse
     
     
 Individual: Bane
@@ -1286,7 +1292,7 @@ Individual: BartyJrCrouch
     
     Facts:  
      isMemberOf  DeathEater,
-     birthYear  "1962"@en
+     birthYear  1962
     
     
 Individual: BartySrCrouch
@@ -1355,6 +1361,18 @@ Individual: BlaiseZabini
      isStudentAtSchool  Hogwarts
     
     
+Individual: BlindfoldingSpell
+
+    Annotations: 
+        rdfs:label "Blindfolding Spell"@en
+    
+    Types: 
+        Spell
+    
+    Facts:  
+     incantation  "Obscuro"@en
+    
+    
 Individual: BloodyBaron
 
     Annotations: 
@@ -1411,7 +1429,7 @@ Individual: CedricDiggory
      isMemberOf  Hufflepuff,
      isPrefectOf  Hufflepuff,
      isStudentAtSchool  Hogwarts,
-     birthYear  "1977"@en
+     birthYear  1977
     
     
 Individual: CharityBurbage
@@ -1463,7 +1481,7 @@ Individual: ChoChang
     Facts:  
      isMemberOf  Ravenclaw,
      isStudentAtSchool  Hogwarts,
-     birthYear  "1979"@en
+     birthYear  1979
     
     
 Individual: ColinCreevey
@@ -1478,7 +1496,7 @@ Individual: ColinCreevey
     Facts:  
      isMemberOf  Gryffindor,
      isStudentAtSchool  Hogwarts,
-     birthYear  "1981"@en
+     birthYear  1981
     
     
 Individual: CorbanYaxley
@@ -1524,12 +1542,6 @@ Individual: Crookshanks
         Beast
     
     
-Individual: Crucio
-
-    Annotations: 
-        rdfs:label "Crucio"@en
-    
-    
 Individual: CygnusBlack
 
     Annotations: 
@@ -1539,7 +1551,7 @@ Individual: CygnusBlack
         PureBlood
     
     Facts:  
-     isFatherOf  Andromeda_Tonks,
+     isFatherOf  AndromedaTonks,
      isFatherOf  BellatrixLestrange,
      isFatherOf  NarcissaMalfoy,
      isMarriedTo  DruellaBlack
@@ -1605,6 +1617,18 @@ Individual: DennisCreevey
      isStudentAtSchool  Hogwarts
     
     
+Individual: DisarmingCharm
+
+    Annotations: 
+        rdfs:label "Disarming Charm"@en
+    
+    Types: 
+        Charm
+    
+    Facts:  
+     incantation  "Expelliarmus"@en
+    
+    
 Individual: Divination
 
     Annotations: 
@@ -1655,7 +1679,7 @@ Individual: DracoMalfoy
      isMemberOf  Slytherin,
      isPrefectOf  Slytherin,
      isStudentAtSchool  Hogwarts,
-     birthYear  "1980"@en
+     birthYear  1980
     
     
 Individual: DruellaBlack
@@ -1888,6 +1912,18 @@ Individual: FredWeasley
      isStudentAtSchool  Hogwarts
     
     
+Individual: FreezingCharm
+
+    Annotations: 
+        rdfs:label "Freezing Charm"@en
+    
+    Types: 
+        Charm
+    
+    Facts:  
+     incantation  "Immobulus"@en
+    
+    
 Individual: GabrielleDelacour
 
     Annotations: 
@@ -1921,6 +1957,20 @@ Individual: GellertGrindelwald
         Wizard
     
     
+Individual: GeneralCounterSpell
+
+    Annotations: 
+        rdfs:label "General Counter-Spell"@en
+    
+    Types: 
+        Spell
+    
+    Facts:  
+     counters  LevitationCharm,
+     counters  SlugVomitingCharm,
+     incantation  "Finite Incantatem"@en
+    
+    
 Individual: GeorgeWeasley
 
     Annotations: 
@@ -1934,7 +1984,7 @@ Individual: GeorgeWeasley
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix,
      isStudentAtSchool  Hogwarts,
-     birthYear  "1978"@en
+     birthYear  1978
     
     
 Individual: GideonPrewett
@@ -1959,7 +2009,7 @@ Individual: GilderoyLockhart
     
     Facts:  
      isMemberOf  Ravenclaw,
-     birthYear  "1964"@en
+     birthYear  1964
     
     
 Individual: GinnyWeasley
@@ -1974,7 +2024,7 @@ Individual: GinnyWeasley
     Facts:  
      isMemberOf  Gryffindor,
      isStudentAtSchool  Hogwarts,
-     birthYear  "1981"@en
+     birthYear  1981
     
     
 Individual: GodricGryffindor
@@ -2088,7 +2138,8 @@ Individual: HarryPotter
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix,
      isStudentAtSchool  Hogwarts,
-     birthYear  "1980"@en
+     performsSpell  DisarmingCharm,
+     birthYear  1980
     
     
 Individual: Hedwig
@@ -2137,7 +2188,7 @@ Individual: HermioneGranger
      isMemberOf  OrderOfThePhoenix,
      isPrefectOf  Gryffindor,
      isStudentAtSchool  Hogwarts,
-     birthYear  "1979"@en
+     birthYear  1979
     
     
 Individual: HestiaCarrow
@@ -2199,6 +2250,15 @@ Individual: HoraceSlughorn
      isMemberOf  Slytherin
     
     
+Individual: HorcruxMakingSpell
+
+    Annotations: 
+        rdfs:label "Horcrux-making Spell"@en
+    
+    Types: 
+        Curse
+    
+    
 Individual: Hufflepuff
 
     Annotations: 
@@ -2220,10 +2280,13 @@ Individual: IgorKarkaroff
      isMemberOf  DeathEater
     
     
-Individual: Imperio
+Individual: ImperiusCurse
 
     Annotations: 
-        rdfs:label "Imperio"@en
+        rdfs:label "Imperius Curse"@en
+    
+    Facts:  
+     incantation  "Imperio"@en
     
     
 Individual: JackSloper
@@ -2253,7 +2316,7 @@ Individual: JamesPotter
      isMarriedTo  LilyPotter,
      isMemberOf  OrderOfThePhoenix,
      transformsInto  Stag,
-     birthYear  "1960"@en
+     birthYear  1960
     
     
 Individual: JamesTuckett
@@ -2358,6 +2421,15 @@ Individual: KevinWhitby
      isStudentAtSchool  Hogwarts
     
     
+Individual: KillingCurse
+
+    Annotations: 
+        rdfs:label "Killing Curse"@en
+    
+    Facts:  
+     incantation  "Avada Kedavra"@en
+    
+    
 Individual: KingsleyShacklebolt
 
     Annotations: 
@@ -2377,6 +2449,18 @@ Individual: Kreacher
     
     Types: 
         HouseElf
+    
+    
+Individual: LacerationCurse
+
+    Annotations: 
+        rdfs:label "Laceration Curse"@en
+    
+    Types: 
+        Spell
+    
+    Facts:  
+     incantation  "Sectumsempra"@en
     
     
 Individual: LauraMadley
@@ -2434,6 +2518,18 @@ Individual: LeeJordan
      isStudentAtSchool  Hogwarts
     
     
+Individual: LevitationCharm
+
+    Annotations: 
+        rdfs:label "Levitation Charm"@en
+    
+    Types: 
+        Charm
+    
+    Facts:  
+     incantation  "Wingardium Leviosa"@en
+    
+    
 Individual: LilyPotter
 
     Annotations: 
@@ -2447,7 +2543,19 @@ Individual: LilyPotter
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix,
      isMotherOf  HarryPotter,
-     birthYear  "1960"@en
+     birthYear  1960
+    
+    
+Individual: LockingSpell
+
+    Annotations: 
+        rdfs:label "Locking Spell"@en
+    
+    Types: 
+        Spell
+    
+    Facts:  
+     incantation  "Colloportus"@en
     
     
 Individual: LuciusMalfoy
@@ -2463,7 +2571,7 @@ Individual: LuciusMalfoy
      isMarriedTo  NarcissaMalfoy,
      isMemberOf  DeathEater,
      isMemberOf  Slytherin,
-     birthYear  "1954"@en
+     birthYear  1954
     
     
 Individual: LunaLovegood
@@ -2480,7 +2588,7 @@ Individual: LunaLovegood
      isMemberOf  OrderOfThePhoenix,
      isMemberOf  Ravenclaw,
      isStudentAtSchool  Hogwarts,
-     birthYear  "1981"@en
+     birthYear  1981
     
     
 Individual: MafaldaHopkirk
@@ -2612,7 +2720,7 @@ Individual: MeropeRiddle
     Facts:  
      isMarriedTo  TomSrRiddle,
      isMotherOf  TomRiddle,
-     birthYear  "1907"@en
+     birthYear  1907
     
     
 Individual: MichaelCorner
@@ -2768,7 +2876,7 @@ Individual: NarcissaMalfoy
      isMemberOf  DeathEater,
      isMemberOf  Slytherin,
      isMotherOf  DracoMalfoy,
-     birthYear  "1955"@en
+     birthYear  1955
     
     
 Individual: NatalieMcDonald
@@ -2801,7 +2909,7 @@ Individual: NevilleLongbottom
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix,
      isStudentAtSchool  Hogwarts,
-     birthYear  "1980"@en
+     birthYear  1980
     
     
 Individual: NicholasDeMimsyPorpington
@@ -2859,7 +2967,8 @@ Individual: NymphadoraTonks
     Facts:  
      isMarriedTo  RemusLupin,
      isMemberOf  Hufflepuff,
-     isMemberOf  OrderOfThePhoenix
+     isMemberOf  OrderOfThePhoenix,
+     performsSpell  BabblingCurse
     
     
 Individual: OliverWood
@@ -2982,6 +3091,18 @@ Individual: ParvatiPatil
      isStudentAtSchool  Hogwarts
     
     
+Individual: PatronusCharm
+
+    Annotations: 
+        rdfs:label "Patronus Charm"@en
+    
+    Types: 
+        Charm
+    
+    Facts:  
+     incantation  "Expecto Patronum"@en
+    
+    
 Individual: Peeves
 
     Annotations: 
@@ -3017,7 +3138,7 @@ Individual: PercyWeasley
      isMemberOf  Gryffindor,
      isPrefectOf  Gryffindor,
      isStudentAtSchool  Hogwarts,
-     birthYear  "1976"@en
+     birthYear  1976
     
     
 Individual: PeregrineDerrick
@@ -3090,7 +3211,7 @@ Individual: PolluxBlack
     Facts:  
      isFatherOf  CygnusBlack,
      isFatherOf  WalburgaBlack,
-     birthYear  "1912"@en
+     birthYear  1912
     
     
 Individual: PomonaSprout
@@ -3181,6 +3302,19 @@ Individual: RemusLupin
     Facts:  
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: RevivingSpell
+
+    Annotations: 
+        rdfs:label "Reviving Spell"@en
+    
+    Types: 
+        Spell
+    
+    Facts:  
+     counters  StunningSpell,
+     incantation  "Rennervate"@en
     
     
 Individual: RitaSkeeter
@@ -3288,7 +3422,7 @@ Individual: RonWeasley
      isMemberOf  OrderOfThePhoenix,
      isPrefectOf  Gryffindor,
      isStudentAtSchool  Hogwarts,
-     birthYear  "1980"@en
+     birthYear  1980
     
     
 Individual: Ronan
@@ -3401,7 +3535,19 @@ Individual: SeverusSnape
      isMemberOf  Slytherin,
      isProfessorAtSchool  Hogwarts,
      teaches  Potions,
-     birthYear  "1960"@en
+     birthYear  1960
+    
+    
+Individual: ShieldCharm
+
+    Annotations: 
+        rdfs:label "Shield Charm"@en
+    
+    Types: 
+        Charm
+    
+    Facts:  
+     incantation  "Protego"@en
     
     
 Individual: SiriusBlack
@@ -3417,7 +3563,19 @@ Individual: SiriusBlack
      isFriendOf  JamesPotter,
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix,
-     birthYear  "1959"@en
+     birthYear  1959
+    
+    
+Individual: SlugVomitingCharm
+
+    Annotations: 
+        rdfs:label "Slug-vomiting Charm"@en
+    
+    Types: 
+        Charm
+    
+    Facts:  
+     incantation  "Slugulus Eructo"@en
     
     
 Individual: Slytherin
@@ -3451,6 +3609,18 @@ Individual: StewartAckerley
      isStudentAtSchool  Hogwarts
     
     
+Individual: StunningSpell
+
+    Annotations: 
+        rdfs:label "Stunning Spell"@en
+    
+    Types: 
+        Spell
+    
+    Facts:  
+     incantation  "Stupefy"@en
+    
+    
 Individual: SturgisPodmore
 
     Annotations: 
@@ -3474,6 +3644,18 @@ Individual: SueLi
     Facts:  
      isMemberOf  Ravenclaw,
      isStudentAtSchool  Hogwarts
+    
+    
+Individual: SummoningCharm
+
+    Annotations: 
+        rdfs:label "Summoning Charm"@en
+    
+    Types: 
+        Charm
+    
+    Facts:  
+     incantation  "Accio"@en
     
     
 Individual: SusanBones
@@ -3514,7 +3696,7 @@ Individual: TedTonks
     
     Facts:  
      isFatherOf  NymphadoraTonks,
-     isMarriedTo  Andromeda_Tonks
+     isMarriedTo  AndromedaTonks
     
     
 Individual: TerrenceHiggs
@@ -3568,7 +3750,7 @@ Individual: TomRiddle
     Facts:  
      isMemberOf  DeathEater,
      isMemberOf  Slytherin,
-     birthYear  "1926"@en
+     birthYear  1926
     
     SameAs: 
         Voldemort
@@ -3585,7 +3767,28 @@ Individual: TomSrRiddle
     Facts:  
      isFatherOf  TomRiddle,
      isMarriedTo  MeropeRiddle,
-     birthYear  "1905"@en
+     birthYear  1905
+    
+    
+Individual: TongueTyingCurse
+
+    Annotations: 
+        rdfs:label "Tongue-Tying Curse"@en
+    
+    Types: 
+        Curse
+    
+    Facts:  
+     incantation  "Mimblewimble"@en
+    
+    
+Individual: TortureCurse
+
+    Annotations: 
+        rdfs:label "Torture Curse"@en
+    
+    Facts:  
+     incantation  "Crucio"@en
     
     
 Individual: TraceyDavis
@@ -3617,6 +3820,19 @@ Individual: Trevor
     
     Types: 
         Beast
+    
+    
+Individual: UnlockingCharm
+
+    Annotations: 
+        rdfs:label "UnlockingCharm"@en
+    
+    Types: 
+        Charm
+    
+    Facts:  
+     counters  LockingSpell,
+     incantation  "Alohomora"@en
     
     
 Individual: Urquhart
@@ -3699,6 +3915,31 @@ Individual: WalburgaBlack
      isMemberOf  Slytherin,
      isMotherOf  RegulusArcturusBlack,
      isMotherOf  SiriusBlack
+    
+    
+Individual: WandExtinguishingCharm
+
+    Annotations: 
+        rdfs:label "Wand-Extinguishing Charm"@en
+    
+    Types: 
+        Spell
+    
+    Facts:  
+     counters  WandLightingCharm,
+     incantation  "Nox"@en
+    
+    
+Individual: WandLightingCharm
+
+    Annotations: 
+        rdfs:label "Wand-Lighting Charm"@en
+    
+    Types: 
+        Spell
+    
+    Facts:  
+     incantation  "Lumos"@en
     
     
 Individual: WayneHopkins

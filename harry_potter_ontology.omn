@@ -389,8 +389,7 @@ ObjectProperty: isMemberOf
         Wizard
     
     Range: 
-        House,
-        SecretSociety
+        House or SecretSociety
     
     
 ObjectProperty: isMotherOf
@@ -776,6 +775,9 @@ Class: DeathlyHallow
     Annotations: 
         rdfs:label "DeathlyHallow"@en
     
+    EquivalentTo: 
+        {CloakOfInvisibility , ElderWand , ResurrectionStone}
+    
     SubClassOf: 
         MagicalObject
     
@@ -833,10 +835,10 @@ Class: HalfBlood
         MuggleBorn, PureBlood
     
     
-Class: HorcruxMakingSpell
+Class: Horcrux
 
     Annotations: 
-        rdfs:label "Horcrux-making Spell"@en
+        rdfs:label "Horcrux"@en
     
     SubClassOf: 
         MagicalObject
@@ -1113,6 +1115,7 @@ Individual: AlbusDumbledore
         Professor
     
     Facts:  
+     destroys  MarvoloGauntsRing,
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix,
      isProfessorAtSchool  Hogwarts,
@@ -1370,7 +1373,7 @@ Individual: BlindfoldingSpell
         Spell
     
     Facts:  
-     incantation  "Obscuro"@en
+     incantation  "Obscuro"
     
     
 Individual: BloodyBaron
@@ -1482,6 +1485,12 @@ Individual: ChoChang
      isMemberOf  Ravenclaw,
      isStudentAtSchool  Hogwarts,
      birthYear  1979
+    
+    
+Individual: CloakOfInvisibility
+
+    Annotations: 
+        rdfs:label "Cloak of Invisibility"@en
     
     
 Individual: ColinCreevey
@@ -1626,7 +1635,7 @@ Individual: DisarmingCharm
         Charm
     
     Facts:  
-     incantation  "Expelliarmus"@en
+     incantation  "Expelliarmus"
     
     
 Individual: Divination
@@ -1729,6 +1738,16 @@ Individual: EddieCarmichael
     Facts:  
      isMemberOf  Ravenclaw,
      isStudentAtSchool  Hogwarts
+    
+    
+Individual: ElderWand
+
+    Annotations: 
+        rdfs:label "Elder Wand"@en
+    
+    Types: 
+        DeathlyHallow,
+        Wand
     
     
 Individual: ElphiasDoge
@@ -1921,7 +1940,7 @@ Individual: FreezingCharm
         Charm
     
     Facts:  
-     incantation  "Immobulus"@en
+     incantation  "Immobulus"
     
     
 Individual: GabrielleDelacour
@@ -1968,7 +1987,7 @@ Individual: GeneralCounterSpell
     Facts:  
      counters  LevitationCharm,
      counters  SlugVomitingCharm,
-     incantation  "Finite Incantatem"@en
+     incantation  "Finite Incantatem"
     
     
 Individual: GeorgeWeasley
@@ -2130,6 +2149,7 @@ Individual: HarryPotter
         Student
     
     Facts:  
+     destroys  RiddlesDiary,
      hasFather  JamesPotter,
      hasMother  LilyPotter,
      hasPet  Hedwig,
@@ -2138,6 +2158,8 @@ Individual: HarryPotter
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix,
      isStudentAtSchool  Hogwarts,
+     owns  CloakOfInvisibility,
+     owns  Nimbus2000,
      performsSpell  DisarmingCharm,
      birthYear  1980
     
@@ -2182,6 +2204,7 @@ Individual: HermioneGranger
         Student
     
     Facts:  
+     destroys  HufflepuffsCup,
      hasPet  Crookshanks,
      isMemberOf  DumbledoresArmy,
      isMemberOf  Gryffindor,
@@ -2268,6 +2291,15 @@ Individual: Hufflepuff
         House
     
     
+Individual: HufflepuffsCup
+
+    Annotations: 
+        rdfs:label "Hufflepuff's Cup"@en
+    
+    Types: 
+        Horcrux
+    
+    
 Individual: IgorKarkaroff
 
     Annotations: 
@@ -2286,7 +2318,7 @@ Individual: ImperiusCurse
         rdfs:label "Imperius Curse"@en
     
     Facts:  
-     incantation  "Imperio"@en
+     incantation  "Imperio"
     
     
 Individual: JackSloper
@@ -2427,7 +2459,7 @@ Individual: KillingCurse
         rdfs:label "Killing Curse"@en
     
     Facts:  
-     incantation  "Avada Kedavra"@en
+     incantation  "Avada Kedavra"
     
     
 Individual: KingsleyShacklebolt
@@ -2460,7 +2492,7 @@ Individual: LacerationCurse
         Spell
     
     Facts:  
-     incantation  "Sectumsempra"@en
+     incantation  "Sectumsempra"
     
     
 Individual: LauraMadley
@@ -2527,7 +2559,7 @@ Individual: LevitationCharm
         Charm
     
     Facts:  
-     incantation  "Wingardium Leviosa"@en
+     incantation  "Wingardium Leviosa"
     
     
 Individual: LilyPotter
@@ -2555,7 +2587,7 @@ Individual: LockingSpell
         Spell
     
     Facts:  
-     incantation  "Colloportus"@en
+     incantation  "Colloportus"
     
     
 Individual: LuciusMalfoy
@@ -2707,6 +2739,15 @@ Individual: MarleneMcKinnon
     
     Facts:  
      isMemberOf  OrderOfThePhoenix
+    
+    
+Individual: MarvoloGauntsRing
+
+    Annotations: 
+        rdfs:label "Marvolo Gaunt's Ring"@en
+    
+    Types: 
+        Horcrux
     
     
 Individual: MeropeRiddle
@@ -2861,7 +2902,8 @@ Individual: Nagini
         rdfs:label "Nagini"@en
     
     Types: 
-        Beast
+        Beast,
+        Horcrux
     
     
 Individual: NarcissaMalfoy
@@ -2902,6 +2944,7 @@ Individual: NevilleLongbottom
         Student
     
     Facts:  
+     destroys  Nagini,
      hasPet  Trevor,
      isFriendOf  HarryPotter,
      isFriendOf  RonWeasley,
@@ -2945,6 +2988,15 @@ Individual: NigelWolpert
      isMemberOf  DumbledoresArmy,
      isMemberOf  Gryffindor,
      isStudentAtSchool  Hogwarts
+    
+    
+Individual: Nimbus2000
+
+    Annotations: 
+        rdfs:label "Nimbus 2000"@en
+    
+    Types: 
+        Broomstick
     
     
 Individual: Norbert
@@ -3100,7 +3152,7 @@ Individual: PatronusCharm
         Charm
     
     Facts:  
-     incantation  "Expecto Patronum"@en
+     incantation  "Expecto Patronum"
     
     
 Individual: Peeves
@@ -3268,6 +3320,15 @@ Individual: Ravenclaw
         House
     
     
+Individual: RavenclawsDiadem
+
+    Annotations: 
+        rdfs:label "Ravenclaw's Diadem"@en
+    
+    Types: 
+        Horcrux
+    
+    
 Individual: ReginaldCattermole
 
     Annotations: 
@@ -3304,6 +3365,12 @@ Individual: RemusLupin
      isMemberOf  OrderOfThePhoenix
     
     
+Individual: ResurrectionStone
+
+    Annotations: 
+        rdfs:label "Resurrection Stone"@en
+    
+    
 Individual: RevivingSpell
 
     Annotations: 
@@ -3314,7 +3381,13 @@ Individual: RevivingSpell
     
     Facts:  
      counters  StunningSpell,
-     incantation  "Rennervate"@en
+     incantation  "Rennervate"
+    
+    
+Individual: RiddlesDiary
+
+    Types: 
+        Horcrux
     
     
 Individual: RitaSkeeter
@@ -3417,6 +3490,7 @@ Individual: RonWeasley
         Student
     
     Facts:  
+     destroys  SlytherinsLocket,
      isMemberOf  DumbledoresArmy,
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix,
@@ -3547,7 +3621,7 @@ Individual: ShieldCharm
         Charm
     
     Facts:  
-     incantation  "Protego"@en
+     incantation  "Protego"
     
     
 Individual: SiriusBlack
@@ -3575,7 +3649,7 @@ Individual: SlugVomitingCharm
         Charm
     
     Facts:  
-     incantation  "Slugulus Eructo"@en
+     incantation  "Slugulus Eructo"
     
     
 Individual: Slytherin
@@ -3585,6 +3659,15 @@ Individual: Slytherin
     
     Types: 
         House
+    
+    
+Individual: SlytherinsLocket
+
+    Annotations: 
+        rdfs:label "Slytherin's Locket"@en
+    
+    Types: 
+        Horcrux
     
     
 Individual: Stag
@@ -3618,7 +3701,7 @@ Individual: StunningSpell
         Spell
     
     Facts:  
-     incantation  "Stupefy"@en
+     incantation  "Stupefy"
     
     
 Individual: SturgisPodmore
@@ -3655,7 +3738,7 @@ Individual: SummoningCharm
         Charm
     
     Facts:  
-     incantation  "Accio"@en
+     incantation  "Accio"
     
     
 Individual: SusanBones
@@ -3750,6 +3833,7 @@ Individual: TomRiddle
     Facts:  
      isMemberOf  DeathEater,
      isMemberOf  Slytherin,
+     owns  RiddlesDiary,
      birthYear  1926
     
     SameAs: 
@@ -3779,7 +3863,7 @@ Individual: TongueTyingCurse
         Curse
     
     Facts:  
-     incantation  "Mimblewimble"@en
+     incantation  "Mimblewimble"
     
     
 Individual: TortureCurse
@@ -3788,7 +3872,7 @@ Individual: TortureCurse
         rdfs:label "Torture Curse"@en
     
     Facts:  
-     incantation  "Crucio"@en
+     incantation  "Crucio"
     
     
 Individual: TraceyDavis
@@ -3832,7 +3916,7 @@ Individual: UnlockingCharm
     
     Facts:  
      counters  LockingSpell,
-     incantation  "Alohomora"@en
+     incantation  "Alohomora"
     
     
 Individual: Urquhart
@@ -3881,6 +3965,7 @@ Individual: VincentCrabbe
         PureBlood
     
     Facts:  
+     destroys  RavenclawsDiadem,
      isFriendOf  DracoMalfoy,
      isMemberOf  Slytherin,
      isStudentAtSchool  Hogwarts
@@ -3927,7 +4012,7 @@ Individual: WandExtinguishingCharm
     
     Facts:  
      counters  WandLightingCharm,
-     incantation  "Nox"@en
+     incantation  "Nox"
     
     
 Individual: WandLightingCharm
@@ -3939,7 +4024,7 @@ Individual: WandLightingCharm
         Spell
     
     Facts:  
-     incantation  "Lumos"@en
+     incantation  "Lumos"
     
     
 Individual: WayneHopkins

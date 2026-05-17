@@ -1699,61 +1699,12 @@ Individual: EddieCarmichael
     Annotations: 
         rdfs:label "Eddie Carmichael"@en
     
+    Types: 
+        Student
+    
     Facts:  
      isMemberOf  Ravenclaw,
      isStudentAtSchool  Hogwarts
-    
-    
-Individual: EdgarBones
-
-    Annotations: 
-        rdfs:label "Edgar Bones"@en
-    
-    Types: 
-        Wizard
-    
-    Facts:  
-     isMemberOf  OrderOfThePhoenix
-    
-    
-Individual: EdwardLupin
-
-    Annotations: 
-        rdfs:label "Edward Lupin"@en
-    
-    Types: 
-        HalfBlood
-    
-    Facts:  
-     isMemberOf  Hufflepuff
-    
-    
-Individual: EleanorBranstone
-
-    Annotations: 
-        rdfs:label "Eleanor Branstone"@en
-    
-    Facts:  
-     isMemberOf  Hufflepuff,
-     isStudentAtSchool  Hogwarts
-    
-    
-Individual: EllaMax
-
-    Annotations: 
-        rdfs:label "Ella Max"@en
-    
-    Types: 
-        PureBlood
-    
-    
-Individual: ElladoraBlack
-
-    Annotations: 
-        rdfs:label "Elladora Black"@en
-    
-    Types: 
-        PureBlood
     
     
 Individual: ElphiasDoge
@@ -1768,22 +1719,14 @@ Individual: ElphiasDoge
      isMemberOf  OrderOfThePhoenix
     
     
-Individual: EmmelineVance
-
-    Annotations: 
-        rdfs:label "Emmeline Vance"@en
-    
-    Facts:  
-     isMemberOf  OrderOfThePhoenix
-    
-    
 Individual: ErnieMacmillan
 
     Annotations: 
         rdfs:label "Ernie Macmillan"@en
     
     Types: 
-        PureBlood
+        PureBlood,
+        Student
     
     Facts:  
      isMemberOf  Hufflepuff,
@@ -1800,28 +1743,6 @@ Individual: Errol
         Beast
     
     
-Individual: EuanAbercrombie
-
-    Annotations: 
-        rdfs:label "Euan Abercrombie"@en
-    
-    Facts:  
-     isMemberOf  Gryffindor,
-     isStudentAtSchool  Hogwarts
-    
-    
-Individual: FabianPrewett
-
-    Annotations: 
-        rdfs:label "Fabian Prewett"@en
-    
-    Types: 
-        PureBlood
-    
-    Facts:  
-     isMemberOf  OrderOfThePhoenix
-    
-    
 Individual: Fang
 
     Annotations: 
@@ -1836,6 +1757,9 @@ Individual: FatLady
     Annotations: 
         rdfs:label "Fat Lady"@en
     
+    Types: 
+        Spirit
+    
     Facts:  
      isMemberOf  Gryffindor
     
@@ -1849,47 +1773,13 @@ Individual: Fawkes
         Beast
     
     
-Individual: FayDunbar
-
-    Annotations: 
-        rdfs:label "Fay Dunbar"@en
-    
-    Types: 
-        Wizard
-    
-    Facts:  
-     isMemberOf  Gryffindor,
-     isStudentAtSchool  Hogwarts
-    
-    
-Individual: FelicityEastchurch
-
-    Annotations: 
-        rdfs:label "Felicity Eastchurch"@en
-    
-    Facts:  
-     isMemberOf  Ravenclaw
-    
-    
-Individual: FelixRosier
-
-    Annotations: 
-        rdfs:label "Felix Rosier"@en
-    
-    Types: 
-        PureBlood
-    
-    Facts:  
-     isMemberOf  Slytherin,
-     isStudentAtSchool  Hogwarts
-    
-    
 Individual: FenrirGreyback
 
     Annotations: 
         rdfs:label "Fenrir Greyback"@en
     
     Types: 
+        Werewolf,
         Wizard
     
     
@@ -1899,11 +1789,12 @@ Individual: FiliusFlitwick
         rdfs:label "Filius Flitwick"@en
     
     Types: 
-        Wizard
+        Professor
     
     Facts:  
      isMemberOf  Ravenclaw,
-     isProfessorAtSchool  Hogwarts
+     isProfessorAtSchool  Hogwarts,
+     teaches  Charms
     
     
 Individual: Firenze
@@ -1933,10 +1824,12 @@ Individual: FloraCarrow
         rdfs:label "Flora Carrow"@en
     
     Types: 
-        PureBlood
+        PureBlood,
+        Student
     
     Facts:  
-     isMemberOf  Slytherin
+     isMemberOf  Slytherin,
+     isStudentAtSchool  Hogwarts
     
     
 Individual: Fluffy
@@ -1975,13 +1868,9 @@ Individual: FrankLongbottom
         PureBlood
     
     Facts:  
+     isFatherOf  NevilleLongbottom,
+     isMarriedTo  AliceLongbottom,
      isMemberOf  OrderOfThePhoenix
-    
-    
-Individual: FredIIWeasley
-
-    Annotations: 
-        rdfs:label "Fred II Weasley"@en
     
     
 Individual: FredWeasley
@@ -1990,22 +1879,13 @@ Individual: FredWeasley
         rdfs:label "Fred Weasley"@en
     
     Types: 
-        PureBlood
+        PureBlood,
+        Student
     
     Facts:  
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix,
      isStudentAtSchool  Hogwarts
-    
-    
-Individual: GabrielTruman
-
-    Annotations: 
-        rdfs:label "Gabriel Truman"@en
-    
-    Facts:  
-     isMemberOf  Hufflepuff,
-     isPrefectOf  Hufflepuff
     
     
 Individual: GabrielleDelacour
@@ -2014,7 +1894,10 @@ Individual: GabrielleDelacour
         rdfs:label "Gabrielle Delacour"@en
     
     Types: 
-        Wizard
+        Student
+    
+    Facts:  
+     isStudentAtSchool  Beauxbatons
     
     
 Individual: GarrickOllivander
@@ -2038,37 +1921,20 @@ Individual: GellertGrindelwald
         Wizard
     
     
-Individual: GemmaFarley
-
-    Annotations: 
-        rdfs:label "Gemma Farley"@en
-    
-    Facts:  
-     isMemberOf  Slytherin,
-     isPrefectOf  Slytherin
-    
-    
-Individual: GeoffreyHooper
-
-    Annotations: 
-        rdfs:label "Geoffrey Hooper"@en
-    
-    Facts:  
-     isMemberOf  Gryffindor
-    
-    
 Individual: GeorgeWeasley
 
     Annotations: 
         rdfs:label "George Weasley"@en
     
     Types: 
-        PureBlood
+        PureBlood,
+        Student
     
     Facts:  
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix,
-     isStudentAtSchool  Hogwarts
+     isStudentAtSchool  Hogwarts,
+     birthYear  "1978"@en
     
     
 Individual: GideonPrewett
@@ -2092,7 +1958,8 @@ Individual: GilderoyLockhart
         HalfBlood
     
     Facts:  
-     isMemberOf  Ravenclaw
+     isMemberOf  Ravenclaw,
+     birthYear  "1964"@en
     
     
 Individual: GinnyWeasley
@@ -2101,11 +1968,13 @@ Individual: GinnyWeasley
         rdfs:label "Ginny Weasley"@en
     
     Types: 
-        PureBlood
+        PureBlood,
+        Student
     
     Facts:  
      isMemberOf  Gryffindor,
-     isStudentAtSchool  Hogwarts
+     isStudentAtSchool  Hogwarts,
+     birthYear  "1981"@en
     
     
 Individual: GodricGryffindor
@@ -2125,6 +1994,9 @@ Individual: GrahamMontague
     Annotations: 
         rdfs:label "Graham Montague"@en
     
+    Types: 
+        Student
+    
     Facts:  
      isMemberOf  Slytherin
     
@@ -2133,6 +2005,9 @@ Individual: GrahamPritchard
 
     Annotations: 
         rdfs:label "Graham Pritchard"@en
+    
+    Types: 
+        Student
     
     Facts:  
      isMemberOf  Slytherin,
@@ -2154,7 +2029,8 @@ Individual: GregoryGoyle
         rdfs:label "Gregory Goyle"@en
     
     Types: 
-        PureBlood
+        PureBlood,
+        Student
     
     Facts:  
      isMemberOf  Slytherin,

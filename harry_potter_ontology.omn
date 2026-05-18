@@ -1141,7 +1141,8 @@ Individual: AliceLongbottom
         PureBlood
     
     Facts:  
-     isMemberOf  OrderOfThePhoenix
+     isMemberOf  OrderOfThePhoenix,
+     isMotherOf  NevilleLongbottom
     
     
 Individual: AliciaSpinnet
@@ -1699,9 +1700,6 @@ Individual: DracoMalfoy
 
     Annotations: 
         rdfs:label "Draco Malfoy"@en
-    
-    Types: 
-        PureBlood
     
     Facts:  
      isMemberOf  Slytherin,
@@ -3029,9 +3027,6 @@ Individual: NymphadoraTonks
 
     Annotations: 
         rdfs:label "Nymphadora Tonks"@en
-    
-    Types: 
-        HalfBlood
     
     Facts:  
      isMarriedTo  RemusLupin,

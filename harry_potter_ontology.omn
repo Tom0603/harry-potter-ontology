@@ -143,6 +143,21 @@ ObjectProperty: hasChild
         hasParent
     
     
+ObjectProperty: hasCousin
+
+    Annotations: 
+        rdfs:label "hasCousin"@en
+    
+    SubPropertyChain: 
+        hasParent o hasSibling o hasChild
+    
+    Domain: 
+        Person
+    
+    Range: 
+        Person
+    
+    
 ObjectProperty: hasEnchanted
 
     Annotations: 
@@ -255,6 +270,39 @@ ObjectProperty: hasPet
         Beast
     
     
+ObjectProperty: hasSibling
+
+    Annotations: 
+        rdfs:label "hasSibling"@en
+    
+    SubPropertyChain: 
+        hasParent o hasChild
+    
+    Domain: 
+        Person
+    
+    Range: 
+        Person
+    
+    
+ObjectProperty: isAuntOrUncleOf
+
+    Annotations: 
+        rdfs:label "isAuntOrUncleOf"@en
+    
+    SubPropertyChain: 
+        hasParent o hasSibling
+    
+    Domain: 
+        Person
+    
+    Range: 
+        Person
+    
+    InverseOf: 
+        isNieceOrNephewOf
+    
+    
 ObjectProperty: isEnemyOf
 
     Annotations: 
@@ -319,6 +367,42 @@ ObjectProperty: isFriendOf
     
     Range: 
         LivingBeing
+    
+    
+ObjectProperty: isGrandchildOf
+
+    Annotations: 
+        rdfs:label "isGrandchildOf"@en
+    
+    SubPropertyChain: 
+        hasParent o hasParent
+    
+    Domain: 
+        Person
+    
+    Range: 
+        Person
+    
+    InverseOf: 
+        isGrandparentOf
+    
+    
+ObjectProperty: isGrandparentOf
+
+    Annotations: 
+        rdfs:label "isGrandparentOf"@en
+    
+    SubPropertyChain: 
+        hasChild o hasChild
+    
+    Domain: 
+        Person
+    
+    Range: 
+        Person
+    
+    InverseOf: 
+        isGrandchildOf
     
     
 ObjectProperty: isHeadOf
@@ -423,6 +507,24 @@ ObjectProperty: isMotherOf
     
     InverseOf: 
         hasMother
+    
+    
+ObjectProperty: isNieceOrNephewOf
+
+    Annotations: 
+        rdfs:label "isNieceOrNephewOf"@en
+    
+    SubPropertyChain: 
+        hasSibling o hasChild
+    
+    Domain: 
+        Person
+    
+    Range: 
+        Person
+    
+    InverseOf: 
+        isAuntOrUncleOf
     
     
 ObjectProperty: isPrefectOf
@@ -1670,7 +1772,7 @@ Individual: Dobby
 Individual: Dog
 
     Annotations: 
-        rdfs:comment "Dog"@en
+        rdfs:label "Dog"@en
     
     Types: 
         Beast
@@ -3406,7 +3508,7 @@ Individual: QuirinusQuirrell
 Individual: Rat
 
     Annotations: 
-        rdfs:comment "Rat"@en
+        rdfs:label "Rat"@en
     
     Types: 
         Beast

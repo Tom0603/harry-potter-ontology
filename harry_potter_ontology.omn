@@ -148,8 +148,9 @@ ObjectProperty: hasCousin
     Annotations: 
         rdfs:label "hasCousin"@en
     
-    SubPropertyChain: 
-        hasParent o hasSibling o hasChild
+    Characteristics: 
+        Symmetric,
+        Irreflexive
     
     Domain: 
         Person
@@ -275,8 +276,9 @@ ObjectProperty: hasSibling
     Annotations: 
         rdfs:label "hasSibling"@en
     
-    SubPropertyChain: 
-        hasParent o hasChild
+    Characteristics: 
+        Symmetric,
+        Irreflexive
     
     Domain: 
         Person
@@ -290,8 +292,9 @@ ObjectProperty: isAuntOrUncleOf
     Annotations: 
         rdfs:label "isAuntOrUncleOf"@en
     
-    SubPropertyChain: 
-        hasParent o hasSibling
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
     
     Domain: 
         Person
@@ -374,8 +377,9 @@ ObjectProperty: isGrandchildOf
     Annotations: 
         rdfs:label "isGrandchildOf"@en
     
-    SubPropertyChain: 
-        hasParent o hasParent
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
     
     Domain: 
         Person
@@ -392,8 +396,9 @@ ObjectProperty: isGrandparentOf
     Annotations: 
         rdfs:label "isGrandparentOf"@en
     
-    SubPropertyChain: 
-        hasChild o hasChild
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
     
     Domain: 
         Person
@@ -514,8 +519,9 @@ ObjectProperty: isNieceOrNephewOf
     Annotations: 
         rdfs:label "isNieceOrNephewOf"@en
     
-    SubPropertyChain: 
-        hasSibling o hasChild
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
     
     Domain: 
         Person
@@ -4292,4 +4298,16 @@ Individual: ZachariasSmith
     
 Rule: 
     Wizard(?<http://www.potterverse-ontology.de/#w1>), isMemberOf(?<http://www.potterverse-ontology.de/#w1>, OrderOfThePhoenix), Wizard(?<http://www.potterverse-ontology.de/#w2>), isMemberOf(?<http://www.potterverse-ontology.de/#w2>, DeathEater) -> isEnemyOf(?<http://www.potterverse-ontology.de/#w1>, ?<http://www.potterverse-ontology.de/#w2>)
+
+Rule: 
+    hasParent(?<http://www.potterverse-ontology.de/#x>, ?<http://www.potterverse-ontology.de/#p>), hasParent(?<http://www.potterverse-ontology.de/#p>, ?<http://www.potterverse-ontology.de/#g>) -> isGrandchildOf(?<http://www.potterverse-ontology.de/#x>, ?<http://www.potterverse-ontology.de/#g>)
+
+Rule: 
+    hasParent(?<http://www.potterverse-ontology.de/#x>, ?<http://www.potterverse-ontology.de/#p>), hasParent(?<http://www.potterverse-ontology.de/#y>, ?<http://www.potterverse-ontology.de/#p>),  DifferentFrom (?<http://www.potterverse-ontology.de/#x>, ?<http://www.potterverse-ontology.de/#y>) -> hasSibling(?<http://www.potterverse-ontology.de/#x>, ?<http://www.potterverse-ontology.de/#y>)
+
+Rule: 
+    hasParent(?<http://www.potterverse-ontology.de/#x>, ?<http://www.potterverse-ontology.de/#p>), hasSibling(?<http://www.potterverse-ontology.de/#p>, ?<http://www.potterverse-ontology.de/#a>) -> isAuntOrUncleOf(?<http://www.potterverse-ontology.de/#a>, ?<http://www.potterverse-ontology.de/#x>)
+
+Rule: 
+    hasParent(?<http://www.potterverse-ontology.de/#x>, ?<http://www.potterverse-ontology.de/#px>), hasParent(?<http://www.potterverse-ontology.de/#y>, ?<http://www.potterverse-ontology.de/#py>), hasSibling(?<http://www.potterverse-ontology.de/#px>, ?<http://www.potterverse-ontology.de/#py>),  DifferentFrom (?<http://www.potterverse-ontology.de/#x>, ?<http://www.potterverse-ontology.de/#y>) -> hasCousin(?<http://www.potterverse-ontology.de/#x>, ?<http://www.potterverse-ontology.de/#y>)
 

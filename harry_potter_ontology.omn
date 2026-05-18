@@ -187,10 +187,13 @@ ObjectProperty: hasMember
         Asymmetric
     
     Domain: 
-        House
+        House or SecretSociety
     
     Range: 
         Wizard
+    
+    InverseOf: 
+        isMemberOf
     
     
 ObjectProperty: hasMother
@@ -237,9 +240,8 @@ ObjectProperty: hasPet
     SubPropertyOf: 
         owl:topObjectProperty
     
-    Characteristics: 
-        Irreflexive,
-        Asymmetric
+    SubPropertyChain: 
+        hasPet o  inverse (transformsInto)
     
     Domain: 
         Person
@@ -390,6 +392,9 @@ ObjectProperty: isMemberOf
     
     Range: 
         House or SecretSociety
+    
+    InverseOf: 
+        hasMember
     
     
 ObjectProperty: isMotherOf
@@ -849,6 +854,9 @@ Class: House
     Annotations: 
         rdfs:label "House"@en
     
+    DisjointWith: 
+        SecretSociety
+    
     
 Class: HouseElf
 
@@ -987,6 +995,9 @@ Class: SecretSociety
     Annotations: 
         rdfs:label "SecretSociety"@en
     
+    DisjointWith: 
+        House
+    
     
 Class: Spell
 
@@ -1073,7 +1084,7 @@ Individual: AberforthDumbledore
         rdfs:label "Aberforth Dumbledore"@en
     
     Types: 
-        HalfBlood
+        Wizard
     
     Facts:  
      isMemberOf  Gryffindor,
@@ -1111,8 +1122,8 @@ Individual: AlbusDumbledore
         rdfs:label "Albus Dumbledore"@en
     
     Types: 
-        HalfBlood,
-        Professor
+        Professor,
+        Wizard
     
     Facts:  
      destroys  MarvoloGauntsRing,
@@ -1224,7 +1235,7 @@ Individual: ArianaDumbledore
         rdfs:label "Ariana Dumbledore"@en
     
     Types: 
-        HalfBlood
+        Wizard
     
     
 Individual: ArthurWeasley
@@ -1659,6 +1670,15 @@ Individual: Dobby
      isFriendOf  HarryPotter,
      isFriendOf  HermioneGranger,
      isFriendOf  RonWeasley
+    
+    
+Individual: Dog
+
+    Annotations: 
+        rdfs:comment "Dog"@en
+    
+    Types: 
+        Beast
     
     
 Individual: DoloresUmbridge
@@ -2340,7 +2360,6 @@ Individual: JamesPotter
         rdfs:label "James Potter"@en
     
     Types: 
-        Animagus,
         PureBlood
     
     Facts:  
@@ -2940,7 +2959,6 @@ Individual: NevilleLongbottom
         rdfs:label "Neville Longbottom"@en
     
     Types: 
-        PureBlood,
         Student
     
     Facts:  
@@ -3178,6 +3196,18 @@ Individual: PenelopeClearwater
      isStudentAtSchool  Hogwarts
     
     
+Individual: PercivalDumbledore
+
+    Types: 
+        PureBlood
+    
+    Facts:  
+     isFatherOf  AberforthDumbledore,
+     isFatherOf  AlbusDumbledore,
+     isFatherOf  ArianaDumbledore,
+     isMarriedTo  KendraDumbledore
+    
+    
 Individual: PercyWeasley
 
     Annotations: 
@@ -3212,11 +3242,12 @@ Individual: PeterPettigrew
         rdfs:label "Peter Pettigrew"@en
     
     Types: 
-        Animagus
+        Wizard
     
     Facts:  
      isMemberOf  DeathEater,
-     isMemberOf  Gryffindor
+     isMemberOf  Gryffindor,
+     transformsInto  Rat
     
     
 Individual: PetuniaDursley
@@ -3309,6 +3340,15 @@ Individual: QuirinusQuirrell
     
     Facts:  
      isMemberOf  Ravenclaw
+    
+    
+Individual: Rat
+
+    Annotations: 
+        rdfs:comment "Rat"@en
+    
+    Types: 
+        Beast
     
     
 Individual: Ravenclaw
@@ -3485,12 +3525,9 @@ Individual: RonWeasley
     Annotations: 
         rdfs:label "Ron Weasley"@en
     
-    Types: 
-        PureBlood,
-        Student
-    
     Facts:  
      destroys  SlytherinsLocket,
+     hasPet  Rat,
      isMemberOf  DumbledoresArmy,
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix,
@@ -3630,13 +3667,13 @@ Individual: SiriusBlack
         rdfs:label "Sirius Black"@en
     
     Types: 
-        Animagus,
         PureBlood
     
     Facts:  
      isFriendOf  JamesPotter,
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix,
+     transformsInto  Dog,
      birthYear  1959
     
     

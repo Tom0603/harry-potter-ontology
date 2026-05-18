@@ -1531,6 +1531,15 @@ Individual: CassiusWarrington
      isStudentAtSchool  Hogwarts
     
     
+Individual: Cat
+
+    Annotations: 
+        rdfs:label "Cat"@en
+    
+    Types: 
+        Beast
+    
+    
 Individual: CedricDiggory
 
     Annotations: 
@@ -2993,7 +3002,8 @@ Individual: MinervaMcGonagall
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix,
      isProfessorAtSchool  Hogwarts,
-     teaches  Transfiguration
+     teaches  Transfiguration,
+     transformsInto  Cat
     
     
 Individual: MollyWeasley

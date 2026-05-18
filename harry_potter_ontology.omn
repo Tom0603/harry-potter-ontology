@@ -10,6 +10,9 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 Ontology: <http://www.potterverse-ontology.de/>
 
 
+AnnotationProperty: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled>
+
+    
 AnnotationProperty: rdfs:comment
 
     
@@ -17,6 +20,9 @@ AnnotationProperty: rdfs:label
 
     
 Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:boolean
 
     
 Datatype: xsd:decimal
@@ -3071,6 +3077,9 @@ Individual: OrderOfThePhoenix
     Types: 
         SecretSociety
     
+    Facts:  
+     isEnemyOf  DeathEater
+    
     
 Individual: OrionBlack
 
@@ -4098,3 +4107,6 @@ Individual: ZachariasSmith
      isStudentAtSchool  Hogwarts
     
     
+Rule: 
+    Wizard(?<http://www.potterverse-ontology.de/#w1>), isMemberOf(?<http://www.potterverse-ontology.de/#w1>, OrderOfThePhoenix), Wizard(?<http://www.potterverse-ontology.de/#w2>), isMemberOf(?<http://www.potterverse-ontology.de/#w2>, DeathEater) -> isEnemyOf(?<http://www.potterverse-ontology.de/#w1>, ?<http://www.potterverse-ontology.de/#w2>)
+

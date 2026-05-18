@@ -1458,9 +1458,6 @@ Individual: BillWeasley
     Annotations: 
         rdfs:label "Bill Weasley"@en
     
-    Types: 
-        PureBlood
-    
     Facts:  
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix
@@ -2083,7 +2080,6 @@ Individual: FredWeasley
         rdfs:label "Fred Weasley"@en
     
     Types: 
-        PureBlood,
         Student
     
     Facts:  
@@ -2157,7 +2153,6 @@ Individual: GeorgeWeasley
         rdfs:label "George Weasley"@en
     
     Types: 
-        PureBlood,
         Student
     
     Facts:  
@@ -2198,7 +2193,6 @@ Individual: GinnyWeasley
         rdfs:label "Ginny Weasley"@en
     
     Types: 
-        PureBlood,
         Student
     
     Facts:  
@@ -2309,7 +2303,6 @@ Individual: HarryPotter
         rdfs:label "Harry Potter"@en
     
     Types: 
-        HalfBlood,
         Student
     
     Facts:  
@@ -3370,9 +3363,6 @@ Individual: PercyWeasley
     Annotations: 
         rdfs:label "Percy Weasley"@en
     
-    Types: 
-        PureBlood
-    
     Facts:  
      isMemberOf  Gryffindor,
      isPrefectOf  Gryffindor,
@@ -3554,9 +3544,6 @@ Individual: RegulusArcturusBlack
 
     Annotations: 
         rdfs:label "Regulus Arcturus Black"@en
-    
-    Types: 
-        PureBlood
     
     Facts:  
      isMemberOf  DeathEater,
@@ -3843,9 +3830,6 @@ Individual: SiriusBlack
     Annotations: 
         rdfs:label "Sirius Black"@en
     
-    Types: 
-        PureBlood
-    
     Facts:  
      isFriendOf  JamesPotter,
      isMemberOf  Gryffindor,
@@ -4043,9 +4027,6 @@ Individual: TomRiddle
 
     Annotations: 
         rdfs:label "Tom Riddle"@en
-    
-    Types: 
-        HalfBlood
     
     Facts:  
      isMemberOf  DeathEater,

@@ -182,7 +182,6 @@ ObjectProperty: hasMember
         owl:topObjectProperty
     
     Characteristics: 
-        InverseFunctional,
         Irreflexive,
         Asymmetric
     

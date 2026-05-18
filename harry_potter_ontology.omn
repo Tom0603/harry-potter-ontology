@@ -634,6 +634,8 @@ DataProperty: effectDuration
         Potion
     
     Range: 
+        
+            Annotations: rdfs:comment "Hours"@en
         xsd:integer
     
     SubPropertyOf: 
@@ -678,24 +680,6 @@ DataProperty: incantation
     
 DataProperty: owl:topDataProperty
 
-    
-DataProperty: schoolYear
-
-    Annotations: 
-        rdfs:label "schoolYear"@en
-    
-    Characteristics: 
-        Functional
-    
-    Domain: 
-        Student
-    
-    Range: 
-        xsd:integer
-    
-    SubPropertyOf: 
-        owl:topDataProperty
-    
     
 Class: Animagus
 
@@ -859,9 +843,6 @@ Class: House
     Annotations: 
         rdfs:label "House"@en
     
-    DisjointWith: 
-        SecretSociety
-    
     
 Class: HouseElf
 
@@ -999,9 +980,6 @@ Class: SecretSociety
 
     Annotations: 
         rdfs:label "SecretSociety"@en
-    
-    DisjointWith: 
-        House
     
     
 Class: Spell
@@ -1157,7 +1135,6 @@ Individual: AliciaSpinnet
         rdfs:label "Alicia Spinnet"@en
     
     Types: 
-        Student,
         Wizard
     
     Facts:  
@@ -1172,6 +1149,18 @@ Individual: AmeliaBones
     
     Types: 
         Wizard
+    
+    
+Individual: Amortentia
+
+    Annotations: 
+        rdfs:label "Amortentia"@en
+    
+    Types: 
+        Potion
+    
+    Facts:  
+     effectDuration  24
     
     
 Individual: AmosDiggory
@@ -1263,6 +1252,7 @@ Individual: ArthurWeasley
      isMarriedTo  MollyWeasley,
      isMemberOf  Gryffindor,
      isMemberOf  OrderOfThePhoenix,
+     owns  FlyingCar,
      birthYear  1950
     
     
@@ -1471,7 +1461,6 @@ Individual: CharlieWeasley
         rdfs:label "Charlie Weasley"@en
     
     Types: 
-        PureBlood,
         Student
     
     Facts:  
@@ -1714,6 +1703,18 @@ Individual: DracoMalfoy
      birthYear  1980
     
     
+Individual: DraughtOfLivingDeath
+
+    Annotations: 
+        rdfs:label "Draught of Living Death"@en
+    
+    Types: 
+        Potion
+    
+    Facts:  
+     effectDuration  1
+    
+    
 Individual: DruellaBlack
 
     Annotations: 
@@ -1769,8 +1770,19 @@ Individual: ElderWand
         rdfs:label "Elder Wand"@en
     
     Types: 
-        DeathlyHallow,
         Wand
+    
+    
+Individual: ElixirOfLife
+
+    Annotations: 
+        rdfs:label "Elixir of Life"@en
+    
+    Types: 
+        Potion
+    
+    Facts:  
+     effectDuration  8760
     
     
 Individual: ElphiasDoge
@@ -1837,6 +1849,15 @@ Individual: Fawkes
     
     Types: 
         Beast
+    
+    
+Individual: FelixFelicis
+
+    Annotations: 
+        rdfs:label "Felix Felicis"@en
+    
+    Types: 
+        Potion
     
     
 Individual: FenrirGreyback
@@ -1914,6 +1935,15 @@ Individual: Flying
     
     Types: 
         Class
+    
+    
+Individual: FlyingCar
+
+    Annotations: 
+        rdfs:label "Flying Car"@en
+    
+    Types: 
+        MagicalVehicle
     
     
 Individual: FrankBryce
@@ -2146,6 +2176,9 @@ Individual: Gryffindor
     Types: 
         House
     
+    Facts:  
+     housePoints  250
+    
     
 Individual: HannahAbbott
 
@@ -2172,6 +2205,7 @@ Individual: HarryPotter
         Student
     
     Facts:  
+     brews  DraughtOfLivingDeath,
      destroys  RiddlesDiary,
      hasFather  JamesPotter,
      hasMother  LilyPotter,
@@ -2227,6 +2261,7 @@ Individual: HermioneGranger
         Student
     
     Facts:  
+     brews  PolyjuicePotion,
      destroys  HufflepuffsCup,
      hasPet  Crookshanks,
      isMemberOf  DumbledoresArmy,
@@ -2293,6 +2328,8 @@ Individual: HoraceSlughorn
         PureBlood
     
     Facts:  
+     brews  Amortentia,
+     brews  DraughtOfLivingDeath,
      isMemberOf  Slytherin
     
     
@@ -2312,6 +2349,9 @@ Individual: Hufflepuff
     
     Types: 
         House
+    
+    Facts:  
+     housePoints  300
     
     
 Individual: HufflepuffsCup
@@ -2996,6 +3036,9 @@ Individual: NicolasFlamel
     Types: 
         Wizard
     
+    Facts:  
+     brews  ElixirOfLife
+    
     
 Individual: NigelWolpert
 
@@ -3201,6 +3244,9 @@ Individual: PenelopeClearwater
     
 Individual: PercivalDumbledore
 
+    Annotations: 
+        rdfs:label "Percival Dumbledore"@en
+    
     Types: 
         PureBlood
     
@@ -3300,6 +3346,18 @@ Individual: PolluxBlack
      birthYear  1912
     
     
+Individual: PolyjuicePotion
+
+    Annotations: 
+        rdfs:label "Polyjuice Potion"
+    
+    Types: 
+        Potion
+    
+    Facts:  
+     effectDuration  1
+    
+    
 Individual: PomonaSprout
 
     Annotations: 
@@ -3361,6 +3419,9 @@ Individual: Ravenclaw
     
     Types: 
         House
+    
+    Facts:  
+     housePoints  350
     
     
 Individual: RavenclawsDiadem
@@ -3429,6 +3490,9 @@ Individual: RevivingSpell
     
 Individual: RiddlesDiary
 
+    Annotations: 
+        rdfs:label "Riddle's Diary"@en
+    
     Types: 
         Horcrux
     
@@ -3644,6 +3708,8 @@ Individual: SeverusSnape
         Professor
     
     Facts:  
+     brews  Amortentia,
+     brews  Veritaserum,
      isMemberOf  DeathEater,
      isMemberOf  OrderOfThePhoenix,
      isMemberOf  Slytherin,
@@ -3699,6 +3765,9 @@ Individual: Slytherin
     
     Types: 
         House
+    
+    Facts:  
+     housePoints  650
     
     
 Individual: SlytherinsLocket
@@ -3970,6 +4039,18 @@ Individual: Urquhart
     Facts:  
      isMemberOf  Slytherin,
      isStudentAtSchool  Hogwarts
+    
+    
+Individual: Veritaserum
+
+    Annotations: 
+        rdfs:label "Veritaserum"@en
+    
+    Types: 
+        Potion
+    
+    Facts:  
+     effectDuration  1
     
     
 Individual: VernonDursley

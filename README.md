@@ -2,7 +2,7 @@
 
 An OWL ontology modelling the Harry Potter universe, written in **Manchester Syntax** (`.omn`). Built as a group project for the **Semantic Web** course at DHBW Stuttgart.
 
-The ontology is hosted at `http://www.potterverse-ontology.de/` and covers characters, spells, potions, magical objects, locations, secret societies, and the relationships between them. A reasoner (e.g. HermiT) is required to infer a significant portion of the class memberships and relationships.
+The ontology covers characters, spells, potions, magical objects, locations, secret societies, and the relationships between them. A reasoner (e.g. HermiT) is required to infer a significant portion of the class memberships and relationships.
 
 ---
 
